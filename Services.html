@@ -1,112 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services - MeraPopi Digital Seva Center</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services - MeraPopi Digital Seva Center</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body{font-family:'Poppins',sans-serif;margin:0;padding:0;background:#f9f9f9;color:#333;}
+header{background:linear-gradient(90deg,#0078ff,#00c389);color:#fff;text-align:center;padding:40px 20px;}
+header h1{font-size:2em;margin-bottom:10px;}
+header p{font-size:1.1em;opacity:0.9;}
+
+nav{background:#fff;box-shadow:0 2px 4px rgba(0,0,0,0.1);position:sticky;top:0;z-index:10;}
+nav ul{display:flex;flex-wrap:wrap;justify-content:center;list-style:none;margin:0;padding:0;}
+nav li{margin:10px;}
+nav a{text-decoration:none;color:#0078ff;font-weight:500;}
+nav a:hover{color:#00c389;}
+
+section{padding:40px 20px;max-width:1000px;margin:auto;}
+section h2{text-align:center;margin-bottom:30px;color:#0078ff;}
+
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+
+.card{background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 6px rgba(0,0,0,0.1);transition:transform .2s;}
+.card:hover{transform:translateY(-5px);}
+.card h3{color:#00a884;margin-bottom:15px;text-align:center;}
+
+.service-item{background:#0078ff;color:#fff;padding:10px;margin:5px 0;border-radius:5px;text-align:center;text-decoration:none;display:block;transition:background .2s;}
+.service-item:hover{background:#00c389;}
+
+.contact{text-align:center;margin-top:40px;}
+.contact a{display:inline-block;margin:10px;padding:12px 20px;border-radius:30px;text-decoration:none;color:#fff;font-weight:600;}
+.whatsapp{background:#25D366;}
+.email{background:#0078ff;}
+.contact a:hover{opacity:0.9;}
+
+footer{background:#003b64;color:#fff;text-align:center;padding:20px;font-size:0.9em;margin-top:30px;}
+footer a{color:#00c389;text-decoration:none;}
+footer a:hover{text-decoration:underline;}
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>MeraPopi - Digital Seva Center</h1>
-    <p>All Our Services at One Place</p>
-  </header>
+<header>
+  <h1>MeraPopi - Digital Seva Center</h1>
+  <p>All Our Services at One Place</p>
+</header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services-grid">
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services-grid">
 
-      <div class="card">
-        <h3>Government & Official Services</h3>
-        <p>
-          PF Withdrawal & Correction<br>
-          PAN Card Registration & Correction<br>
-          Aadhaar Update / Correction<br>
-          GST Registration & Filing Support<br>
-          MSME (Udyam) Registration<br>
-          Passport Registration & Appointment<br>
-          Voter ID & Driving License Assistance
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>IT & Digital Services</h3>
-        <p>
-          Computer & Laptop Software Support<br>
-          Data Backup & Cloud Setup<br>
-          Email Setup & Recovery<br>
-          Online Form Filling & Document Upload<br>
-          Resume & Cover Letter Creation<br>
-          Website / Domain / Hosting Assistance
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Banking & Financial Services</h3>
-        <p>
-          New Bank Account Opening Assistance<br>
-          Bank Account Update (KYC / Mobile / Email)<br>
-          Loan Application Support<br>
-          Online Payment / UPI Support
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Travel & Ticketing Services</h3>
-        <p>
-          Train Ticket Booking (IRCTC)<br>
-          Flight Ticket Booking<br>
-          Visa Application Support<br>
-          Hotel Reservation & Travel Packages
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Business & Taxation Services</h3>
-        <p>
-          Company / Firm Registration Guidance<br>
-          Business PAN & GST Linking<br>
-          Digital Signature Certificate (DSC) Assistance<br>
-          Business Website & Email Setup
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>CSC & Online Utility Services</h3>
-        <p>
-          e-KYC & Biometric Authentication<br>
-          Bill Payment (Electricity, Water, Gas, Mobile)<br>
-          Recharge Services (Mobile / DTH / FASTag)<br>
-          Insurance Premium Payment<br>
-          Online Application for Government Schemes
-        </p>
-      </div>
-
+    <!-- Government & Official Services -->
+    <div class="card">
+      <h3>Government & Official Services</h3>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20PF%20Withdrawal%20Assistance" target="_blank">PF Withdrawal & Correction</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20PAN%20Card%20Registration" target="_blank">PAN Card Registration & Correction</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Aadhaar%20Update" target="_blank">Aadhaar Update / Correction</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20GST%20Registration" target="_blank">GST Registration & Filing</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20MSME%20Registration" target="_blank">MSME Registration</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Passport%20Assistance" target="_blank">Passport Services</a>
     </div>
-  </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Have a question or need help? Reach us anytime!</p>
-    <a class="whatsapp" href="https://wa.me/919464642218" target="_blank">💬 WhatsApp Us</a>
-    <a class="email" href="mailto:raj@merapopi.com">📧 Email Us</a>
-    <p style="margin-top:15px;">📍 Delhi, India</p>
-  </section>
+    <!-- IT & Digital Services -->
+    <div class="card">
+      <h3>IT & Digital Services</h3>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Computer%20Support" target="_blank">Computer & Laptop Support</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Cloud%20Backup%20Setup" target="_blank">Data Backup & Cloud Setup</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Email%20Setup" target="_blank">Email Setup & Recovery</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Online%20Form%20Filling" target="_blank">Online Form Filling</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Resume%20Creation" target="_blank">Resume & Document Creation</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Website%20Assistance" target="_blank">Website / Domain Assistance</a>
+    </div>
 
-  <footer>
-    © 2025 <strong>MeraPopi.com</strong> | All Rights Reserved.<br>
-    Designed with 💙 by Raj Kumar | <a href="https://merapopi.com">merapopi.com</a>
-  </footer>
+    <!-- Banking & Finance -->
+    <div class="card">
+      <h3>Banking & Finance</h3>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Bank%20Account%20Opening" target="_blank">New Bank Account Opening</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20KYC%20Update" target="_blank">Bank Account Update / KYC</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Loan%20Support" target="_blank">Loan Application Support</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20UPI%20Payment%20Support" target="_blank">Online Payment / UPI</a>
+    </div>
 
-</body>
-</html>
+    <!-- Travel & Ticketing -->
+    <div class="card">
+      <h3>Travel & Ticketing</h3>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Train%20Ticket%20Booking" target="_blank">Train Ticket Booking</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Flight%20Ticket%20Booking" target="_blank">Flight Ticket Booking</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Visa%20Assistance" target="_blank">Visa Application Support</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Hotel%20Booking" target="_blank">Hotel Reservation</a>
+    </div>
+
+    <!-- Business & Taxation -->
+    <div class="card">
+      <h3>Business & Taxation</h3>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Company%20Registration" target="_blank">Company / Firm Registration</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Digital%20Signature" target="_blank">Digital Signature Certificate</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20GST%20Linking" target="_blank">GST & PAN Linking</a>
+      <a class="service-item" href="https://wa.me/919464642218?text=Hi,%20I%20want%20Business%20Email%20Setup" target="_blank">Business Website & Email</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>Have a question or need help? Reach us anytime!</p>
+  <a class="whatsapp" href="https://wa.me/919464642218" target="_blank">💬 WhatsApp Us</a>
+  <a class="email" href="mailto:raj@merapopi.com">📧 Email Us</a>
+  <p style="margin-top:15px;">📍 Delhi, India</p>
+</section>
+
+<footer>
+  © 2025 <strong>MeraPopi.com</strong> | All Rights Reserved.<br>
+  Designed with
