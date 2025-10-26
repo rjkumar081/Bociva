@@ -26,7 +26,7 @@ header .cta-buttons a:hover{opacity:0.9;transform:scale(1.05);}
 nav{background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.1);position:sticky;top:0;z-index:100;}
 nav .nav-container{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto;padding:10px 20px;}
 nav .logo{color:#0078ff;font-weight:700;font-size:1.3em;}
-nav ul{display:flex;flex-wrap:wrap;gap:15px;}
+nav ul{display:flex;gap:15px;}
 nav li{}
 nav a{color:#0078ff;font-weight:600;transition:0.3s;}
 nav a:hover{color:#00c389;}
@@ -69,7 +69,7 @@ footer a:hover{text-decoration:underline;}
 
 /* Mobile */
 @media(max-width:768px){
-nav ul{display:none;flex-direction:column;background:#fff;width:100%;position:absolute;top:60px;left:0;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
-nav ul.show{display:flex;}
-nav .menu-toggle{display:block;}
+  nav ul{flex-direction:column;max-height:0;overflow:hidden;width:100%;background:#fff;transition:max-height 0.3s ease;}
+  nav ul.show{max-height:500px;}
+  nav .menu-toggle{display:block;}
 }
