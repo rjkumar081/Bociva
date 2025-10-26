@@ -5,67 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MeraPopi Digital Seva Center</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-body{
-  margin:0; padding:0; font-family:'Poppins',sans-serif; background:#f0f8ff;
-  scroll-behavior: smooth;
-}
-header{
-  height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
-  background:linear-gradient(135deg,#0078ff,#00c389);
-  color:#fff; text-align:center; padding:20px;
-}
-header h1{font-size:2.5em; margin-bottom:20px; animation:fadeInDown 1s;}
-header p{font-size:1.2em; margin-bottom:30px; opacity:0.9; animation:fadeInUp 1s;}
-.cta-buttons a{
-  display:inline-block; margin:10px; padding:15px 30px; border-radius:50px;
-  text-decoration:none; font-weight:600; color:#fff; transition:0.3s;
-}
-.cta-buttons a.whatsapp{background:#25D366;}
-.cta-buttons a.email{background:#fff; color:#0078ff;}
-.cta-buttons a:hover{opacity:0.9; transform:scale(1.05);}
-
-@keyframes fadeInDown{from{opacity:0; transform:translateY(-50px);} to{opacity:1; transform:translateY(0);}}
-@keyframes fadeInUp{from{opacity:0; transform:translateY(50px);} to{opacity:1; transform:translateY(0);}}
-
-section{padding:60px 20px; max-width:1200px; margin:auto;}
-section h2{text-align:center; margin-bottom:40px; color:#0078ff; font-size:2em;}
-
-.services-preview{
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px;
-}
-.service-card{
-  background:#fff; border-radius:15px; padding:20px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.1); transition:all 0.4s;
-  text-align:center;
-}
-.service-card:hover{
-  transform:translateY(-10px) scale(1.03);
-  box-shadow:0 15px 30px rgba(0,0,0,0.2);
-}
-.service-card i{font-size:2em; color:#00a884; margin-bottom:15px;}
-.service-card h3{margin-bottom:10px;}
-.service-card p{opacity:0.8;}
-
-.features-grid{
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px;
-  margin-top:40px;
-}
-.feature-card{
-  background:#0078ff; color:#fff; border-radius:15px; padding:25px;
-  text-align:center; transition:all 0.3s;
-}
-.feature-card:hover{transform:scale(1.05);}
-.feature-card i{font-size:2.2em; margin-bottom:15px; color:#00c389;}
-
-footer{
-  background:#003b64; color:#fff; text-align:center; padding:25px;
-  margin-top:50px; font-size:0.9em;
-}
-footer a{color:#00c389; text-decoration:none;}
-footer a:hover{text-decoration:underline;}
-</style>
 </head>
 <body>
 
@@ -78,15 +19,24 @@ footer a:hover{text-decoration:underline;}
 </div>
 </header>
 
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
 <section id="services-preview">
 <h2>Our Popular Services</h2>
-<div class="services-preview">
-<div class="service-card"><i class="fa-solid fa-file-invoice"></i><h3>PF Withdrawal</h3><p>Quick PF correction & withdrawal assistance</p></div>
-<div class="service-card"><i class="fa-solid fa-id-card"></i><h3>PAN Card</h3><p>Registration & correction services</p></div>
-<div class="service-card"><i class="fa-solid fa-address-card"></i><h3>Aadhaar</h3><p>Update / Correction support</p></div>
-<div class="service-card"><i class="fa-solid fa-money-bill"></i><h3>GST & MSME</h3><p>Registration & filing guidance</p></div>
-<div class="service-card"><i class="fa-solid fa-passport"></i><h3>Passport</h3><p>Registration & appointment support</p></div>
-<div class="service-card"><i class="fa-solid fa-train"></i><h3>Travel Booking</h3><p>Train, Flight & Hotel bookings</p></div>
+<div class="services-grid">
+<div class="card"><i class="fa-solid fa-file-invoice"></i><h3>PF Withdrawal</h3><p>Quick PF correction & withdrawal assistance</p></div>
+<div class="card"><i class="fa-solid fa-id-card"></i><h3>PAN Card</h3><p>Registration & correction services</p></div>
+<div class="card"><i class="fa-solid fa-address-card"></i><h3>Aadhaar</h3><p>Update / Correction support</p></div>
+<div class="card"><i class="fa-solid fa-money-bill"></i><h3>GST & MSME</h3><p>Registration & filing guidance</p></div>
+<div class="card"><i class="fa-solid fa-passport"></i><h3>Passport</h3><p>Registration & appointment support</p></div>
+<div class="card"><i class="fa-solid fa-train"></i><h3>Travel Booking</h3><p>Train, Flight & Hotel bookings</p></div>
 </div>
 </section>
 
@@ -102,7 +52,7 @@ footer a:hover{text-decoration:underline;}
 
 <footer>
 © 2025 <strong>MeraPopi.com</strong> | All Rights Reserved.<br>
-Designed with 💙 by Raj Kumar | <a href="https://merapopi.com">merapopi.com</a>
+Designed with 💙 by Raj Kumar | <a href="https://MeraPopi.com">merapopi.com</a>
 </footer>
 
 </body>
