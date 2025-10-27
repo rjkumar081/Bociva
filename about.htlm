@@ -25,7 +25,7 @@
         <section class="content-page">
             <div class="container">
                 <h1>About Us</h1>
-                <p>Welcome to MeraPopi Digital Seva Center, your one-stop solution for all government and IT-related services. Our mission is to bridge the digital divide and make essential services accessible to everyone, everywhere.</p>
+                <p>Welcome to **MeraPopi Digital Seva Center**, your one-stop solution for all government and IT-related services. Our mission is to bridge the digital divide and make essential services accessible to everyone, everywhere.</p>
                 <p>Founded on the principles of reliability, affordability, and speed, we are committed to simplifying the complex processes of government documentation, financial services, and travel bookings. We understand that navigating these systems can be daunting, and our team of trained professionals is here to provide expert guidance and support at every step.</p>
                 
                 <h2>Our Vision</h2>
@@ -39,15 +39,15 @@
                     <li>To offer expert support and guidance to all our clients.</li>
                 </ul>
 
-                <h2>Meet the Team</h2>
-                <p>Our team is composed of dedicated professionals with years of experience in IT services, government portals, and customer support. We are passionate about what we do and are always ready to help you with your needs.</p>
+                <h2>Our Commitment to Trust</h2>
+                <p>As a Digital Seva Center, we adhere to strict ethical guidelines. We prioritize data privacy, transparent fee structures, and honest communication, building a foundation of trust with every customer.</p>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="footer-container">
-            <div class="footer-about"><h4>MeraPopi Seva</h4><p>Your one-stop solution for all government and IT-related services.</p></div>
+            <div class="footer-about"><h4>MeraPopi Seva</h4><p>Your one-stop solution for all government and IT-related services. We simplify the process.</p></div>
             <div class="footer-links"><h4>Company</h4><a href="about.html">About Us</a><a href="index.html#services">Services</a><a href="index.html#contact">Contact</a></div>
             <div class="footer-links"><h4>Legal & Support</h4><a href="terms.html">Terms & Conditions</a><a href="privacy.html">Privacy Policy</a><a href="refund.html">Refund Policy</a></div>
         </div>
