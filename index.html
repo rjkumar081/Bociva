@@ -4,182 +4,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MeraPopi Digital Seva Center</title>
-  <link rel="icon" href="https://img.icons8.com/color/96/online-store.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: "Poppins", Arial, sans-serif;
-      background-color: #f8fafc;
-      color: #1e293b;
-      scroll-behavior: smooth;
-    }
-
-    header {
-      background: #2563eb;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-    header h1 { font-size: 1.8rem; }
-    nav a {
-      color: white;
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    nav a:hover { text-decoration: underline; }
-
-    .hero {
-      background: url("https://images.unsplash.com/photo-1581091012184-5c0b9e65b2b8?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 6rem 1rem;
-    }
-    .hero h1 {
-      background: rgba(0, 0, 0, 0.6);
-      display: inline-block;
-      padding: 12px 25px;
-      border-radius: 8px;
-      font-size: 2rem;
-    }
-    .hero p {
-      background: rgba(0, 0, 0, 0.4);
-      display: inline-block;
-      padding: 8px 16px;
-      margin-top: 10px;
-      border-radius: 6px;
-      font-size: 1.1rem;
-    }
-    .btn {
-      background: #22c55e;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 30px;
-      display: inline-block;
-      margin-top: 1rem;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .btn:hover { background: #16a34a; }
-
-    section { padding: 3rem 1rem; text-align: center; }
-    h2 {
-      color: #1e40af;
-      margin-bottom: 1.2rem;
-      font-size: 1.7rem;
-    }
-
-    #services ul {
-      list-style: none;
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: left;
-      background: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    }
-    #services li {
-      padding: 10px 0;
-      border-bottom: 1px solid #e5e7eb;
-      font-size: 1rem;
-    }
-    #services li:last-child { border-bottom: none; }
-
-    #about, #contact {
-      max-width: 700px;
-      margin: 0 auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-    }
-
-    footer {
-      background: #1e3a8a;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      margin-top: 2rem;
-    }
-    footer a { color: #bfdbfe; text-decoration: none; }
+    body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+    header { background: linear-gradient(135deg, #0077b6, #00b4d8); color: white; padding: 80px 0; text-align: center; }
+    header h1 { font-size: 2.5rem; font-weight: 700; }
+    header p { font-size: 1.1rem; }
+    .btn-primary { background: #00b4d8; border: none; }
+    .btn-primary:hover { background: #0096c7; }
+    .services { background-color: #f8f9fa; padding: 60px 0; }
+    .service-box { background: white; border-radius: 10px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; transition: 0.3s; }
+    .service-box:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    footer { background: #222; color: white; text-align: center; padding: 30px 0; margin-top: 50px; }
+    footer a { color: #00b4d8; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
-
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 1.5rem; }
-      #services li { font-size: 0.95rem; }
-    }
+    .contact-section { padding: 60px 0; }
+    .whatsapp { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border-radius: 50%; width: 55px; height: 55px; display: flex; justify-content: center; align-items: center; font-size: 25px; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
   </style>
 </head>
-
 <body>
 
   <header>
-    <h1>MeraPopi Digital Seva Center</h1>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>Welcome to MeraPopi Digital Seva Center</h1>
+    <p>Your one-stop solution for all government and IT-related services</p>
+    <a href="#services" class="btn btn-light mt-3">Explore Services</a>
   </header>
 
-  <section class="hero">
-    <h1>Empowering You With Digital Solutions</h1>
-    <p>Fast • Secure • Reliable • Trusted by Thousands</p><br>
-    <a href="https://wa.me/919464642218" class="btn">💬 Chat on WhatsApp</a>
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">Our Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4"><div class="service-box">PF Withdrawal & Correction</div></div>
+        <div class="col-md-4"><div class="service-box">IT Services & Support</div></div>
+        <div class="col-md-4"><div class="service-box">GST Registration</div></div>
+        <div class="col-md-4"><div class="service-box">MSME Registration</div></div>
+        <div class="col-md-4"><div class="service-box">PAN Card Registration & Correction</div></div>
+        <div class="col-md-4"><div class="service-box">Aadhaar Correction</div></div>
+        <div class="col-md-4"><div class="service-box">Bank Account Opening</div></div>
+        <div class="col-md-4"><div class="service-box">Passport Registration</div></div>
+        <div class="col-md-4"><div class="service-box">Train Ticket Booking</div></div>
+        <div class="col-md-4"><div class="service-box">Flight Ticket Booking</div></div>
+        <div class="col-md-4"><div class="service-box">Visa Apply Assistance</div></div>
+        <div class="col-md-4"><div class="service-box">Hotel Booking</div></div>
+        <div class="col-md-4"><div class="service-box">Digital Signature (DSC)</div></div>
+        <div class="col-md-4"><div class="service-box">Voter ID Apply</div></div>
+        <div class="col-md-4"><div class="service-box">Online Bill Payments</div></div>
+      </div>
+    </div>
   </section>
 
-  <section id="services">
-    <h2>Our Digital & CSC Services</h2>
-    <ul>
-      <li>✅ PF Withdrawal & Correction</li>
-      <li>✅ IT Return Filing & GST Registration</li>
-      <li>✅ MSME (Udyam) Registration</li>
-      <li>✅ PAN Card Apply & Correction</li>
-      <li>✅ Aadhaar Update / Correction</li>
-      <li>✅ Bank Account Opening Assistance</li>
-      <li>✅ Passport Apply / Renewal</li>
-      <li>✅ Train Ticket Booking (IRCTC Authorized)</li>
-      <li>✅ Flight Booking & Visa Assistance</li>
-      <li>✅ Hotel Booking Services</li>
-      <li>✅ PM Kisan, Ayushman, Birth/Death Certificate</li>
-      <li>✅ Data Entry, Scanning & Online Form Submission</li>
-      <li>✅ Website Development & Digital Marketing</li>
-      <li>✅ Data Security & Privacy Protection</li>
-    </ul>
-    <br>
-    <a href="https://wa.me/919464642218" class="btn">📞 Contact for Any Service</a>
-  </section>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      <strong>MeraPopi Digital Seva Center</strong> is a trusted platform that provides
-      a wide range of government, financial, and digital services under one roof.
-      We aim to make online services simple, secure, and accessible for everyone.
-      <br><br>
-      Our team ensures your data privacy and offers quick assistance to fulfill
-      your needs—from PF to PAN, and tickets to taxes—all in one place.
-    </p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>📧 Email: <a href="mailto:support@merapopi.com">support@merapopi.com</a></p>
-    <p>📞 Phone / WhatsApp: <a href="https://wa.me/919464642218">+91 94646 42218</a></p>
-    <a href="mailto:support@merapopi.com" class="btn">📩 Send Email</a>
+  <section class="contact-section">
+    <div class="container text-center">
+      <h2>Contact Us</h2>
+      <p class="mb-4">Get in touch for any queries or assistance</p>
+      <p><strong>Email:</strong> <a href="mailto:support@merapopi.com">support@merapopi.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:9464642218">9464642218</a></p>
+    </div>
   </section>
 
   <footer>
+    <p>&copy; 2025 MeraPopi Digital Seva Center. All Rights Reserved.</p>
     <p>
-      © 2025 MeraPopi Digital Seva Center |
-      <a href="#">Terms</a> |
-      <a href="#">Privacy</a> |
-      <a href="#">Refund</a>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms & Conditions</a> |
+      <a href="refund.html">Refund Policy</a> |
+      <a href="security.html">Data Security</a>
     </p>
-    <p>All customer data is protected with end-to-end encryption for complete security.</p>
   </footer>
+
+  <a href="https://wa.me/919464642218" target="_blank" class="whatsapp">💬</a>
+
 </body>
 </html>
