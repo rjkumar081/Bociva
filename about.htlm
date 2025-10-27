@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    
     <header>
         <nav class="container">
             <a href="index.html" class="logo">MeraPopi Seva</a>
-            <div class="hamburger-menu"><i class="fas fa-bars"></i></div>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#services">Services</a></li>
+                <li><a href="#services">Our Services</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -24,34 +27,51 @@
     <main>
         <section class="content-page">
             <div class="container">
-                <h1>About Us</h1>
-                <p>Welcome to **MeraPopi Digital Seva Center**, your one-stop solution for all government and IT-related services. Our mission is to bridge the digital divide and make essential services accessible to everyone, everywhere.</p>
-                <p>Founded on the principles of reliability, affordability, and speed, we are committed to simplifying the complex processes of government documentation, financial services, and travel bookings. We understand that navigating these systems can be daunting, and our team of trained professionals is here to provide expert guidance and support at every step.</p>
+                <h1>About MeraPopi Digital Seva Center</h1>
                 
-                <h2>Our Vision</h2>
-                <p>To be the most trusted and accessible digital service provider in the region, empowering citizens by making technology work for them.</p>
+                <p>Welcome to MeraPopi Seva! We are your trusted local digital service provider, dedicated to simplifying complex government and utility processes for our community.</p>
 
                 <h2>Our Mission</h2>
+                <p>Our mission is to bridge the digital divide by offering fast, reliable, and secure assistance with essential services. We strive to save you time and confusion by handling documentation, application filling, and processing with professional care.</p>
+
+                <h2>What We Offer</h2>
                 <ul>
-                    <li>To provide a wide range of digital services under one roof.</li>
-                    <li>To ensure a fast, secure, and hassle-free customer experience.</li>
-                    <li>To stay updated with the latest government schemes and technologies.</li>
-                    <li>To offer expert support and guidance to all our clients.</li>
+                    <li>**Government Documentation:** Hassle-free Aadhaar, PAN Card, and Passport application support.</li>
+                    <li>**Financial Services:** Secure AEPS (cash withdrawal), micro-loan application assistance, and bill payments.</li>
+                    <li>**Travel & Bookings:** Authorized IRCTC, flight, and bus ticket reservations.</li>
                 </ul>
 
-                <h2>Our Commitment to Trust</h2>
-                <p>As a Digital Seva Center, we adhere to strict ethical guidelines. We prioritize data privacy, transparent fee structures, and honest communication, building a foundation of trust with every customer.</p>
+                <h2>Why We Care</h2>
+                <p>We understand the importance of having your documents processed correctly the first time. Our team is trained to handle all procedures according to official guidelines, ensuring accuracy and peace of mind for every customer.</p>
+                
+                <p class="cta-about">Ready to get started? <a href="#contact">Contact us today</a> or visit our center!</p>
             </div>
         </section>
-    </main>
+        
+        </main>
 
     <footer>
         <div class="footer-container">
-            <div class="footer-about"><h4>MeraPopi Seva</h4><p>Your one-stop solution for all government and IT-related services. We simplify the process.</p></div>
-            <div class="footer-links"><h4>Company</h4><a href="about.html">About Us</a><a href="index.html#services">Services</a><a href="index.html#contact">Contact</a></div>
-            <div class="footer-links"><h4>Legal & Support</h4><a href="terms.html">Terms & Conditions</a><a href="privacy.html">Privacy Policy</a><a href="refund.html">Refund Policy</a></div>
+            <div class="footer-about">
+                <h4>MeraPopi Seva</h4>
+                <p>Your one-stop solution for all government and IT-related services. We simplify the process.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-links">
+                <h4>Legal & Support</h4>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="refund.html">Refund Policy</a>
+            </div>
         </div>
-        <div class="footer-copyright"><p>&copy; 2025 MeraPopi Digital Seva Center. All Rights Reserved.</p></div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 MeraPopi Digital Seva Center. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
