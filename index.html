@@ -184,6 +184,42 @@
       });
     });
   </script>
+  <!-- Floating Verified & Secure Badge -->
+<div id="secure-badge"
+     class="fixed bottom-5 right-5 bg-white shadow-lg border border-gray-200 rounded-full flex items-center gap-2 px-4 py-2 z-50 cursor-pointer hover:shadow-2xl transition"
+     onclick="document.getElementById('data-safety').scrollIntoView({ behavior: 'smooth' });">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+       stroke-width="1.5" stroke="#10B981" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 6v6m0 0l3 3m-3-3l-3 3m9 6a9 9 0 11-18 0 9 9 0 0118 0z"/>
+  </svg>
+  <span class="text-green-700 font-semibold text-sm">Verified & Secure</span>
+</div>
+
+<!-- Tooltip Styling -->
+<style>
+  #secure-badge::after {
+    content: "SSL Secured | Data Protected by MeraPopi";
+    position: absolute;
+    bottom: 120%;
+    right: 0;
+    background: #10B981;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-size: 13px;
+  }
+  #secure-badge:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
 
 </body>
 </html>
