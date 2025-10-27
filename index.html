@@ -26,6 +26,17 @@
       background: #20bd5f;
       transition: all 0.3s;
     }
+  
+  /* Add spacing between WhatsApp and Secure Badge */
+  #whatsapp-button {
+    bottom: 80px; /* lift WhatsApp icon up a bit */
+    right: 20px;
+  }
+
+  #secure-badge {
+    bottom: 15px; /* stays at the very bottom */
+    right: 20px;
+  }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -184,9 +195,10 @@
       });
     });
   </script>
-  <!-- Floating Verified & Secure Badge -->
+
+<!-- Floating Verified & Secure Badge (Left Side) -->
 <div id="secure-badge"
-     class="fixed bottom-5 right-5 bg-white shadow-lg border border-gray-200 rounded-full flex items-center gap-2 px-4 py-2 z-50 cursor-pointer hover:shadow-2xl transition"
+     class="fixed bottom-5 left-5 bg-white shadow-lg border border-gray-200 rounded-full flex items-center gap-2 px-4 py-2 z-50 cursor-pointer hover:shadow-2xl transition"
      onclick="document.getElementById('data-safety').scrollIntoView({ behavior: 'smooth' });">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
        stroke-width="1.5" stroke="#10B981" class="w-6 h-6">
@@ -196,13 +208,13 @@
   <span class="text-green-700 font-semibold text-sm">Verified & Secure</span>
 </div>
 
-<!-- Tooltip Styling -->
+<!-- Tooltip Styling (adjusted for left side) -->
 <style>
   #secure-badge::after {
     content: "SSL Secured | Data Protected by MeraPopi";
     position: absolute;
     bottom: 120%;
-    right: 0;
+    left: 0;
     background: #10B981;
     color: white;
     padding: 6px 10px;
