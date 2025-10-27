@@ -5,17 +5,18 @@
 :root {
     --primary-color: #007bff;
     --primary-hover: #0056b3;
-    --secondary-color: #28a745; /* Changed secondary for better contrast */
+    --secondary-color: #28a745; 
     --light-color: #f8f9fa;
-    --dark-color: #212529; /* Darker for better contrast */
+    --dark-color: #212529; 
     --text-color: #495057;
     --gradient-start: #007bff;
     --gradient-end: #0056b3;
-    --shadow: 0 12px 40px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    --shadow: 0 12px 40px rgba(0, 0, 0, 0.15); 
     --card-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    --success-color: #28a745; /* Green for trust badge */
 }
 
-/* ======== GLOBAL STYLES ======== */
+/* ======== GLOBAL STYLES (UNCHANGED) ======== */
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +28,7 @@ body {
     line-height: 1.7;
     background-color: #fdfdfd;
     color: var(--text-color);
-    padding-top: 70px; /* Space for fixed navbar */
+    padding-top: 70px;
 }
 
 .container {
@@ -71,7 +72,7 @@ a:hover {
     color: var(--primary-hover);
 }
 
-/* ======== BUTTONS (GLOSSY) ======== */
+/* ======== BUTTONS (UNCHANGED) ======== */
 .btn {
     display: inline-block;
     padding: 14px 35px;
@@ -110,7 +111,7 @@ a:hover {
     transform: translateY(-2px);
 }
 
-/* ======== NAVIGATION BAR ======== */
+/* ======== NAVIGATION BAR (UNCHANGED) ======== */
 header {
     background: #ffffff;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
@@ -137,44 +138,22 @@ header nav {
 .nav-links a:hover { color: var(--primary-color); }
 .hamburger-menu { display: none; font-size: 1.8rem; cursor: pointer; }
 
-/* ======== HERO BANNER (AWESOME HEADER) ======== */
+/* ======== HERO BANNER (UNCHANGED) ======== */
 #hero {
-    /* Set up background image, adjust URL if needed */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1556761175-59736f6230ba?q=80&w=2070') no-repeat center center/cover;
-    min-height: 90vh; /* Taller banner */
+    min-height: 90vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #fff;
-    position: relative; /* Needed for the wave effect */
-    padding-bottom: 100px; /* Space for the wave */
+    position: relative; 
+    padding-bottom: 100px;
 }
-
-.hero-content {
-    z-index: 10;
-    padding: 20px;
-}
-
-#hero h1 {
-    font-size: 4rem;
-    color: #fff;
-    margin-bottom: 25px;
-    font-weight: 800;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    line-height: 1.1;
-}
-#hero p {
-    font-size: 1.4rem;
-    margin-bottom: 40px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: 300;
-}
-
-/* Layered wave effect for the header bottom */
+.hero-content { z-index: 10; padding: 20px; }
+#hero h1 { font-size: 4rem; color: #fff; margin-bottom: 25px; font-weight: 800; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); line-height: 1.1; }
+#hero p { font-size: 1.4rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; font-weight: 300; }
 .hero-wave {
     position: absolute;
     bottom: 0;
@@ -186,10 +165,10 @@ header nav {
     z-index: 5;
 }
 
-/* ======== WHY CHOOSE US (FIXED LAYOUT) ======== */
+/* ======== WHY CHOOSE US (ATTRACTIVE & DETAILED) ======== */
 #why-choose-us { 
     background-color: var(--light-color);
-    padding-top: 40px; /* Adjust top padding to meet the wave */
+    padding-top: 40px;
 }
 
 .features-grid {
@@ -211,42 +190,73 @@ header nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 4px solid var(--primary-color);
+    /* Initial border to be white/light */
+    border-bottom: 4px solid #f0f0f0; 
 }
 .feature-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow);
+    /* Strong color change on hover */
+    border-bottom: 4px solid var(--primary-color); 
 }
 .feature-card i {
     font-size: 3.2rem;
     color: var(--primary-color);
     margin-bottom: 20px;
 }
-.feature-card h3 { font-size: 1.6rem; }
-.feature-card p { font-size: 1rem; }
+.feature-card h3 { font-size: 1.6rem; margin-bottom: 10px;}
+.feature-card p { font-size: 1rem; color: var(--text-color); }
 
 .feature-support-item {
-    padding: 20px; 
-    text-align: left; 
+    padding: 30px; 
+    text-align: left;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
 }
 .feature-support-item i {
-    font-size: 2.5rem; 
+    font-size: 2rem; 
     color: var(--secondary-color);
     margin-bottom: 15px;
     display: block; 
 }
 .feature-support-item h3 {
     font-size: 1.6rem; 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: var(--dark-color);
 }
 .feature-support-item p {
     font-size: 1.1rem;
     color: var(--text-color);
     line-height: 1.6;
+    margin-bottom: 25px;
+}
+/* New style for the trust badge */
+.trust-badge {
+    display: flex;
+    align-items: center;
+    background: var(--success-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+}
+.trust-badge i {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-right: 15px;
+    margin-bottom: 0;
+}
+.trust-badge p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0;
 }
 
-/* ======== SERVICES SECTION ======== */
+
+/* ======== SERVICES SECTION (UNCHANGED) ======== */
 #services { background-color: #fff; }
 .category-title {
     font-size: 1.8rem;
@@ -290,7 +300,7 @@ header nav {
 .service-card p { font-size: 1rem; margin-bottom: 20px; }
 .service-card .btn-secondary { width: 100%; }
 
-/* ======== PAYMENT SAFETY (TRUST) ======== */
+/* ======== PAYMENT SAFETY (TRUST) (UNCHANGED) ======== */
 #payment-safety {
     background: var(--light-color);
     text-align: center;
@@ -308,7 +318,7 @@ header nav {
     color: var(--primary-color);
 }
 
-/* ======== CONTACT SECTION (HIGH-IMPACT HOOK) ======== */
+/* ======== CONTACT SECTION (UNCHANGED) ======== */
 #contact {
     background-image: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     color: #fff;
@@ -346,7 +356,7 @@ header nav {
 }
 #contact a:hover { color: #ffe; }
 
-/* ======== FOOTER ======== */
+/* ======== FOOTER (UNCHANGED) ======== */
 footer {
     background: var(--dark-color);
     color: #ccc;
@@ -371,7 +381,7 @@ footer {
     border-top: 1px solid #555;
 }
 
-/* ======== GENERIC CONTENT PAGE (FOR POLICY PAGES) ======== */
+/* ======== GENERIC CONTENT PAGE (UNCHANGED) ======== */
 .content-page {
     padding: 60px 0;
     min-height: 70vh;
@@ -382,13 +392,12 @@ footer {
 .content-page p, .content-page li { margin-bottom: 15px; line-height: 1.8; }
 .content-page ul { margin-left: 20px; }
 
-/* ======== MOBILE OPTIMIZATION (Essential) ======== */
+/* ======== MOBILE OPTIMIZATION (UNCHANGED) ======== */
 @media (max-width: 768px) {
     body { padding-top: 60px; }
     header nav { height: 60px; }
     .hamburger-menu { display: block; }
     .nav-links {
-        /* Mobile menu styles */
         display: none;
         position: absolute;
         top: 60px;
@@ -417,6 +426,7 @@ footer {
     .features-grid { grid-template-columns: 1fr; }
     .feature-support-item { text-align: center; }
     .feature-support-item i { margin: 0 auto 15px auto; }
+    .trust-badge { justify-content: center; }
 
     #contact .section-title { font-size: 2rem; }
     .btn-contact-hook { font-size: 1.2rem; padding: 15px 30px; }
