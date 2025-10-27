@@ -140,7 +140,7 @@ header nav {
 
 /* ======== HERO BANNER (ATTRACTIVE BANNER IMAGE) ======== */
 #hero {
-    /* Using a professional digital services image for the background */
+    /* Updated background with a professional digital service image and a dark overlay for text readability */
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1542838132-84090554070a?q=80&w=2070') no-repeat center center/cover;
     min-height: 90vh; 
     display: flex;
@@ -208,7 +208,7 @@ header nav {
 
 .feature-support-item {
     padding: 30px; 
-    /* FIXED: CENTER ALIGN THE TEXT INSIDE THE CARD */
+    /* FIX: CENTER ALIGN THE TEXT INSIDE THE CARD */
     text-align: center; 
     background: #fff;
     border-radius: 12px;
@@ -238,7 +238,7 @@ header nav {
 .trust-badge {
     display: flex;
     align-items: center;
-    /* FIXED: CENTER THE BADGE ITSELF */
+    /* FIX: CENTER THE BADGE ITSELF */
     justify-content: center; 
     max-width: 300px;
     margin: 20px auto 0 auto; 
