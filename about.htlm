@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MeraPopi Digital Seva Center</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">MeraPopi Seva</a>
+            <div class="hamburger-menu"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-page">
+            <div class="container">
+                <h1>About Us</h1>
+                <p>Welcome to MeraPopi Digital Seva Center, your one-stop solution for all government and IT-related services. Our mission is to bridge the digital divide and make essential services accessible to everyone, everywhere.</p>
+                <p>Founded on the principles of reliability, affordability, and speed, we are committed to simplifying the complex processes of government documentation, financial services, and travel bookings. We understand that navigating these systems can be daunting, and our team of trained professionals is here to provide expert guidance and support at every step.</p>
+                
+                <h2>Our Vision</h2>
+                <p>To be the most trusted and accessible digital service provider in the region, empowering citizens by making technology work for them.</p>
+
+                <h2>Our Mission</h2>
+                <ul>
+                    <li>To provide a wide range of digital services under one roof.</li>
+                    <li>To ensure a fast, secure, and hassle-free customer experience.</li>
+                    <li>To stay updated with the latest government schemes and technologies.</li>
+                    <li>To offer expert support and guidance to all our clients.</li>
+                </ul>
+
+                <h2>Meet the Team</h2>
+                <p>Our team is composed of dedicated professionals with years of experience in IT services, government portals, and customer support. We are passionate about what we do and are always ready to help you with your needs.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about"><h4>MeraPopi Seva</h4><p>Your one-stop solution for all government and IT-related services.</p></div>
+            <div class="footer-links"><h4>Company</h4><a href="about.html">About Us</a><a href="index.html#services">Services</a><a href="index.html#contact">Contact</a></div>
+            <div class="footer-links"><h4>Legal & Support</h4><a href="terms.html">Terms & Conditions</a><a href="privacy.html">Privacy Policy</a><a href="refund.html">Refund Policy</a></div>
+        </div>
+        <div class="footer-copyright"><p>&copy; 2025 MeraPopi Digital Seva Center. All Rights Reserved.</p></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
