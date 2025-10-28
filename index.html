@@ -148,9 +148,9 @@
 </section>
 <!-- ======= Book Service / Pay via UPI Section ======= -->
 <section id="payment" class="payment-section" style="padding:60px 0;background:#f9f9f9;">
-  <div class="container" style="max-width:800px;margin:auto;text-align:center;">
+  <div class="container" style="max-width:850px;margin:auto;text-align:center;">
     <h2 style="color:#222;margin-bottom:10px;font-weight:600;">Book Your Service</h2>
-    <p style="color:#555;font-size:16px;margin-bottom:30px;">Pay securely via UPI to confirm your service booking.</p>
+    <p style="color:#555;font-size:16px;margin-bottom:30px;">Select your service and pay securely via UPI to confirm your booking.</p>
 
     <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:40px;">
       
@@ -163,8 +163,24 @@
         >
       </div>
 
-      <!-- UPI Payment Form -->
-      <div style="min-width:250px;">
+      <!-- Payment Form -->
+      <div style="min-width:260px;text-align:center;">
+        
+        <!-- Select Service -->
+        <select id="service" style="padding:10px;width:100%;max-width:260px;border:1px solid #ccc;border-radius:6px;font-size:16px;">
+          <option value="">-- Select a Service --</option>
+          <option value="Aadhar Update">Aadhar Update</option>
+          <option value="Pan Card Application">Pan Card Application</option>
+          <option value="Electricity Bill Payment">Electricity Bill Payment</option>
+          <option value="Passport Application">Passport Application</option>
+          <option value="Bank Account Opening">Bank Account Opening</option>
+          <option value="Mobile Recharge">Mobile Recharge</option>
+          <option value="Other Service">Other Service</option>
+        </select>
+
+        <br><br>
+
+        <!-- Amount -->
         <input 
           id="amount" 
           type="number" 
@@ -173,6 +189,7 @@
         >
         <br><br>
 
+        <!-- Pay Button -->
         <a id="upi-link" target="_blank">
           <button 
             style="background:#007bff;color:white;padding:12px 30px;border:none;border-radius:8px;font-size:16px;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,0.1);transition:0.3s;"
@@ -185,16 +202,25 @@
       </div>
     </div>
 
-    <p style="margin-top:25px;color:#555;font-size:14px;">Scan the QR or click the button to pay via UPI</p>
+    <p style="margin-top:25px;color:#555;font-size:14px;">Select a service, enter amount, and scan the QR or click the button to pay via UPI.</p>
   </div>
 
   <script>
     const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=MeraPopi%20Digital%20Seva&cu=INR";
-    document.getElementById('amount').addEventListener('input', function() {
-      const amount = this.value || '';
-      const link = upiBase + (amount ? `&am=${amount}` : '');
+
+    function updateUPILink() {
+      const amount = document.getElementById('amount').value || '';
+      const service = document.getElementById('service').value || '';
+      let link = upiBase;
+
+      if (amount) link += `&am=${amount}`;
+      if (service) link += `&tn=${encodeURIComponent(service)}`;
+
       document.getElementById('upi-link').href = link;
-    });
+    }
+
+    document.getElementById('amount').addEventListener('input', updateUPILink);
+    document.getElementById('service').addEventListener('change', updateUPILink);
   </script>
 </section>
 <!-- ======= End Payment Section ======= -->
