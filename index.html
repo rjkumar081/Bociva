@@ -146,6 +146,52 @@
     </div>
   </div>
 </section>
+  <!-- ======= Book Service / Pay via UPI Section ======= -->
+<section id="payment" class="payment-section" style="padding:60px 0;text-align:center;background:#f9f9f9;">
+  <div class="container">
+    <h2 style="color:#333;margin-bottom:15px;">Book Your Service</h2>
+    <p style="color:#666;">Pay securely via UPI to confirm your service booking.</p>
+
+    <div style="margin-top:25px;">
+      <input 
+        id="amount" 
+        type="number" 
+        placeholder="Enter Amount (₹)" 
+        style="padding:10px;width:220px;border:1px solid #ccc;border-radius:6px;"
+      >
+      <br><br>
+
+      <a id="upi-link" target="_blank">
+        <button 
+          style="background:#25d366;color:white;padding:12px 30px;border:none;border-radius:8px;font-size:16px;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,0.1);"
+        >
+          Pay via UPI
+        </button>
+      </a>
+
+      <br><br>
+
+      <img 
+        src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=hdfcbox@ybl&pn=MeraPopi%20Digital%20Seva&cu=INR&size=220x220" 
+        alt="Pay via UPI" 
+        style="border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.2);"
+      >
+
+      <p style="margin-top:10px;color:#444;font-size:14px;">Scan the QR or click the button to pay via UPI</p>
+    </div>
+  </div>
+
+  <script>
+    const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=MeraPopi%20Digital%20Seva&cu=INR";
+    document.getElementById('amount').addEventListener('input', function() {
+      const amount = this.value || '';
+      const link = upiBase + (amount ? `&am=${amount}` : '');
+      document.getElementById('upi-link').href = link;
+    });
+  </script>
+</section>
+<!-- ======= End Payment Section ======= -->
+
 
 
   <!-- FOOTER -->
