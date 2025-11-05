@@ -1,188 +1,124 @@
-/* =========================================================
-   MeraPopi | Responsive Design (Same Look Desktop + Mobile)
-   ========================================================= */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MeraPopi Digital Seva Center</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .floating-chat {
+      position: fixed; bottom: 20px; right: 20px;
+      background: #25D366; border-radius: 50%;
+      width: 60px; height: 60px; display: flex;
+      align-items: center; justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 50;
+    }
+    .floating-chat:hover { transform: scale(1.1); background: #20bd5f; transition: all 0.3s; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
 
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <!-- HEADER -->
+  <header class="bg-gradient-to-r from-indigo-600 to-blue-500 text-white py-6 shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl md:text-3xl font-extrabold">MeraPopi <span class="text-yellow-300">Digital Seva Center</span></h1>
+      <nav class="hidden md:flex gap-6">
+        <a href="#services" class="hover:text-yellow-300">Services</a>
+        <a href="#contact" class="hover:text-yellow-300">Contact</a>
+        <a href="tel:+919464642218" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full hover:bg-yellow-300">Call Now</a>
+      </nav>
+    </div>
+  </header>
 
-body {
-  font-family: "Poppins", sans-serif;
-  color: #222;
-  background: #f8f9fa;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+  <!-- HERO -->
+  <section class="bg-gradient-to-br from-indigo-100 via-white to-blue-50 py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-4 text-gray-800">Fast, Trusted & Local Services</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">We simplify Aadhaar, PAN, GST, PF claims, Passport, Travel & more — all at one reliable center.</p>
+      <div class="mt-6 flex justify-center gap-4">
+        <a href="https://wa.me/919464642218" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition">Chat on WhatsApp</a>
+        <a href="#contact" class="border-2 border-indigo-600 text-indigo-700 px-6 py-3 rounded-full font-semibold hover:bg-indigo-50 transition">Enquire Now</a>
+      </div>
+    </div>
+  </section>
 
-/* Header */
-header {
-  background: #222;
-  color: #fff;
-  padding: 15px 0;
-}
+  <!-- SERVICES -->
+  <section id="services" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Our Essential Digital Services</h2>
+      <div id="service-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    </div>
+  </section>
 
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
+  <!-- CONTACT -->
+  <section id="contact" class="bg-gray-50 py-20">
+    <div class="max-w-3xl mx-auto bg-white shadow-2xl p-8 rounded-2xl">
+      <h2 class="text-3xl font-bold text-center mb-6 text-gray-800">Contact Us</h2>
+      <p class="text-center text-gray-600 mb-8">Fill the form below and we’ll get back to you within a few hours.</p>
 
-header h1 {
-  font-size: 1.8rem;
-  margin-left: 10px;
-}
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">
+        <input name="name" required placeholder="Full Name" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
+        <input name="email" type="email" required placeholder="Email Address" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
+        <input name="phone" required placeholder="Phone / WhatsApp" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
+        <select name="service" id="serviceSelect" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+          <option value="">Select a Service</option>
+          <option>PF Withdrawal & Correction</option>
+          <option>IT & GST Services</option>
+          <option>PAN Card Services</option>
+          <option>Aadhaar Update</option>
+          <option>MSME Registration</option>
+          <option>Bank Account Opening</option>
+          <option>Passport Services</option>
+          <option>Travel & Ticket Booking</option>
+          <option>IT Support & Consultancy</option>
+        </select>
+        <textarea name="message" rows="4" placeholder="Your message or requirement..." class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500"></textarea>
+        <button type="submit" class="bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold w-full hover:bg-indigo-700">Submit Request</button>
+      </form>
+    </div>
+  </section>
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin-right: 10px;
-}
+  <footer class="bg-gray-900 text-gray-300 text-center py-6">
+    <p>© 2025 MeraPopi Digital Seva Center — All Rights Reserved</p>
+  </footer>
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
+  <!-- WhatsApp Floating Chat -->
+  <a href="https://wa.me/919464642218" target="_blank" class="floating-chat">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Chat" class="w-8 h-8" />
+  </a>
 
-nav a:hover {
-  color: #ffb703;
-}
+  <script>
+    const services = [
+      {name: "PF Withdrawal & Correction", desc: "EPF withdrawal, name correction, and KYC linking made easy."},
+      {name: "IT & GST Services", desc: "ITR filing, GST registration, and business tax solutions."},
+      {name: "PAN Card Services", desc: "Apply, update or reprint PAN Card quickly."},
+      {name: "Aadhaar Update", desc: "Aadhaar name, address or mobile correction support."},
+      {name: "MSME Registration", desc: "Udyam / MSME registration for new and existing businesses."},
+      {name: "Bank Account Opening", desc: "Open new zero balance or current account."},
+      {name: "Passport Services", desc: "Apply or renew passport with document verification."},
+      {name: "Travel & Ticket Booking", desc: "Book IRCTC train, flight, hotel or visa assistance."},
+      {name: "IT Support & Consultancy", desc: "Website, email setup and digital marketing support."},
+    ];
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.getElementById("service-grid");
+      services.forEach(s => {
+        const card = document.createElement("div");
+        card.className = "border rounded-xl shadow-md p-6 hover:shadow-2xl transition";
+        card.innerHTML = `
+          <h3 class="text-xl font-bold text-indigo-700 mb-2">${s.name}</h3>
+          <p class="text-gray-600 mb-4">${s.desc}</p>
+          <button onclick="selectService('${s.name}')" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">Enquire</button>
+        `;
+        container.appendChild(card);
+      });
+    });
 
-/* Hero Section */
-.hero-section {
-  background: linear-gradient(135deg, #0077b6, #0096c7);
-  color: #fff;
-  padding: 80px 20px;
-  text-align: center;
-}
+    function selectService(service) {
+      document.getElementById("serviceSelect").value = service;
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
 
-.hero-section h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.hero-section p {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
-}
-
-.hero-section button {
-  background: #ffb703;
-  color: #000;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.hero-section button:hover {
-  background: #ffaa00;
-}
-
-/* Services Section */
-.services-section {
-  padding: 60px 20px;
-  background: #fff;
-}
-
-.services-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-.services-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.service-card {
-  background: #f8f9fa;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  padding: 25px 15px;
-  transition: all 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-}
-
-.service-card img {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 10px;
-}
-
-.service-card h3 {
-  font-size: 1.2rem;
-  margin: 10px 0;
-}
-
-.service-card p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* Footer */
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 15px 10px;
-  margin-top: 40px;
-}
-
-/* =========================================================
-   RESPONSIVE FIXES (Same Look, Smart Layout)
-   ========================================================= */
-
-/* Tablets (2 columns) */
-@media (max-width: 1024px) {
-  .services-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Mobiles (2 columns up to 480px) */
-@media (max-width: 768px) {
-  header h1 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  nav ul {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .services-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-
-  .service-card {
-    padding: 20px 10px;
-  }
-}
-
-/* Extra Small Devices (single column) */
-@media (max-width: 480px) {
-  .services-container {
-    grid-template-columns: 1fr;
-  }
-}
+</body>
+</html>
