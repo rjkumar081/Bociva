@@ -1,18 +1,94 @@
-/* --- Mobile Responsive Fixes for MeraPopi.com --- */
+/* =========================================================
+   MeraPopi Responsive Layout Fix
+   ========================================================= */
+
+/* === BASE (already good for desktop) === */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Basic structure */
+header, nav, footer {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Services Section (default desktop layout) --- */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  padding: 25px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.service-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: #222;
+}
+
+.service-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   RESPONSIVE FIXES FOR MOBILE / TABLET
+   ========================================================= */
+
+/* --- Tablets (below 1024px) --- */
+@media (max-width: 1024px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Mobiles (below 768px) --- */
 @media (max-width: 768px) {
+
   body {
     padding: 0 12px;
     overflow-x: hidden;
   }
 
   header, nav, footer {
-    width: 100%;
-    box-sizing: border-box;
     text-align: center;
   }
 
+  /* Navbar adjustments */
   nav ul {
     flex-direction: column;
+    gap: 10px;
     padding: 0;
     margin: 0;
   }
@@ -20,49 +96,42 @@
   nav li {
     display: block;
     width: 100%;
-    margin: 8px 0;
   }
 
-  .hero-section, .banner {
-    padding: 40px 10px;
+  /* Hero section */
+  .hero-section {
     text-align: center;
+    padding: 40px 10px;
   }
 
-  .container, .section, .content {
-    width: 100%;
-    margin: 0 auto 20px auto;
-    box-sizing: border-box;
+  /* Two-column layout for services */
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 10px;
   }
 
-  img, .responsive-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+  .service-card {
+    padding: 20px 10px;
   }
 
+  /* Buttons */
   button, .btn, input[type=submit] {
     font-size: 16px;
     padding: 12px 20px;
     width: 100%;
     max-width: 300px;
-    margin: 15px auto;
+    margin: 10px auto;
     display: block;
   }
 
-  h1 {
-    font-size: 1.8rem;
-    margin: 0.5em 0;
-  }
-  h2 {
-    font-size: 1.4rem;
-    margin: 0.4em 0;
-  }
-  p, li {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
+  /* Text sizes */
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+  p, li { font-size: 1rem; line-height: 1.5; }
 
+  /* Form elements */
   form input, form select, form textarea {
     width: 100%;
     padding: 10px;
@@ -73,5 +142,12 @@
   footer {
     padding: 20px 10px;
     font-size: 0.9rem;
+  }
+}
+
+/* --- Extra small devices (below 480px) --- */
+@media (max-width: 480px) {
+  .services-container {
+    grid-template-columns: 1fr;
   }
 }
