@@ -20,23 +20,12 @@
       justify-content: center;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
       z-index: 50;
+      transition: all 0.3s ease;
     }
     .floating-chat:hover {
       transform: scale(1.1);
       background: #20bd5f;
-      transition: all 0.3s;
     }
-  
-  /* Add spacing between WhatsApp and Secure Badge */
-  #whatsapp-button {
-    bottom: 80px; /* lift WhatsApp icon up a bit */
-    right: 20px;
-  }
-
-  #secure-badge {
-    bottom: 15px; /* stays at the very bottom */
-    right: 20px;
-  }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -51,431 +40,171 @@
         <a href="#services" class="hover:text-yellow-300">Our Services</a>
         <a href="#contact" class="hover:text-yellow-300">Contact Us</a>
         <a href="#payment" class="hover:text-yellow-300">Fast Payment</a>
-
         <a href="tel:+919464642218" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full hover:bg-yellow-300">Call Now</a>
       </nav>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="bg-gradient-to-br from-indigo-100 via-white to-blue-50 py-16">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-4xl font-bold mb-4 text-gray-800">Fast, Trusted & Digital Services</h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        We simplify Aadhaar, PAN, GST, PF claims, Passport, Travel & more — all at one reliable Platform.
-      </p>
-      <div class="mt-6 flex justify-center gap-4">
-        <a href="https://wa.me/919464642218" target="_blank"
-           class="bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition">
-           Chat on WhatsApp
-        </a>
-        <a href="#contact"
-           class="border-2 border-indigo-600 text-indigo-700 px-6 py-3 rounded-full font-semibold hover:bg-indigo-50 transition">
-           Enquire Now
-        </a>
-      </div>
+  <section class="bg-gradient-to-br from-indigo-100 via-white to-blue-50 py-16 text-center">
+    <h2 class="text-4xl font-bold mb-4 text-gray-800">Fast, Trusted & Digital Services</h2>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">We simplify Aadhaar, PAN, GST, Passport, Travel & more — now including Website, App & Marketing services too!</p>
+    <div class="mt-6 flex justify-center gap-4">
+      <a href="https://wa.me/919464642218" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition">Chat on WhatsApp</a>
+      <a href="#contact" class="border-2 border-indigo-600 text-indigo-700 px-6 py-3 rounded-full font-semibold hover:bg-indigo-50 transition">Enquire Now</a>
     </div>
   </section>
 
   <!-- SERVICES -->
   <section id="services" class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">
-        Our Essential Digital Services
-      </h2>
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Our Essential Digital Services</h2>
       <div id="service-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
     </div>
+  </section>
+
+  <!-- PAYMENT SECTION -->
+  <section id="payment" class="py-20 bg-gradient-to-br from-indigo-50 via-white to-green-50">
+    <div class="max-w-5xl mx-auto text-center px-4">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">💳 Book Your Service & Fast Payment</h2>
+      <p class="text-gray-600 mb-10 max-w-2xl mx-auto">Select your service, enter the amount, and pay securely using UPI. Once payment is done, please share the screenshot on WhatsApp for quick confirmation.</p>
+
+      <div class="bg-white rounded-2xl shadow-xl p-8 md:flex items-center justify-between gap-8">
+        <div class="flex-1 mb-6 md:mb-0">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=hdfcbox@ybl&pn=MeraPopi%20Digital%20Seva&cu=INR&size=220x220" alt="UPI QR" class="mx-auto rounded-xl shadow-lg" />
+          <p class="text-gray-700 text-sm mt-3">Scan to pay via any UPI app (GPay / PhonePe / Paytm)</p>
+        </div>
+
+        <div class="flex-1 text-left">
+          <label class="block text-gray-700 font-semibold mb-2">Select Service</label>
+          <select id="service" class="border border-gray-300 rounded-lg w-full p-3 mb-4 focus:ring-2 focus:ring-indigo-500">
+            <option value="">-- Choose a Service --</option>
+            <option>Website Development</option>
+            <option>App Development</option>
+            <option>Digital Marketing</option>
+            <option>Graphic & Logo Design</option>
+            <option>Business & IT Consultancy</option>
+            <option>SEO & Google Ads Setup</option>
+            <option>Email & WhatsApp Marketing</option>
+            <option>Video Editing & Reels Creation</option>
+            <option>PF Withdrawal & Correction</option>
+            <option>IT & GST Services</option>
+            <option>PAN Card Services</option>
+            <option>Aadhaar Update</option>
+            <option>MSME Registration</option>
+            <option>Passport Services</option>
+          </select>
+
+          <label class="block text-gray-700 font-semibold mb-2">Enter Amount (₹)</label>
+          <input id="amount" type="number" placeholder="Enter Amount" class="border border-gray-300 rounded-lg w-full p-3 mb-6 focus:ring-2 focus:ring-indigo-500" />
+
+          <a id="upi-link" target="_blank">
+            <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition">Pay via UPI</button>
+          </a>
+
+          <p class="text-xs text-gray-500 mt-3">Your payment is 100% secure and directly processed via UPI.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=MeraPopi%20Digital%20Seva&cu=INR";
+      const upiLink = document.getElementById('upi-link');
+      function updateUPILink() {
+        const amount = document.getElementById('amount').value || '';
+        const service = document.getElementById('service').value || '';
+        let link = upiBase;
+        if (amount) link += `&am=${amount}`;
+        if (service) link += `&tn=${encodeURIComponent(service)}`;
+        upiLink.href = link;
+      }
+      document.getElementById('amount').addEventListener('input', updateUPILink);
+      document.getElementById('service').addEventListener('change', updateUPILink);
+    </script>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="bg-gray-50 py-20">
     <div class="max-w-3xl mx-auto bg-white shadow-2xl p-8 rounded-2xl">
       <h2 class="text-3xl font-bold text-center mb-6 text-gray-800">Contact Us</h2>
-      <p class="text-center text-gray-600 mb-8">
-        Fill the form below and we’ll get back to you within a few hours.
-      </p>
-
-      <!-- Formspree Form -->
+      <p class="text-center text-gray-600 mb-8">Fill the form below and we’ll get back to you within a few hours.</p>
       <form action="https://formspree.io/f/xnnojdpr" method="POST" class="space-y-5">
-        <input name="name" required placeholder="Full Name"
-               class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
-        <input name="email" type="email" required placeholder="Email Address"
-               class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
-        <input name="phone" required placeholder="Phone / WhatsApp"
-               class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
-        <select name="service" id="serviceSelect"
-                class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+        <input name="name" required placeholder="Full Name" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
+        <input name="email" type="email" required placeholder="Email Address" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
+        <input name="phone" required placeholder="Phone / WhatsApp" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
+        <select name="service" id="serviceSelect" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
           <option value="">Select a Service</option>
+          <option>Website Development</option>
+          <option>App Development</option>
+          <option>Digital Marketing</option>
+          <option>Graphic & Logo Design</option>
+          <option>Business & IT Consultancy</option>
+          <option>SEO & Google Ads Setup</option>
+          <option>Email & WhatsApp Marketing</option>
+          <option>Video Editing & Reels Creation</option>
           <option>PF Withdrawal & Correction</option>
           <option>IT & GST Services</option>
           <option>PAN Card Services</option>
           <option>Aadhaar Update</option>
           <option>MSME Registration</option>
-          <option>Bank Account Opening</option>
           <option>Passport Services</option>
-          <option>Travel & Ticket Booking</option>
-          <option>IT Support & Consultancy</option>
-         <option>Any Other Requirment</option>
         </select>
-        <textarea name="message" rows="4" placeholder="Your message or requirement..."
-                  class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500"></textarea>
-        <button type="submit"
-                class="bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold w-full hover:bg-indigo-700">
-          Submit Request
-        </button>
+        <textarea name="message" rows="4" placeholder="Your message or requirement..." class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500"></textarea>
+        <button type="submit" class="bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold w-full hover:bg-indigo-700">Submit Request</button>
       </form>
     </div>
   </section>
-  <!-- Data Safety Section -->
-<section id="data-safety" class="bg-gray-100 py-16">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold text-indigo-700 mb-6">🔒 Your Data Safety is Our Priority</h2>
-    <p class="text-gray-700 text-lg mb-6">
-      At <strong>MeraPopi Digital Seva Center</strong>, we take your privacy and data security seriously.
-      All the personal information you share with us — such as PAN, Aadhaar, or bank details — is encrypted and
-      handled securely. We never share your data with third parties without your consent.
-    </p>
-    <p class="text-gray-700 text-lg mb-6">
-      Our systems use secure HTTPS connections, regular monitoring, and limited access to ensure complete protection.
-      Every process follows government guidelines and digital service compliance standards.
-    </p>
-    <div class="mt-6">
-      <a href="privacy.html" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">
-        Read Full Privacy Policy
-      </a>
-    </div>
-  </div>
-</section>
-<!-- ======= Book Service / Pay via UPI Section ======= -->
-<section id="payment" class="payment-section" style="padding:60px 0;background:#f9f9f9;">
-  <div class="container" style="max-width:850px;margin:auto;text-align:center;">
-    <h2 style="color:#222;margin-bottom:10px;font-weight:600;">Book Your Service</h2>
-    <p style="color:#555;font-size:16px;margin-bottom:30px;">Select your service and pay securely via UPI to confirm your booking.</p>
-
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:40px;">
-      
-      <!-- QR Code -->
-      <div>
-        <img 
-          src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=hdfcbox@ybl&pn=MeraPopi%20Digital%20Seva&cu=INR&size=220x220" 
-          alt="UPI QR" 
-          style="border-radius:12px;box-shadow:0 0 12px rgba(0,0,0,0.2);"
-        >
-      </div>
-
-      <!-- Payment Form -->
-      <div style="min-width:260px;text-align:center;">
-        
-        <!-- Select Service -->
-        <select id="service" style="padding:10px;width:100%;max-width:260px;border:1px solid #ccc;border-radius:6px;font-size:16px;">
-          <option value="">-- Select a Service --</option>
-          <option value="Aadhar Update">Aadhar Update</option>
-          <option value="Pan Card Application">Pan Card Application</option>
-          <option value="Electricity Bill Payment">Electricity Bill Payment</option>
-          <option value="Passport Application">Passport Application</option>
-          <option value="Bank Account Opening">Bank Account Opening</option>
-          <option value="Mobile Recharge">Mobile Recharge</option>
-          <option value="Other Service">Other Service</option>
-        </select>
-
-        <br><br>
-
-        <!-- Amount -->
-        <input 
-          id="amount" 
-          type="number" 
-          placeholder="Enter Amount (₹)" 
-          style="padding:10px;width:100%;max-width:240px;border:1px solid #ccc;border-radius:6px;font-size:16px;"
-        >
-        <br><br>
-
-        <!-- Pay Button -->
-        <a id="upi-link" target="_blank">
-          <button 
-            style="background:#007bff;color:white;padding:12px 30px;border:none;border-radius:8px;font-size:16px;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,0.1);transition:0.3s;"
-            onmouseover="this.style.background='#0056b3'" 
-            onmouseout="this.style.background='#007bff'"
-          >
-            Pay via UPI
-          </button>
-        </a>
-      </div>
-    </div>
-
-    <p style="margin-top:25px;color:#555;font-size:14px;">Select a service, enter amount, and scan the QR or click the button to pay via UPI.</p>
-  </div>
-
-  <script>
-    const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=MeraPopi%20Digital%20Seva&cu=INR";
-
-    function updateUPILink() {
-      const amount = document.getElementById('amount').value || '';
-      const service = document.getElementById('service').value || '';
-      let link = upiBase;
-
-      if (amount) link += `&am=${amount}`;
-      if (service) link += `&tn=${encodeURIComponent(service)}`;
-
-      document.getElementById('upi-link').href = link;
-    }
-
-    document.getElementById('amount').addEventListener('input', updateUPILink);
-    document.getElementById('service').addEventListener('change', updateUPILink);
-  </script>
-</section>
-<!-- ======= End Payment Section ======= -->
-
-
 
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-gray-300 text-center py-8">
-  <div class="flex flex-wrap justify-center gap-6 mb-4 text-sm">
-    <a href="privacy.html" class="hover:text-white">Privacy Policy</a>
-    <a href="terms.html" class="hover:text-white">Terms & Conditions</a>
-    <a href="refund.html" class="hover:text-white">Refund & Cancellation Policy</a>
-  </div>
-  <p>© 2025 MeraPopi Digital Seva Center — All Rights Reserved</p>
-</footer>
+    <p>© 2025 MeraPopi Digital Seva Center — All Rights Reserved</p>
+  </footer>
 
   <!-- WhatsApp Floating Chat -->
   <a href="https://wa.me/919464642218" target="_blank" class="floating-chat">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Chat" class="w-8 h-8" />
   </a>
 
-  <!-- JS -->
+  <!-- JS for Services -->
   <script>
-    const whatsappNumber = "919464642218"; // Your WhatsApp number
-
+    const whatsappNumber = "919464642218";
     const services = [
-      {name: "PF Withdrawal & Correction", desc: "EPF withdrawal, name correction, and KYC linking made easy."},
-      {name: "IT & GST Services", desc: "ITR filing, GST registration, and business tax solutions."},
-      {name: "PAN Card Services", desc: "Apply, update or reprint PAN Card quickly."},
-      {name: "Aadhaar Update", desc: "Aadhaar name, address or mobile correction support."},
-      {name: "MSME Registration", desc: "Udyam / MSME registration for new and existing businesses."},
-      {name: "Bank Account Opening", desc: "Open new zero balance or current account."},
-      {name: "Passport Services", desc: "Apply or renew passport with document verification."},
-      {name: "Travel & Ticket Booking", desc: "Book IRCTC train, flight, hotel or visa assistance."},
-      {name: "IT Support & Consultancy", desc: "Website, email setup and digital marketing support."}
+      { icon: "💼", name: "PF Withdrawal & Correction", desc: "EPF withdrawal, name correction, and KYC linking made easy." },
+      { icon: "💰", name: "IT & GST Services", desc: "ITR filing, GST registration, and business tax solutions." },
+      { icon: "🪪", name: "PAN Card Services", desc: "Apply, update or reprint PAN Card quickly." },
+      { icon: "🆔", name: "Aadhaar Update", desc: "Aadhaar name, address or mobile correction support." },
+      { icon: "🏢", name: "MSME Registration", desc: "Udyam / MSME registration for new and existing businesses." },
+      { icon: "🏦", name: "Bank Account Opening", desc: "Open new zero balance or current account." },
+      { icon: "🛂", name: "Passport Services", desc: "Apply or renew passport with document verification." },
+      { icon: "✈️", name: "Travel & Ticket Booking", desc: "Book IRCTC train, flight, hotel or visa assistance." },
+      { icon: "🌐", name: "Website Development", desc: "Create professional, responsive business or e-commerce websites." },
+      { icon: "📱", name: "App Development", desc: "Build Android & iOS apps tailored to your business needs." },
+      { icon: "📈", name: "Digital Marketing", desc: "Promote your brand through SEO, ads, and social media growth." },
+      { icon: "🎨", name: "Graphic & Logo Design", desc: "Custom logos, posters & creatives that make your brand shine." },
+      { icon: "🧠", name: "Business & IT Consultancy", desc: "Expert consultancy for business setup & tech growth." },
+      { icon: "⚙️", name: "Website Maintenance & Support", desc: "Ongoing updates, bug fixes & uptime monitoring." },
+      { icon: "🧩", name: "Social Media Management", desc: "Plan, post & manage social content for consistent growth." },
+      { icon: "💡", name: "SEO & Google Ads Setup", desc: "Boost visibility with SEO optimization & ad campaigns." },
+      { icon: "✉️", name: "Email & WhatsApp Marketing", desc: "Send personalized campaigns that convert leads into clients." },
+      { icon: "🎥", name: "Video Editing & Reels Creation", desc: "Create short videos & reels for social media engagement." }
     ];
 
     document.addEventListener("DOMContentLoaded", () => {
       const container = document.getElementById("service-grid");
       services.forEach(s => {
         const card = document.createElement("div");
-        card.className = "border rounded-xl shadow-md p-6 hover:shadow-2xl transition";
+        card.className = "border rounded-xl shadow-md p-6 hover:shadow-2xl transform hover:-translate-y-1 bg-white hover:bg-gradient-to-r hover:from-indigo-50 hover:to-green-50 transition";
         const msg = encodeURIComponent(`Hello! I want to enquire about ${s.name} service from MeraPopi Digital Seva Center.`);
         const whatsappLink = `https://wa.me/${whatsappNumber}?text=${msg}`;
         card.innerHTML = `
-          <h3 class="text-xl font-bold text-indigo-700 mb-2">${s.name}</h3>
-          <p class="text-gray-600 mb-4">${s.desc}</p>
-          <a href="${whatsappLink}" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">
-            Enquire on WhatsApp
-          </a>
+          <div class='text-4xl mb-3'>${s.icon}</div>
+          <h3 class='text-xl font-bold text-indigo-700 mb-2'>${s.name}</h3>
+          <p class='text-gray-600 mb-4 text-sm leading-relaxed'>${s.desc}</p>
+          <a href='${whatsappLink}' target='_blank' class='bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700'>Enquire on WhatsApp</a>
         `;
         container.appendChild(card);
       });
     });
   </script>
-<!-- Floating Verified & Secure Badge (Transparent Background, Bottom-Left) -->
-<div id="secure-badge"
-     onclick="document.getElementById('data-safety').scrollIntoView({ behavior: 'smooth' });"
-     style="
-       position: fixed;
-       bottom: 20px;
-       left: 20px;
-       display: inline-flex;
-       align-items: center;
-       gap: 8px;
-       background: rgba(255, 255, 255, 0.15); /* transparent background */
-       backdrop-filter: blur(6px); /* frosted effect */
-       border: 1px solid rgba(16, 185, 129, 0.4);
-       border-radius: 9999px;
-       padding: 8px 14px;
-       box-shadow: 0 0 10px rgba(16, 185, 129, 0.4),
-                   0 0 20px rgba(16, 185, 129, 0.3),
-                   0 0 30px rgba(16, 185, 129, 0.2);
-       cursor: pointer;
-       z-index: 9999;
-       transition: all 0.3s ease;
-       animation: glowPulse 3s infinite ease-in-out;
-       width: auto;
-       max-width: max-content;
-     ">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-       stroke-width="1.5" stroke="#10B981"
-       style="width: 24px; height: 24px; animation: pulse 2s infinite;">
-    <path stroke-linecap="round" stroke-linejoin="round"
-          d="M12 6v6m0 0l3 3m-3-3l-3 3m9 6a9 9 0 11-18 0 9 9 0 0118 0z"/>
-  </svg>
-  <span style="color: #047857; font-weight: 600; font-size: 14px; white-space: nowrap;">
-    Verified & Secure
-  </span>
-</div>
-
-<!-- Tooltip + Glow Styling -->
-<style>
-  #secure-badge::after {
-    content: "SSL Secured | Data Protected by MeraPopi";
-    position: absolute;
-    bottom: 120%;
-    left: 0;
-    background: #10B981;
-    color: white;
-    padding: 6px 10px;
-    border-radius: 8px;
-    white-space: nowrap;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    pointer-events: none;
-    font-size: 13px;
-  }
-
-  #secure-badge:hover::after {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  @keyframes glowPulse {
-    0% { box-shadow: 0 0 5px rgba(16, 185, 129, 0.4), 0 0 10px rgba(16, 185, 129, 0.2); }
-    50% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.6), 0 0 40px rgba(16, 185, 129, 0.4); }
-    100% { box-shadow: 0 0 5px rgba(16, 185, 129, 0.4), 0 0 10px rgba(16, 185, 129, 0.2); }
-  }
-
-  @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.15); opacity: 0.8; }
-  }
-</style>
-  <style>
-  /* 🧭 Universal Reset */
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-  }
-
-  /* 🖼️ Banner Image Responsive */
-  header img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    max-height: 420px;
-  }
-
-  /* 🧩 Services Section */
-  #services {
-    padding: 3rem 1rem;
-    text-align: center;
-  }
-
-  #services h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  .service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    justify-items: center;
-  }
-
-  .service-card {
-    background: #fff;
-    border-radius: 1rem;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .service-card:hover {
-    transform: translateY(-5px);
-  }
-
-  .service-card button {
-    background-color: #25D366;
-    color: white;
-    padding: 0.6rem 1rem;
-    border: none;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-
-  .service-card button:hover {
-    background-color: #22bb5f;
-  }
-
-  /* 🧠 Responsive Footer + Badge Fix */
-  #whatsapp-btn {
-    bottom: 90px !important;
-    right: 20px !important;
-  }
-
-  #secure-badge {
-    bottom: 20px !important;
-    left: 20px !important;
-  }
-
-  @media (max-width: 768px) {
-    header img {
-      max-height: 280px;
-    }
-
-    #services h2 {
-      font-size: 1.6rem;
-    }
-
-    .service-card {
-      padding: 1rem;
-      max-width: 90%;
-    }
-
-    #whatsapp-btn {
-      bottom: 80px;
-      right: 15px;
-      width: 55px;
-      height: 55px;
-    }
-
-    #secure-badge {
-      bottom: 15px;
-      left: 10px;
-      padding: 6px 10px;
-      font-size: 12px;
-      gap: 5px;
-    }
-
-    #secure-badge svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    #secure-badge span {
-      font-size: 12px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .service-card button {
-      font-size: 0.9rem;
-      padding: 0.5rem 0.9rem;
-    }
-  }
 </body>
 </html>
