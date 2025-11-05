@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NexAI Tech & Digital Solutions</title>
+  <title>NexAI Tech & Digital Solutions — Powered by MeraPopi</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
     html { scroll-behavior: smooth; }
@@ -22,10 +22,8 @@
       z-index: 50;
       transition: all 0.3s ease;
     }
-    .floating-chat:hover {
-      transform: scale(1.1);
-      background: #20bd5f;
-    }
+    .floating-chat:hover { transform: scale(1.1); background: #20bd5f; }
+    .brand-small { display: block; font-size: 13px; color: #fde68a; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -33,9 +31,13 @@
   <!-- HEADER -->
   <header class="bg-gradient-to-r from-indigo-600 to-blue-500 text-white py-6 shadow-lg">
     <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-      <h1 class="text-2xl md:text-3xl font-extrabold">
-        NexAI <span class="text-yellow-300">Tech & Digital Solutions</span>
-      </h1>
+      <div>
+        <h1 class="text-2xl md:text-3xl font-extrabold">
+          NexAI <span class="text-yellow-300">Tech & Digital Solutions</span>
+        </h1>
+        <span class="brand-small">Powered by MeraPopi</span>
+      </div>
+
       <nav class="hidden md:flex gap-6">
         <a href="#services" class="hover:text-yellow-300">Our Services</a>
         <a href="#contact" class="hover:text-yellow-300">Contact Us</a>
@@ -71,7 +73,7 @@
 
       <div class="bg-white rounded-2xl shadow-xl p-8 md:flex items-center justify-between gap-8">
         <div class="flex-1 mb-6 md:mb-0">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions&cu=INR&size=220x220" alt="UPI QR" class="mx-auto rounded-xl shadow-lg" />
+          <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR&size=220x220" alt="UPI QR" class="mx-auto rounded-xl shadow-lg" />
           <p class="text-gray-700 text-sm mt-3">Scan to pay via any UPI app (GPay / PhonePe / Paytm)</p>
         </div>
 
@@ -110,7 +112,7 @@
     </div>
 
     <script>
-      const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions&cu=INR";
+      const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR";
       const upiLink = document.getElementById('upi-link');
       function updateUPILink() {
         const amount = document.getElementById('amount').value || '';
@@ -161,7 +163,7 @@
 
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-gray-300 text-center py-8">
-    <p>© 2025 NexAI Tech & Digital Solutions — All Rights Reserved</p>
+    <p>© 2025 NexAI Tech & Digital Solutions — Powered by MeraPopi</p>
   </footer>
 
   <!-- WhatsApp Floating Chat -->
