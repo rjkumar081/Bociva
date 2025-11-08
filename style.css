@@ -151,44 +151,23 @@ header, nav, footer {
     grid-template-columns: 1fr;
   }
 }
-/* Styling for Secure Payment Badges in Footer */
-.payment-badges-container {
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
-    border-top: 1px solid #e0e0e0; /* ऊपर एक पतली लाइन (separator) */
-    background-color: #f9f9f9; /* हल्का बैकग्राउंड (optional) */
+footer img {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-height: 40px;
+  width: auto;
+  background: white;
+  border-radius: 6px;
+  padding: 4px;
+  object-fit: contain;
 }
 
-.payment-badges-container h4 {
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 15px;
+footer img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
 }
 
-.payment-badges-container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* आइकनों को एक लाइन में दिखाने के लिए */
-    justify-content: center; /* आइकनों को केंद्र (center) में रखें */
-    gap: 12px; /* आइकनों के बीच की दूरी */
-}
-
-.payment-badges-container li {
-    display: inline-block;
-}
-
-.payment-badges-container img {
-    height: 28px; /* आइकॉन की ऊंचाई */
-    width: auto;
-    max-width: 100%;
-    /* विज़ुअल इफ़ेक्ट */
-    opacity: 0.7;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.payment-badges-container img:hover {
-    opacity: 1; /* माउस ऊपर आने पर पूरी तरह से स्पष्ट करें */
+footer p {
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
 }
