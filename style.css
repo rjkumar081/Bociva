@@ -152,9 +152,9 @@ header, nav, footer {
   }
 }
 footer img {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.2s ease;
 }
 footer img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(255,255,255,0.25);
 }
