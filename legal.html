@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pricing & Legal Disclaimer | NexAI Tech & Digital Solutions</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    .floating-chat {
+      position: fixed; bottom: 20px; right: 20px;
+      background: #25D366; border-radius: 50%;
+      width: 60px; height: 60px; display: flex;
+      align-items: center; justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      z-index: 50; transition: all 0.3s ease;
+    }
+    .floating-chat:hover { transform: scale(1.1); background: #20bd5f; }
+    table td, table th { border-bottom: 1px solid rgba(0,0,0,0.05); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<!-- HEADER -->
+<header class="bg-gradient-to-r from-indigo-600 to-blue-500 text-white py-4 shadow-md fixed w-full z-50">
+  <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold md:text-2xl">NexAI <span class="text-yellow-300">Tech & Digital</span></h1>
+    <nav class="hidden md:flex gap-6">
+      <a href="index.html" class="hover:text-yellow-300 font-semibold">🏠 Home</a>
+      <a href="services.html" class="hover:text-yellow-300 font-semibold">💼 Services</a>
+      <a href="#legal" class="hover:text-yellow-300 font-semibold">⚖️ Legal Info</a>
+      <a href="tel:+919464642218" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full hover:bg-yellow-300 font-semibold">Call Now</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE TITLE -->
+<section class="pt-28 pb-8 text-center bg-gradient-to-br from-indigo-100 via-white to-blue-50">
+  <h2 class="text-3xl sm:text-4xl font-bold mb-3 text-gray-800">Pricing & Legal Disclaimer</h2>
+  <p class="text-gray-600 max-w-2xl mx-auto">Transparent starting prices and clear remarks so you always know what you’re paying for.</p>
+</section>
+
+<!-- SERVICES TABLE -->
+<section class="py-8">
+  <div class="max-w-6xl mx-auto px-4">
+    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">💼 Complete Service List — Starting Prices</h3>
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white rounded-lg shadow-md">
+        <thead class="bg-indigo-600 text-white">
+          <tr>
+            <th class="py-3 px-4 text-left">Service</th>
+            <th class="py-3 px-4 text-center">Starting Price (₹)</th>
+            <th class="py-3 px-4 text-left">Remarks (what the price covers / extra)</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr>
+            <td class="py-3 px-4">🤖 AI Automation Setup</td>
+            <td class="py-3 px-4 text-center">4,999</td>
+            <td class="py-3 px-4">Starting fee for basic bot/workflow setup. Integrations, custom models or ongoing automation retainers are quoted separately.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">🌐 Website Development</td>
+            <td class="py-3 px-4 text-center">2,999</td>
+            <td class="py-3 px-4">Starting for a simple business site. E-commerce, custom integrations, premium plugins, hosting & domain are charged extra and quoted after scope review.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">📱 App Development</td>
+            <td class="py-3 px-4 text-center">15,000</td>
+            <td class="py-3 px-4">Starting for a basic Android app. iOS/complex features, backend APIs, and maintenance are quoted separately.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">📈 Digital Marketing</td>
+            <td class="py-3 px-4 text-center">2,999</td>
+            <td class="py-3 px-4">Starting campaign/setup fee. Ad spend, platform fees, and monthly retainers vary by goals — quoted separately.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">🎨 Graphic & Logo Design</td>
+            <td class="py-3 px-4 text-center">499</td>
+            <td class="py-3 px-4">Starting price for a simple logo or social creative. Detailed branding packages or rush work cost extra.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">🧠 Business & IT Consultancy</td>
+            <td class="py-3 px-4 text-center">999</td>
+            <td class="py-3 px-4">Consultation session starting fee. Full projects, audits or implementation support are quoted after assessment.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">⚙️ Website Maintenance & Support</td>
+            <td class="py-3 px-4 text-center">999 / month</td>
+            <td class="py-3 px-4">Basic maintenance starter plan. Incident response, feature work or large updates billed separately.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">🧩 Social Media Management</td>
+            <td class="py-3 px-4 text-center">2,499 / month</td>
+            <td class="py-3 px-4">Starter plan includes limited posts. Content creation, paid ads & community management cost more based on package.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">💡 SEO & Google Ads Setup</td>
+            <td class="py-3 px-4 text-center">2,999</td>
+            <td class="py-3 px-4">One-time setup. Ongoing SEO/ads management and ad spend are separate and quoted per campaign.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">✉️ Email & WhatsApp Marketing</td>
+            <td class="py-3 px-4 text-center">1,499</td>
+            <td class="py-3 px-4">Setup fee for templates & automation. Platform costs (SMS/WhatsApp sender), list purchase and recurring campaigns charged separately.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">🎥 Video Editing & Reels Creation</td>
+            <td class="py-3 px-4 text-center">499</td>
+            <td class="py-3 px-4">Per short video starting price. Complex edits, long videos, voiceover or stock footage licensing cost extra.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">💼 PF Withdrawal & Correction</td>
+            <td class="py-3 px-4 text-center">299</td>
+            <td class="py-3 px-4">Service fee only. Any government portal delays or additional verification requests may require extra time/fees.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">💰 IT & GST Services</td>
+            <td class="py-3 px-4 text-center">499</td>
+            <td class="py-3 px-4">Starting price for basic filings/registration assistance. Govt fees, late penalties and monthly compliances billed separately.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">🪪 PAN Card Services</td>
+            <td class="py-3 px-4 text-center">150</td>
+            <td class="py-3 px-4">Service fee only — government application fee (if any) is extra.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">🆔 Aadhaar Update</td>
+            <td class="py-3 px-4 text-center">199</td>
+            <td class="py-3 px-4">Assistance fee only. Any regional/nodal charges or document re-issuance fees are extra.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">🏢 MSME Registration (Udyam)</td>
+            <td class="py-3 px-4 text-center">299</td>
+            <td class="py-3 px-4">Registration assistance fee. Govt charges (if applicable) and advisory services quoted separately.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">🛂 Passport Services</td>
+            <td class="py-3 px-4 text-center">999</td>
+            <td class="py-3 px-4">Service & document assistance fee. Govt passport fee (application/slot charges) is not included.</td>
+          </tr>
+
+          <tr>
+            <td class="py-3 px-4">✈️ Travel & Ticket Booking</td>
+            <td class="py-3 px-4 text-center">99</td>
+            <td class="py-3 px-4">Processing/service charge only. Actual ticket fare, taxes & third-party booking fees are additional.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-xs text-gray-500 mt-3">Note: "Starting" prices are indicative. Final quote provided after scope & requirements are discussed.</p>
+  </div>
+</section>
+
+<!-- LEGAL DISCLAIMER -->
+<section id="legal" class="py-12 bg-indigo-50 text-center">
+  <div class="max-w-4xl mx-auto px-4">
+    <h3 class="text-2xl font-bold mb-4 text-gray-800">⚖️ Pricing & Legal Disclaimer</h3>
+
+    <p class="text-gray-700 text-sm mb-3">
+      All prices on this page are <strong>starting / indicative prices</strong> intended to give a general idea. Final prices depend on project complexity, integrations, timelines and additional third-party costs.
+    </p>
+
+    <p class="text-gray-700 text-sm mb-3">
+      Every payment is securely processed via verified UPI (<strong>hdfcbox@ybl</strong>). Invoices are available on request. Platform, government, or third-party charges (if any) are always charged extra and clearly communicated before payment.
+    </p>
+
+    <p class="text-gray-700 text-sm mb-3">
+      Client data is handled confidentially and only used to deliver services. We follow standard industry practices for data protection; please refer to our Privacy Policy for details.
+    </p>
+
+    <p class="text-gray-700 text-sm">
+      Refunds are considered only for uninitiated projects and are governed by our refund policy. For custom projects, a detailed scope & contract will be shared prior to payment — please review terms carefully.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER (original style with icons) -->
+<footer class="bg-gray-900 text-gray-300 text-center py-10 mt-10">
+  <div class="mb-6 flex flex-wrap justify-center items-center gap-4">
+    <a href="about.html" class="hover:text-white transition mx-3">About Us</a>
+    <a href="refund.html" class="hover:text-white transition mx-3">Refund Policy</a>
+    <a href="terms.html" class="hover:text-white transition mx-3">Terms & Conditions</a>
+    <a href="privacy.html" class="hover:text-white transition mx-3">Privacy Policy</a>
+  </div>
+
+  <p class="text-sm text-yellow-300 font-semibold mb-4">
+    🔒 Secure Payment — All Major UPI, Cards, Wallets & CRED Supported
+  </p>
+
+  <div class="flex flex-wrap justify-center items-center gap-4 mb-6">
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/Visa.png" alt="Visa" class="h-10 bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/mastercard.png" alt="MasterCard" class="h-10 bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/upi.png" alt="UPI" class="h-10 bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/paytm.png" alt="Paytm" class="h-10 bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/PhonePe.png" alt="PhonePe" class="h-10 bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/gpay.png" alt="Google Pay" class="h-10 bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/cred.png" alt="CRED" class="h-10 bg-white rounded-md p-1 shadow-sm object-contain" />
+  </div>
+
+  <p>© 2025 NexAI Tech & Digital Solutions — Powered by MeraPopi</p>
+</footer>
+
+<a href="https://wa.me/919464642218" target="_blank" class="floating-chat" aria-label="Chat on WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Chat" class="w-8 h-8"/>
+</a>
+
+</body>
+</html>
