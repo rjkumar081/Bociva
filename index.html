@@ -64,7 +64,7 @@
   </script>
 </header>
 
-<section class="bg-gradient-to-br from-indigo-100 via-white to-blue-50 pt-28 pb-16 text-center">
+<section class="bg-gradient-to-br from-indigo-100 via-white to-blue-50 pt-20 pb-12 text-center">
   <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-800 animate-bounce">AI-Powered, Trusted & Digital Tech Solutions</h2>
   <p class="text-gray-600 max-w-2xl mx-auto mb-6">We empower your business with next-gen AI, Digital Marketing, App & Web Solutions — all under one roof.</p>
   
@@ -163,9 +163,9 @@ document.addEventListener("DOMContentLoaded", renderServices);
 
 
 
-<section id="services" class="py-16 bg-white">
+<section id="services" class="py-4 bg-white">
   <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Our Core AI, Tech & Digital Services</h2>
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Our Core AI, Tech & Digital Services</h2>
     <div id="service-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
   </div>
 </section>
@@ -287,6 +287,86 @@ document.addEventListener("DOMContentLoaded", renderServices);
 <a href="https://wa.me/919464642218" target="_blank" class="floating-chat">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Chat" class="w-8 h-8" />
 </a>
+
+<script>
+  const whatsappNumber = "919464642218";
+  const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR";
+
+  const services = [
+    { icon: "🤖", name: "AI Automation Setup", desc: "Integrate AI tools, chatbots, and workflows into your business.", price: 4999 },
+    { icon: "🌐", name: "Website Development", desc: "Create professional, responsive business or e-commerce websites.", price: 2999 },
+    { icon: "📱", name: "App Development", desc: "Build Android & iOS apps tailored to your business needs.", price: 15000 },
+    { icon: "📈", name: "Digital Marketing", desc: "Promote your brand through SEO, ads, and social media growth.", price: 3000 },
+    { icon: "🎨", name: "Graphic & Logo Design", desc: "Custom logos, posters & creatives that make your brand shine.", price: 499 },
+    { icon: "🧠", name: "Business & IT Consultancy", desc: "Expert consultancy for business setup & tech growth.", price: 999 },
+    { icon: "⚙️", name: "Website Maintenance & Support", desc: "Ongoing updates, bug fixes & uptime monitoring.", price: 999 },
+    { icon: "🧩", name: "Social Media Management", desc: "Plan, post & manage social content for consistent growth.", price: 2499 },
+    { icon: "💡", name: "SEO & Google Ads Setup", desc: "Boost visibility with SEO optimization & ad campaigns.", price: 2999 },
+    { icon: "✉️", name: "Email & WhatsApp Marketing", desc: "Send personalized campaigns that convert leads into clients.", price: 1499 },
+    { icon: "🎥", name: "Video Editing & Reels Creation", desc: "Create short videos & reels for social media engagement.", price: 499 },
+    { icon: "💼", name: "PF Withdrawal & Correction", desc: "EPF withdrawal, name correction, and KYC linking made easy.", price: 299 },
+    { icon: "💰", name: "IT & GST Services", desc: "ITR filing, GST registration, and business tax solutions.", price: 499 },
+    { icon: "🪪", name: "PAN Card Services", desc: "Apply, update or reprint PAN Card quickly.", price: 150 },
+    { icon: "🆔", name: "Aadhaar Update", desc: "Aadhaar name, address or mobile correction support.", price: 199 },
+    { icon: "🏢", name: "MSME Registration", desc: "Udyam / MSME registration for new and existing businesses.", price: 299 },
+    { icon: "🛂", name: "Passport Services", desc: "Apply or renew passport with document verification.", price: 999 },
+    { icon: "✈️", name: "Travel & Ticket Booking", desc: "Book IRCTC train, flight, hotel or visa assistance.", price: 99 }
+  ];
+
+  function renderServices() {
+    const grid = document.getElementById('service-grid');
+    if (!grid) return;
+    services.forEach(s => {
+      const upiLink = `${upiBase}&am=${s.price}&tn=${encodeURIComponent(s.name)}`;
+      const chatLink = `https://wa.me/${whatsappNumber}?text=Hi! I am interested in ${encodeURIComponent(s.name)}`;
+      // Share link/text for Web Share API or fallback
+      const shareText = `Check out this service: ${s.name} - ${s.desc}. Starting at ₹${s.price}. Powered by NexAI Tech & Digital Solutions.`;
+
+      const div = document.createElement('div');
+      div.className = "bg-indigo-50 p-6 rounded-xl shadow hover:shadow-xl transition";
+      div.innerHTML = `
+        <div class='text-4xl mb-4'>${s.icon}</div>
+        <h3 class='text-xl font-bold mb-2'>${s.name}</h3>
+        <p class='text-gray-600 text-sm mb-3'>${s.desc}</p>
+        <p class='text-indigo-700 font-semibold mb-4'>Starting ₹${s.price}</p>
+        <div class='flex flex-wrap gap-2 items-center'>
+          <a href='${upiLink}' target='_blank' 
+             class='bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
+             Buy Now
+          </a>
+          <a href='${chatLink}' target='_blank'
+             class='bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
+             💬 Chat
+          </a>
+          <button onclick="shareService('${s.name}', '${s.desc}', '${s.price}')"
+              class='bg-gray-400 hover:bg-gray-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
+              🔗 Share
+          </button>
+        </div>
+      `;
+      grid.appendChild(div);
+    });
+  }
+
+  function shareService(name, desc, price) {
+      const shareData = {
+          title: 'NexAI Service: ' + name,
+          text: `Check out this service: ${name} - ${desc}. Starting at ₹${price}. Get in touch now!`,
+          url: window.location.href // Shares the current page link
+      };
+
+      if (navigator.share) {
+          navigator.share(shareData)
+              .catch((error) => console.log('Error sharing', error));
+      } else {
+          // Fallback for browsers that do not support Web Share API
+          alert(`Share this service: ${shareData.text}\nPage URL: ${shareData.url}\n\n(Note: Your browser does not support the native Share feature, please copy and paste the details.)`);
+      }
+  }
+
+
+  document.addEventListener("DOMContentLoaded", renderServices);
+</script>
 
 </body>
 </html>
