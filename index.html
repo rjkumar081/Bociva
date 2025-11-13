@@ -28,23 +28,19 @@
 </head>
 <body class="bg-gray-50 text-gray-900">
 
-<!-- HEADER -->
 <header class="bg-gradient-to-r from-indigo-600 to-blue-500 text-white py-4 shadow-md fixed w-full z-50">
   <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-    <!-- Logo -->
     <div class="flex items-center gap-2">
       <h1 class="text-xl font-bold md:text-2xl">NexAI <span class="text-yellow-300">Tech & Digital</span></h1>
       <span class="brand-small hidden md:block">Powered by MeraPopi</span>
     </div>
 
-    <!-- Desktop Menu -->
     <nav class="hidden md:flex gap-6">
       <a href="legal.html" class="hover:text-yellow-300 font-semibold">Our Services</a>
       <a href="#payment" class="hover:text-yellow-300 font-semibold">Fast Payment</a>
       <a href="tel:+919464642218" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full hover:bg-yellow-300 font-semibold">Talk to Expert</a>
     </nav>
 
-    <!-- Mobile Hamburger -->
     <div class="md:hidden">
       <button id="mobile-menu-btn" class="focus:outline-none">
         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
@@ -55,7 +51,6 @@
     </div>
   </div>
 
-  <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden bg-indigo-600 text-white flex flex-col px-4 py-2 space-y-2 md:hidden">
     <a href="legal.html" class="hover:text-yellow-300 font-semibold">Our Services</a>
     <a href="#payment" class="hover:text-yellow-300 font-semibold">Fast Payment</a>
@@ -69,7 +64,6 @@
   </script>
 </header>
 
-<!-- HERO SECTION -->
 <section class="bg-gradient-to-br from-indigo-100 via-white to-blue-50 pt-28 pb-16 text-center">
   <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-800 animate-bounce">AI-Powered, Trusted & Digital Tech Solutions</h2>
   <p class="text-gray-600 max-w-2xl mx-auto mb-6">We empower your business with next-gen AI, Digital Marketing, App & Web Solutions — all under one roof.</p>
@@ -111,6 +105,9 @@ function renderServices() {
   services.forEach(s => {
     const upiLink = `${upiBase}&am=${s.price}&tn=${encodeURIComponent(s.name)}`;
     const chatLink = `https://wa.me/${whatsappNumber}?text=Hi! I am interested in ${encodeURIComponent(s.name)}`;
+    // Share link/text for Web Share API or fallback
+    const shareText = `Check out this service: ${s.name} - ${s.desc}. Starting at ₹${s.price}. Powered by NexAI Tech & Digital Solutions.`;
+
     const div = document.createElement('div');
     div.className = "bg-indigo-50 p-6 rounded-xl shadow hover:shadow-xl transition";
     div.innerHTML = `
@@ -118,7 +115,7 @@ function renderServices() {
       <h3 class='text-xl font-bold mb-2'>${s.name}</h3>
       <p class='text-gray-600 text-sm mb-3'>${s.desc}</p>
       <p class='text-indigo-700 font-semibold mb-4'>Starting ₹${s.price}</p>
-      <div class='flex justify-between items-center'>
+      <div class='flex flex-wrap gap-2 items-center'>
         <a href='${upiLink}' target='_blank' 
            class='bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
            Buy Now
@@ -127,11 +124,32 @@ function renderServices() {
            class='bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
            💬 Chat
         </a>
+        <button onclick="shareService('${s.name}', '${s.desc}', '${s.price}')"
+            class='bg-gray-400 hover:bg-gray-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
+            🔗 Share
+        </button>
       </div>
     `;
     grid.appendChild(div);
   });
 }
+
+function shareService(name, desc, price) {
+    const shareData = {
+        title: 'NexAI Service: ' + name,
+        text: `Check out this service: ${name} - ${desc}. Starting at ₹${price}. Get in touch now!`,
+        url: window.location.href // Shares the current page link
+    };
+
+    if (navigator.share) {
+        navigator.share(shareData)
+            .catch((error) => console.log('Error sharing', error));
+    } else {
+        // Fallback for browsers that do not support Web Share API
+        alert(`Share this service: ${shareData.text}\nPage URL: ${shareData.url}\n\n(Note: Your browser does not support the native Share feature, please copy and paste the details.)`);
+    }
+}
+
 
 document.addEventListener("DOMContentLoaded", renderServices);
 </script>
@@ -139,56 +157,12 @@ document.addEventListener("DOMContentLoaded", renderServices);
 
 
 <script>
-const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR";
-
-const services = [
-  { icon: "🤖", name: "AI Automation Setup", desc: "Integrate AI tools, chatbots, and workflows into your business.", price: 4999 },
-  { icon: "🌐", name: "Website Development", desc: "Create professional, responsive business or e-commerce websites.", price: 2999 },
-  { icon: "📱", name: "App Development", desc: "Build Android & iOS apps tailored to your business needs.", price: 15000 },
-  { icon: "📈", name: "Digital Marketing", desc: "Promote your brand through SEO, ads, and social media growth.", price: 3000 },
-  { icon: "🎨", name: "Graphic & Logo Design", desc: "Custom logos, posters & creatives that make your brand shine.", price: 499 },
-  { icon: "🧠", name: "Business & IT Consultancy", desc: "Expert consultancy for business setup & tech growth.", price: 999 },
-  { icon: "⚙️", name: "Website Maintenance & Support", desc: "Ongoing updates, bug fixes & uptime monitoring.", price: 999 },
-  { icon: "🧩", name: "Social Media Management", desc: "Plan, post & manage social content for consistent growth.", price: 2499 },
-  { icon: "💡", name: "SEO & Google Ads Setup", desc: "Boost visibility with SEO optimization & ad campaigns.", price: 2999 },
-  { icon: "✉️", name: "Email & WhatsApp Marketing", desc: "Send personalized campaigns that convert leads into clients.", price: 1499 },
-  { icon: "🎥", name: "Video Editing & Reels Creation", desc: "Create short videos & reels for social media engagement.", price: 499 },
-  { icon: "💼", name: "PF Withdrawal & Correction", desc: "EPF withdrawal, name correction, and KYC linking made easy.", price: 299 },
-  { icon: "💰", name: "IT & GST Services", desc: "ITR filing, GST registration, and business tax solutions.", price: 499 },
-  { icon: "🪪", name: "PAN Card Services", desc: "Apply, update or reprint PAN Card quickly.", price: 150 },
-  { icon: "🆔", name: "Aadhaar Update", desc: "Aadhaar name, address or mobile correction support.", price: 199 },
-  { icon: "🏢", name: "MSME Registration", desc: "Udyam / MSME registration for new and existing businesses.", price: 299 },
-  { icon: "🛂", name: "Passport Services", desc: "Apply or renew passport with document verification.", price: 999 },
-  { icon: "✈️", name: "Travel & Ticket Booking", desc: "Book IRCTC train, flight, hotel or visa assistance.", price: 99 }
-];
-
-function renderServices() {
-  const grid = document.getElementById('service-grid');
-  if (!grid) return;
-  services.forEach(s => {
-    const upiLink = `${upiBase}&am=${s.price}&tn=${encodeURIComponent(s.name)}`;
-    const div = document.createElement('div');
-    div.className = "bg-indigo-50 p-6 rounded-xl shadow hover:shadow-xl transition";
-    div.innerHTML = `
-      <div class="text-4xl mb-4">${s.icon}</div>
-      <h3 class="text-xl font-bold mb-2">${s.name}</h3>
-      <p class="text-gray-600 text-sm mb-3">${s.desc}</p>
-      <p class="text-indigo-700 font-semibold mb-3">Starting ₹${s.price}</p>
-      <a href="${upiLink}" target="_blank" 
-         class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition">
-         Buy Now
-      </a>
-    `;
-    grid.appendChild(div);
-  });
-}
-
-document.addEventListener("DOMContentLoaded", renderServices);
+// NOTE: I am removing the duplicate script block that re-renders services to avoid conflict.
+// The first, updated script block above handles the full rendering now.
 </script>
 
 
 
-<!-- SERVICES -->
 <section id="services" class="py-16 bg-white">
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Our Core AI, Tech & Digital Services</h2>
@@ -196,7 +170,6 @@ document.addEventListener("DOMContentLoaded", renderServices);
   </div>
 </section>
 
-<!-- PAYMENT -->
 <section id="payment" class="py-20 bg-gradient-to-br from-indigo-50 via-white to-green-50">
   <div class="max-w-5xl mx-auto text-center px-4">
     <h2 class="text-3xl font-bold text-gray-800 mb-6">💳 Book Your Slot with Fast Payment</h2>
@@ -255,7 +228,6 @@ document.addEventListener("DOMContentLoaded", renderServices);
     </script>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="bg-gray-50 py-20">
   <div class="max-w-3xl mx-auto bg-white shadow-2xl p-8 rounded-2xl">
     <h2 class="text-3xl font-bold text-center mb-6 text-gray-800">Contact Us</h2>
@@ -290,7 +262,6 @@ document.addEventListener("DOMContentLoaded", renderServices);
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="bg-gray-900 text-gray-300 text-center py-10">
   <div class="mb-6 flex flex-wrap justify-center items-center gap-4">
     <a href="about.html" class="hover:text-white transition mx-3">About Us</a>
@@ -313,54 +284,9 @@ document.addEventListener("DOMContentLoaded", renderServices);
   <p>© 2025 NexAI Tech & Digital Solutions — Powered by MeraPopi</p>
 </footer>
 
-<!-- WHATSAPP FLOATING CHAT -->
 <a href="https://wa.me/919464642218" target="_blank" class="floating-chat">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Chat" class="w-8 h-8" />
 </a>
-
-<!-- SERVICES SCRIPT -->
-<script>
-  const whatsappNumber = "919464642218";
-  const callNumber = "+919464642218";
-  const services = [
-    { icon: "🤖", name: "AI Automation Setup", desc: "Integrate AI tools, chatbots, and workflows into your business." },
-    { icon: "🌐", name: "Website Development", desc: "Create professional, responsive business or e-commerce websites." },
-    { icon: "📱", name: "App Development", desc: "Build Android & iOS apps tailored to your business needs." },
-    { icon: "📈", name: "Digital Marketing", desc: "Promote your brand through SEO, ads, and social media growth." },
-    { icon: "🎨", name: "Graphic & Logo Design", desc: "Custom logos, posters & creatives that make your brand shine." },
-    { icon: "🧠", name: "Business & IT Consultancy", desc: "Expert consultancy for business setup & tech growth." },
-    { icon: "⚙️", name: "Website Maintenance & Support", desc: "Ongoing updates, bug fixes & uptime monitoring." },
-    { icon: "🧩", name: "Social Media Management", desc: "Plan, post & manage social content for consistent growth." },
-    { icon: "💡", name: "SEO & Google Ads Setup", desc: "Boost visibility with SEO optimization & ad campaigns." },
-    { icon: "✉️", name: "Email & WhatsApp Marketing", desc: "Send personalized campaigns that convert leads into clients." },
-    { icon: "🎥", name: "Video Editing & Reels Creation", desc: "Create short videos & reels for social media engagement." },
-    { icon: "💼", name: "PF Withdrawal & Correction", desc: "EPF withdrawal, name correction, and KYC linking made easy." },
-    { icon: "💰", name: "IT & GST Services", desc: "ITR filing, GST registration, and business tax solutions." },
-    { icon: "🪪", name: "PAN Card Services", desc: "Apply, update or reprint PAN Card quickly." },
-    { icon: "🆔", name: "Aadhaar Update", desc: "Aadhaar name, address or mobile correction support." },
-    { icon: "🏢", name: "MSME Registration", desc: "Udyam / MSME registration for new and existing businesses." },
-    { icon: "🛂", name: "Passport Services", desc: "Apply or renew passport with document verification." },
-    { icon: "✈️", name: "Travel & Ticket Booking", desc: "Book IRCTC train, flight, hotel or visa assistance." }
-  ];
-
-  function renderServices() {
-    const grid = document.getElementById('service-grid');
-    services.forEach(s => {
-      const div = document.createElement('div');
-      div.className = "bg-indigo-50 p-6 rounded-xl shadow hover:shadow-xl transition cursor-pointer";
-      div.innerHTML = `
-        <div class="text-4xl mb-4">${s.icon}</div>
-        <h3 class="text-xl font-bold mb-2">${s.name}</h3>
-        <p class="text-gray-600 text-sm">${s.desc}</p>
-      `;
-      div.addEventListener('click', () => {
-        window.location.href = `https://wa.me/${whatsappNumber}?text=Hi! I am interested in your service: ${encodeURIComponent(s.name)}`;
-      });
-      grid.appendChild(div);
-    });
-  }
-  renderServices();
-</script>
 
 </body>
 </html>
