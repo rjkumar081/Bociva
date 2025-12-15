@@ -14,20 +14,16 @@ html{scroll-behavior:smooth}
 
 /* ===== NAVBAR ===== */
 #navbar{
-  background: linear-gradient(
-    135deg,
-    rgba(11,15,26,0.65),
-    rgba(17,24,39,0.75)
-  );
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  background:linear-gradient(135deg,rgba(11,15,26,.65),rgba(17,24,39,.75));
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
 .nav-solid{
-  background: linear-gradient(135deg,#0b0f1a,#111827);
+  background:linear-gradient(135deg,#0b0f1a,#111827);
 }
 
-/* ===== HERO BANNER ===== */
+/* ===== HERO ===== */
 .hero{
   height:280px;
   background:
@@ -56,7 +52,6 @@ html{scroll-behavior:smooth}
 .hero-content h1{
   font-size:2.2rem;
   font-weight:800;
-  letter-spacing:-.4px;
   text-shadow:0 2px 8px rgba(0,0,0,.45);
 }
 .hero-content p{
@@ -90,9 +85,7 @@ html{scroll-behavior:smooth}
       </a>
     </nav>
 
-    <button id="menuBtn" class="md:hidden text-white">
-      ☰
-    </button>
+    <button id="menuBtn" class="md:hidden text-white text-xl">☰</button>
   </div>
 
   <div id="mobileMenu" class="hidden bg-[#0b0f1a]/95 backdrop-blur-lg md:hidden">
@@ -109,7 +102,7 @@ html{scroll-behavior:smooth}
   </div>
 </header>
 
-<!-- HERO -->
+<!-- ===== HERO ===== -->
 <section class="hero">
   <div class="hero-content">
     <h1>Careers at NexAI Tech & Digital Solutions</h1>
@@ -117,7 +110,7 @@ html{scroll-behavior:smooth}
   </div>
 </section>
 
-<!-- WHY JOIN -->
+<!-- ===== WHY JOIN ===== -->
 <section class="py-16 bg-white text-center">
   <h2 class="text-3xl font-bold mb-6">Why Join NexAI?</h2>
   <p class="max-w-3xl mx-auto text-gray-600 mb-10">
@@ -132,21 +125,42 @@ html{scroll-behavior:smooth}
   </div>
 </section>
 
-<!-- APPLY -->
-<section class="py-20 bg-gradient-to-br from-indigo-100 via-white to-blue-50 text-center">
-  <h2 class="text-3xl font-bold mb-4">Apply Now</h2>
-  <p class="text-gray-600 mb-8">Send your resume and our HR team will contact you.</p>
+<!-- ===== APPLY FORM (REUSED CONTACT FORM) ===== -->
+<section class="py-20 bg-gradient-to-br from-indigo-100 via-white to-blue-50">
+  <div class="max-w-3xl mx-auto bg-white shadow-2xl p-8 rounded-2xl">
+    <h2 class="text-3xl font-bold text-center mb-6">Apply for a Position</h2>
+    <p class="text-center text-gray-600 mb-8">
+      Share your details and our HR team will contact you shortly.
+    </p>
 
-  <div class="flex flex-col sm:flex-row justify-center gap-4">
-    <a href="mailto:raj@merapopi.com"
-       class="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700">
-       📧 Apply via Email
-    </a>
-    <a href="https://wa.me/919464642218?text=Hi, I want to apply for a job at NexAI Tech & Digital Solutions"
-       target="_blank"
-       class="bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700">
-       💬 Apply via WhatsApp
-    </a>
+    <form action="https://formspree.io/f/xnnojdpr" method="POST" class="space-y-5">
+      <input name="name" required placeholder="Full Name"
+        class="border rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+
+      <input name="email" type="email" required placeholder="Email Address"
+        class="border rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+
+      <input name="phone" placeholder="Phone / WhatsApp"
+        class="border rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+
+      <select name="position"
+        class="border rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+        <option value="">Position Interested In</option>
+        <option>IT Support Executive</option>
+        <option>Digital Marketing Executive</option>
+        <option>Web / App Developer</option>
+        <option>AI & Automation Specialist</option>
+        <option>Other</option>
+      </select>
+
+      <textarea name="message" rows="4" placeholder="Your skills / experience..."
+        class="border rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500"></textarea>
+
+      <button type="submit"
+        class="bg-indigo-600 text-white py-3 rounded-lg font-semibold w-full hover:bg-indigo-700">
+        Submit Application
+      </button>
+    </form>
   </div>
 </section>
 
@@ -160,11 +174,8 @@ const btn=document.getElementById('menuBtn');
 const menu=document.getElementById('mobileMenu');
 
 btn.onclick=()=>menu.classList.toggle('hidden');
-
 window.addEventListener('scroll',()=>{
-  window.scrollY>40
-    ? navbar.classList.add('nav-solid')
-    : navbar.classList.remove('nav-solid');
+  scrollY>40 ? navbar.classList.add('nav-solid') : navbar.classList.remove('nav-solid');
 });
 </script>
 
