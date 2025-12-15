@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>IT Support & AMC Services | Cybersecurity & IT Consulting Company</title>
-  <meta name="description" content="Professional IT support & AMC services, cybersecurity, cloud solutions and IT consulting for businesses across India. 24x7 support, fast response and trusted IT experts.">
-  <meta name="keywords" content="IT support services, IT AMC services, cybersecurity services, IT consulting company, cloud solutions for business">
+  <meta name="description" content="Professional IT support & AMC services, cybersecurity, cloud solutions and IT consulting for businesses across India. 24x7 support, fast response and trusted IT experts." />
+  <meta name="keywords" content="IT support services, IT AMC services, cybersecurity services, IT consulting company, cloud solutions for business" />
 
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
   <style>
     html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+    }
+
+    h1 { letter-spacing: -0.02em; }
+    h2 { letter-spacing: -0.015em; }
+    h3 { letter-spacing: -0.01em; }
+
+    section {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+      }
+    }
+
     .floating-chat {
       position: fixed;
       bottom: 20px;
@@ -23,7 +45,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
       z-index: 50;
     }
   </style>
@@ -35,154 +57,197 @@
 <header class="bg-gradient-to-r from-indigo-700 to-blue-600 text-white fixed w-full z-50 shadow">
   <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
     <h1 class="text-xl font-bold">NexAI Tech & IT Solutions</h1>
-    <a href="https://wa.me/919464642218" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold">Talk to Expert</a>
+    <a href="https://wa.me/919464642218"
+       class="bg-yellow-400 text-gray-900 px-6 py-2 rounded-full font-semibold">
+      Talk to Expert
+    </a>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="pt-28 pb-16 bg-gradient-to-br from-indigo-100 via-white to-blue-50 text-center">
+<!-- HERO (WIDE BANNER) -->
+<section class="pt-28 pb-20 bg-gradient-to-br from-indigo-100 via-white to-blue-50">
 
-  <!-- HERO IMAGE -->
-  <div class="max-w-6xl mx-auto mb-10 px-4">
+  <!-- FULL WIDTH HERO IMAGE -->
+  <div class="w-full">
     <img
       src="assets/it-support-team.jpg"
       alt="Professional IT support and AMC services for growing businesses"
-      class="rounded-2xl shadow-lg w-full"
+      class="w-full h-[420px] md:h-[520px] object-cover"
       loading="lazy">
   </div>
 
-  <h1 class="text-3xl md:text-4xl font-bold mb-4">
-    Reliable IT Support & AMC Services for Growing Businesses
-  </h1>
+  <!-- HERO CONTENT -->
+  <div class="max-w-6xl mx-auto px-4 text-center mt-14">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-gray-800">
+      Reliable IT Support & AMC Services for Growing Businesses
+    </h1>
 
-  <p class="max-w-3xl mx-auto text-gray-600 mb-6">
-    We help businesses reduce downtime and grow securely with professional IT support,
-    cybersecurity, cloud solutions and IT consulting.
-  </p>
+    <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 mb-10">
+      We help businesses reduce downtime and grow securely with professional IT support,
+      cybersecurity, cloud solutions and IT consulting.
+    </p>
 
-  <div class="flex flex-col sm:flex-row justify-center gap-4">
-    <a href="#contact" class="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold">
-      Get Free IT Consultation
-    </a>
-    <a href="https://wa.me/919464642218" class="bg-green-600 text-white px-6 py-3 rounded-full font-semibold">
-      WhatsApp IT Expert
-    </a>
+    <div class="flex flex-col sm:flex-row justify-center gap-6">
+      <a href="#contact"
+         class="bg-indigo-600 text-white px-8 py-4 rounded-full font-semibold text-base md:text-lg">
+        Get Free IT Consultation
+      </a>
+      <a href="https://wa.me/919464642218"
+         class="bg-green-600 text-white px-8 py-4 rounded-full font-semibold text-base md:text-lg">
+        WhatsApp IT Expert
+      </a>
+    </div>
+
+    <p class="mt-8 text-sm md:text-base text-gray-700">
+      ✔ 24×7 Support &nbsp; ✔ Certified IT Experts &nbsp; ✔ Fast Response &nbsp; ✔ Transparent Pricing
+    </p>
   </div>
-
-  <p class="mt-6 text-sm text-gray-700">
-    ✔ 24×7 Support &nbsp; ✔ Certified IT Experts &nbsp; ✔ Fast Response &nbsp; ✔ Transparent Pricing
-  </p>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="py-16 bg-white">
-  <div class="max-w-6xl mx-auto px-4">
+<section id="services" class="bg-white">
 
-    <h2 class="text-3xl font-bold text-center mb-6">Our Core IT Services</h2>
-
-    <!-- SERVICES BANNER -->
+  <!-- WIDE SERVICES BANNER -->
+  <div class="w-full mb-16">
     <img
       src="assets/managed-it-services.jpg"
       alt="Managed IT services, cybersecurity and cloud solutions for businesses"
-      class="rounded-xl mb-10 w-full"
+      class="w-full h-[300px] md:h-[380px] object-cover"
       loading="lazy">
+  </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div class="p-6 bg-indigo-50 rounded-xl shadow">
-        <h3 class="text-xl font-bold mb-2">IT Support & AMC</h3>
-        <p class="text-sm text-gray-600 mb-4">Monthly & annual IT AMC with remote and onsite support.</p>
-        <a href="it-support-amc-services.html" class="text-indigo-600 font-semibold">Know More →</a>
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+      Our Core IT Services
+    </h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="p-8 bg-indigo-50 rounded-2xl shadow">
+        <h3 class="text-xl font-semibold mb-3">IT Support & AMC</h3>
+        <p class="text-gray-600 text-base leading-relaxed mb-6">
+          Monthly & annual IT AMC with remote and onsite support.
+        </p>
+        <a href="it-support-amc-services.html" class="text-indigo-600 font-semibold">
+          Know More →
+        </a>
       </div>
 
-      <div class="p-6 bg-indigo-50 rounded-xl shadow">
-        <h3 class="text-xl font-bold mb-2">Cybersecurity</h3>
-        <p class="text-sm text-gray-600 mb-4">Website security, malware removal & data protection.</p>
-        <a href="cybersecurity-services.html" class="text-indigo-600 font-semibold">Know More →</a>
+      <div class="p-8 bg-indigo-50 rounded-2xl shadow">
+        <h3 class="text-xl font-semibold mb-3">Cybersecurity</h3>
+        <p class="text-gray-600 text-base leading-relaxed mb-6">
+          Website security, malware removal & business data protection.
+        </p>
+        <a href="cybersecurity-services.html" class="text-indigo-600 font-semibold">
+          Know More →
+        </a>
       </div>
 
-      <div class="p-6 bg-indigo-50 rounded-xl shadow">
-        <h3 class="text-xl font-bold mb-2">Cloud Solutions</h3>
-        <p class="text-sm text-gray-600 mb-4">Business email, cloud backup & migration solutions.</p>
-        <a href="cloud-email-solutions.html" class="text-indigo-600 font-semibold">Know More →</a>
+      <div class="p-8 bg-indigo-50 rounded-2xl shadow">
+        <h3 class="text-xl font-semibold mb-3">Cloud Solutions</h3>
+        <p class="text-gray-600 text-base leading-relaxed mb-6">
+          Business email, cloud backup & migration services.
+        </p>
+        <a href="cloud-email-solutions.html" class="text-indigo-600 font-semibold">
+          Know More →
+        </a>
       </div>
 
-      <div class="p-6 bg-indigo-50 rounded-xl shadow">
-        <h3 class="text-xl font-bold mb-2">IT Consulting</h3>
-        <p class="text-sm text-gray-600 mb-4">Strategic IT consulting for growth & cost optimization.</p>
-        <a href="it-consulting-services.html" class="text-indigo-600 font-semibold">Know More →</a>
+      <div class="p-8 bg-indigo-50 rounded-2xl shadow">
+        <h3 class="text-xl font-semibold mb-3">IT Consulting</h3>
+        <p class="text-gray-600 text-base leading-relaxed mb-6">
+          Strategic IT consulting for growth & cost optimization.
+        </p>
+        <a href="it-consulting-services.html" class="text-indigo-600 font-semibold">
+          Know More →
+        </a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- TRUST -->
-<section class="py-16 bg-gray-50">
-  <div class="max-w-6xl mx-auto px-4">
+<section class="bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
 
-    <div class="grid md:grid-cols-2 gap-10 items-center">
-      <img
-        src="assets/it-team-working.jpg"
-        alt="Experienced IT support team working with business clients"
-        class="rounded-2xl shadow"
-        loading="lazy">
+    <img
+      src="assets/it-team-working.jpg"
+      alt="Experienced IT support team working with business clients"
+      class="w-full h-[380px] object-cover rounded-2xl shadow"
+      loading="lazy">
 
-      <div>
-        <h2 class="text-3xl font-bold mb-6">Why Businesses Trust Us</h2>
-        <ul class="space-y-3 text-gray-700">
-          <li>✔ 24×7 IT Support & AMC Services</li>
-          <li>✔ Experienced & Certified IT Professionals</li>
-          <li>✔ Fast Issue Resolution</li>
-          <li>✔ Business-Focused IT Solutions</li>
-          <li>✔ Transparent & Honest Pricing</li>
-          <li>✔ Long-Term IT Support Partner</li>
-        </ul>
-      </div>
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-8">
+        Why Businesses Trust Us
+      </h2>
+      <ul class="space-y-4 text-lg text-gray-700">
+        <li>✔ 24×7 IT Support & AMC Services</li>
+        <li>✔ Experienced & Certified IT Professionals</li>
+        <li>✔ Fast Issue Resolution</li>
+        <li>✔ Business-Focused IT Solutions</li>
+        <li>✔ Transparent & Honest Pricing</li>
+        <li>✔ Long-Term IT Support Partner</li>
+      </ul>
     </div>
 
   </div>
 </section>
 
-<!-- CTA -->
+<!-- CTA (WIDE TECH BANNER) -->
 <section
-  class="py-20 text-white text-center"
+  class="py-24 text-white text-center"
   style="background:url('assets/tech-bg-blue.jpg') center/cover;">
 
-  <div class="bg-indigo-900 bg-opacity-80 p-10 rounded-2xl max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-4">
+  <div class="bg-indigo-900 bg-opacity-80 p-12 rounded-2xl max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">
       Get a Free 15-Minute IT Consultation
     </h2>
-    <p class="mb-6">
+    <p class="mb-8 text-lg">
       Speak with an IT expert and get the right solution for your business.
     </p>
-    <a href="#contact" class="bg-white text-indigo-700 px-6 py-3 rounded-full font-semibold">
+    <a href="#contact"
+       class="bg-white text-indigo-700 px-8 py-4 rounded-full font-semibold text-lg">
       Request Callback
     </a>
   </div>
-
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-16 bg-white">
-  <div class="max-w-3xl mx-auto px-4 bg-gray-50 p-8 rounded-xl shadow">
-    <h2 class="text-3xl font-bold text-center mb-6">Talk to an IT Expert</h2>
+<section id="contact" class="bg-white">
+  <div class="max-w-3xl mx-auto px-4 bg-gray-50 p-10 rounded-2xl shadow">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">
+      Talk to an IT Expert
+    </h2>
 
-    <form action="https://formspree.io/f/xnnojdpr" method="POST" class="space-y-4">
-      <input required name="name" placeholder="Full Name" class="w-full p-3 border rounded">
-      <input required name="phone" placeholder="Phone / WhatsApp" class="w-full p-3 border rounded">
-      <input type="email" name="email" placeholder="Email (optional)" class="w-full p-3 border rounded">
-      <textarea name="message" rows="4" placeholder="Describe your IT requirement" class="w-full p-3 border rounded"></textarea>
-      <button class="w-full bg-indigo-600 text-white py-3 rounded font-semibold">Submit Request</button>
+    <form action="https://formspree.io/f/xnnojdpr" method="POST" class="space-y-5">
+      <input required name="name" placeholder="Full Name"
+        class="w-full p-4 border border-gray-300 rounded-lg text-base focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+
+      <input required name="phone" placeholder="Phone / WhatsApp"
+        class="w-full p-4 border border-gray-300 rounded-lg text-base focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+
+      <input type="email" name="email" placeholder="Email (optional)"
+        class="w-full p-4 border border-gray-300 rounded-lg text-base focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+
+      <textarea name="message" rows="4" placeholder="Describe your IT requirement"
+        class="w-full p-4 border border-gray-300 rounded-lg text-base focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+
+      <button
+        class="w-full bg-indigo-600 text-white py-4 rounded-lg font-semibold text-lg">
+        Submit Request
+      </button>
     </form>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-gray-900 text-gray-300 py-8 text-center">
+<footer class="bg-gray-900 text-gray-300 py-10 text-center">
   <p>© 2025 NexAI Tech & IT Solutions. All rights reserved.</p>
 </footer>
 
 <a href="https://wa.me/919464642218" class="floating-chat">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="w-8 h-8" alt="WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+       class="w-8 h-8"
+       alt="WhatsApp">
 </a>
 
 </body>
