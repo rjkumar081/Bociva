@@ -1,119 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NexAI Tech & Digital Solutions — Powered by MeraPopi</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexAI Tech & Digital Solutions — Powered by MeraPopi</title>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
 <style>
-html { scroll-behavior: smooth; }
+html{scroll-behavior:smooth}
 
-.floating-chat{
-  position:fixed;bottom:20px;right:20px;
-  background:#25D366;border-radius:50%;
-  width:60px;height:60px;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 4px 15px rgba(0,0,0,.2);
-  z-index:50;
-  transition:.3s;
-}
-.floating-chat:hover{transform:scale(1.1)}
-
-.brand-small{font-size:13px;color:#fde68a}
-
-/* ===== PREMIUM SHORT BANNER ===== */
-.top-banner{
-  width:100%;
-  height:220px;              /* 👈 SHORT & PREMIUM */
-  background-size:cover;
-  background-position:center;
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.top-banner::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    to bottom,
-    rgba(15,23,42,.75),
-    rgba(15,23,42,.55)
-  );
-}
-
-.top-banner-content{
-  position:relative;
-  z-index:2;
-  text-align:center;
-  color:#fff;
-  padding:1rem 2rem;
-}
-
-.top-banner-content h2{
-  font-size:1.7rem;
-  font-weight:700;
-}
-
-.top-banner-content p{
-  margin-top:.3rem;
-  opacity:.9;
-}
-
-@media(max-width:768px){
-  .top-banner{height:170px;}
-  .top-banner-content h2{font-size:1.3rem;}
-}
-
-/* ===== 3D GLOSSY NAVBAR ===== */
+/* ================= NAVBAR ================= */
 #navbar{
+  position:fixed;
+  top:0; left:0;
+  width:100%;
+  z-index:50;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background: linear-gradient(
-    135deg,
-    rgba(79,70,229,0.95),
-    rgba(59,130,246,0.95)
-  );
+  background: linear-gradient(135deg,#312e81,#4f46e5);
   box-shadow:
-    0 10px 25px rgba(0,0,0,0.18),
-    inset 0 1px 0 rgba(255,255,255,0.25);
-  position: relative;
-  overflow: hidden;
+    0 10px 25px rgba(0,0,0,.18),
+    inset 0 1px 0 rgba(255,255,255,.25);
 }
 
-/* glossy shine strip */
-#navbar::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:-40%;
-  width:180%;
-  height:100%;
-  background: linear-gradient(
-    to right,
-    rgba(255,255,255,0.05),
-    rgba(255,255,255,0.25),
-    rgba(255,255,255,0.05)
-  );
-  transform: rotate(-2deg);
-  pointer-events:none;
+/* brand 3D text */
+#navbar h1{
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.35),
+    0 2px 4px rgba(0,0,0,.35);
+}
+#navbar h1 span{
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.4),
+    0 2px 5px rgba(0,0,0,.4);
 }
 
-/* when navbar becomes solid on scroll */
-.nav-solid{
-  background: linear-gradient(
-    135deg,
-    #4f46e5,
-    #2563eb
-  );
-  box-shadow:
-    0 14px 30px rgba(0,0,0,0.25),
-    inset 0 1px 0 rgba(255,255,255,0.35);
-}
-
-/* nav links hover */
+/* nav underline hover */
 #navbar nav a{
   position:relative;
 }
@@ -125,81 +48,99 @@ html { scroll-behavior: smooth; }
   width:0;
   height:2px;
   background:#fde68a;
-  transition:width .3s ease;
+  transition:.3s;
 }
-#navbar nav a:hover::after{
-  width:100%;
-}
+#navbar nav a:hover::after{width:100%}
 
-/* CTA button depth */
+/* CTA 3D button only */
 #navbar a.bg-yellow-400{
   box-shadow:
     0 6px 0 #d97706,
-    0 10px 20px rgba(0,0,0,0.25);
+    0 10px 20px rgba(0,0,0,.25);
+  transition:.2s;
 }
 #navbar a.bg-yellow-400:hover{
-  transform: translateY(-1px);
-  box-shadow:
-    0 4px 0 #d97706,
-    0 14px 25px rgba(0,0,0,0.3);
+  transform:translateY(-1px);
 }
-/* ===== 3D BRAND TEXT ONLY ===== */
-#navbar h1{
-  text-shadow:
-    0 1px 0 rgba(255,255,255,0.35),
-    0 2px 4px rgba(0,0,0,0.35);
-  letter-spacing: .3px;
+#navbar a.bg-yellow-400:active{
+  transform:translateY(1px);
+  box-shadow:0 3px 0 #d97706;
 }
 
-#navbar h1 span{
-  text-shadow:
-    0 1px 0 rgba(255,255,255,0.4),
-    0 2px 5px rgba(0,0,0,0.4);
+/* ================= HERO BANNER ================= */
+.hero{
+  height:280px;
+  background:url('assets/hero.jpg') center/cover no-repeat;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:72px;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(15,23,42,.55);
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  color:#fff;
+  text-align:center;
+}
+.hero-content h2{
+  font-size:2rem;
+  font-weight:700;
+}
+.hero-content p{opacity:.9}
+
+@media(max-width:768px){
+  .hero{height:200px}
+  .hero-content h2{font-size:1.4rem}
 }
 
+/* floating chat */
+.floating-chat{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:60px;
+  height:60px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 15px rgba(0,0,0,.25);
+  z-index:50;
+}
 </style>
-
 </head>
-<body class="bg-gray-50 text-gray-900 pt-[72px]">
 
-<header id="navbar"   class="nav-transparent text-white py-4 fixed w-full z-50 transition-all duration-300">
-  <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-    <div class="flex items-center gap-2">
-      <h1 class="text-xl font-bold md:text-2xl">NexAI <span class="text-yellow-300">Tech & Digital</span></h1>
-      <span class="brand-small hidden md:block">Powered by MeraPopi</span>
-    </div>
+<body class="bg-gray-50 text-gray-900">
 
-    <nav class="hidden md:flex gap-6">
-      <a href="legal.html" class="hover:text-yellow-300 font-semibold">Our Services</a>
-      <a href="#payment" class="hover:text-yellow-300 font-semibold">Fast Payment</a>
-      <a href="tel:+919464642218" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full hover:bg-yellow-300 font-semibold">Talk to Expert</a>
+<!-- ================= NAVBAR ================= -->
+<header id="navbar">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-xl md:text-2xl font-bold text-white">
+      NexAI <span class="text-yellow-300">Tech & Digital</span>
+      <span class="hidden md:inline text-sm text-yellow-200 ml-2">Powered by MeraPopi</span>
+    </h1>
+
+    <nav class="hidden md:flex gap-6 text-white font-semibold">
+      <a href="#services">Our Services</a>
+      <a href="#payment">Fast Payment</a>
+      <a href="tel:+919464642218" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full">
+        Talk to Expert
+      </a>
     </nav>
-
-    <div class="md:hidden">
-      <button id="mobile-menu-btn" class="focus:outline-none">
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
   </div>
-
-  <div id="mobile-menu" class="hidden bg-indigo-600 text-white flex flex-col px-4 py-2 space-y-2 md:hidden">
-    <a href="legal.html" class="hover:text-yellow-300 font-semibold">Our Services</a>
-    <a href="#payment" class="hover:text-yellow-300 font-semibold">Fast Payment</a>
-    <a href="tel:+919464642218" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full hover:bg-yellow-300 font-semibold text-center">Call Now</a>
-  </div>
-
-  <script>
-    const btn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
-  </script>
 </header>
-  <!-- TOP BANNER -->
-<section class="top-banner" style="background-image:url('assets/hero.jpg');">
-  <div class="top-banner-content">
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-content">
     <h2>Smart IT, AI & Digital Solutions</h2>
     <p>Helping businesses grow with technology</p>
   </div>
