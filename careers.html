@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Careers at NexAI Tech & Digital Solutions</title>
-<meta name="description" content="Explore career opportunities at NexAI Tech & Digital Solutions. Join our IT support, AI, digital marketing and tech consultancy team.">
+<meta name="description" content="Explore career opportunities at NexAI Tech & Digital Solutions. Apply for IT support, AI, development and digital marketing roles.">
 
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
@@ -114,7 +114,7 @@ html{scroll-behavior:smooth}
 <section class="py-16 bg-white text-center">
   <h2 class="text-3xl font-bold mb-6">Why Join NexAI?</h2>
   <p class="max-w-3xl mx-auto text-gray-600 mb-10">
-    We believe in innovation, learning and real growth. Work on modern technologies with real clients.
+    Work on real client projects, modern technologies and grow your career with experts.
   </p>
 
   <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto px-4">
@@ -125,26 +125,30 @@ html{scroll-behavior:smooth}
   </div>
 </section>
 
-<!-- ===== APPLY FORM (REUSED CONTACT FORM) ===== -->
+<!-- ===== APPLY FORM (WITH RESUME UPLOAD) ===== -->
 <section class="py-20 bg-gradient-to-br from-indigo-100 via-white to-blue-50">
   <div class="max-w-3xl mx-auto bg-white shadow-2xl p-8 rounded-2xl">
     <h2 class="text-3xl font-bold text-center mb-6">Apply for a Position</h2>
     <p class="text-center text-gray-600 mb-8">
-      Share your details and our HR team will contact you shortly.
+      Upload your resume and our HR team will contact you shortly.
     </p>
 
-    <form action="https://formspree.io/f/xnnojdpr" method="POST" class="space-y-5">
+    <form action="https://formspree.io/f/xnnojdpr"
+          method="POST"
+          enctype="multipart/form-data"
+          class="space-y-5">
+
       <input name="name" required placeholder="Full Name"
-        class="border rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
 
       <input name="email" type="email" required placeholder="Email Address"
-        class="border rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
 
       <input name="phone" placeholder="Phone / WhatsApp"
-        class="border rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
 
       <select name="position"
-        class="border rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
         <option value="">Position Interested In</option>
         <option>IT Support Executive</option>
         <option>Digital Marketing Executive</option>
@@ -153,11 +157,25 @@ html{scroll-behavior:smooth}
         <option>Other</option>
       </select>
 
-      <textarea name="message" rows="4" placeholder="Your skills / experience..."
-        class="border rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500"></textarea>
+      <label class="text-sm font-semibold text-gray-700">
+        Upload Resume (PDF / DOC)
+      </label>
+      <input type="file"
+             name="resume"
+             accept=".pdf,.doc,.docx"
+             required
+             class="border border-gray-300 rounded-lg w-full p-3 bg-white focus:ring-2 focus:ring-indigo-500">
+
+      <input name="resume_link"
+        placeholder="Resume Google Drive link (optional)"
+        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+
+      <textarea name="message" rows="4"
+        placeholder="Your skills / experience"
+        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500"></textarea>
 
       <button type="submit"
-        class="bg-indigo-600 text-white py-3 rounded-lg font-semibold w-full hover:bg-indigo-700">
+        class="bg-indigo-600 text-white py-3 rounded-lg font-semibold w-full hover:bg-indigo-700 transition">
         Submit Application
       </button>
     </form>
