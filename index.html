@@ -3,179 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Managed IT Services & AMC | Cybersecurity & Cloud Consulting</title>
-<meta name="description" content="Reliable managed IT services, AMC, cybersecurity and cloud consulting for growing businesses.">
+<title>NexAI Tech Solutions | Managed IT Services</title>
+<meta name="description" content="Managed IT services, cybersecurity, cloud solutions and IT consulting for growing businesses.">
 
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
 <style>
-  body{
-    font-family: Inter, system-ui, sans-serif;
-    background:#f8fafc;
-    color:#0f172a;
-  }
-
-  /* Banner */
-  .banner{
-    height:520px;
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .overlay{
-    background:rgba(2,6,23,.72);
-    padding:3.2rem 3.8rem;
-    border-radius:22px;
-    max-width:880px;
-    text-align:center;
-    color:#fff;
-  }
-  @media(max-width:768px){
-    .banner{height:380px}
-    .overlay{padding:2rem}
-  }
-
-  /* Service Card */
-  .card{
-    border:1px solid #e5e7eb;
-    border-radius:18px;
-    padding:2rem;
-    background:#fff;
-    transition:.3s;
-  }
-  .card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 20px 40px rgba(0,0,0,.08);
-  }
+.banner{height:520px;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center}
+.overlay{background:rgba(2,6,23,.75);padding:3rem;border-radius:20px;color:#fff;text-align:center;max-width:900px}
+@media(max-width:768px){.banner{height:380px}}
 </style>
 </head>
 
-<body>
+<body class="bg-gray-50 text-gray-900">
 
-<!-- HEADER -->
-<header class="fixed w-full bg-white z-50 shadow-sm">
+<header class="fixed w-full bg-white shadow z-50">
   <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold text-indigo-700">NexAI Tech</h1>
-    <a href="#contact"
-      class="bg-indigo-600 text-white px-5 py-2 rounded-full font-semibold">
-      Talk to Expert
-    </a>
+    <h1 class="text-xl font-bold text-indigo-600">NexAI Tech</h1>
+    <nav class="space-x-6 font-medium">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" class="text-indigo-600">Contact</a>
+    </nav>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="banner mt-16"
- style="background-image:url('assets/it-support-team.jpg')">
+<section class="banner mt-16" style="background-image:url('assets/hero.jpg')">
   <div class="overlay">
     <h2 class="text-4xl font-extrabold mb-4">
       Managed IT Services for Modern Businesses
     </h2>
-    <p class="text-lg mb-8 opacity-90">
-      Reliable IT support, cybersecurity & cloud solutions — without the hassle.
+    <p class="text-lg mb-6">
+      Reliable IT support, cybersecurity & cloud solutions — so you can focus on growth.
     </p>
-    <a href="#contact"
+    <a href="contact.html"
       class="bg-white text-indigo-700 px-8 py-4 rounded-full font-semibold text-lg">
-      Get Free IT Consultation
+      Get Free Consultation
     </a>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section class="py-24 bg-white">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-16">
-      What We Help You With
-    </h2>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-      <div class="card">
-        <h3 class="font-semibold text-lg mb-2">IT Support & AMC</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          End-to-end IT support with predictable AMC pricing.
-        </p>
-        <a class="text-indigo-600 font-semibold">Learn more →</a>
-      </div>
-
-      <div class="card">
-        <h3 class="font-semibold text-lg mb-2">Cybersecurity</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          Secure systems, data and websites from cyber threats.
-        </p>
-        <a class="text-indigo-600 font-semibold">Learn more →</a>
-      </div>
-
-      <div class="card">
-        <h3 class="font-semibold text-lg mb-2">Cloud Solutions</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          Cloud email, backup and migration for teams.
-        </p>
-        <a class="text-indigo-600 font-semibold">Learn more →</a>
-      </div>
-
-      <div class="card">
-        <h3 class="font-semibold text-lg mb-2">IT Consulting</h3>
-        <p class="text-gray-600 text-sm mb-4">
-          Strategic IT decisions that scale with your business.
-        </p>
-        <a class="text-indigo-600 font-semibold">Learn more →</a>
-      </div>
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h3 class="text-3xl font-bold mb-12">What We Do</h3>
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="p-6 border rounded-xl">IT Support & AMC</div>
+      <div class="p-6 border rounded-xl">Cybersecurity</div>
+      <div class="p-6 border rounded-xl">Cloud Solutions</div>
+      <div class="p-6 border rounded-xl">IT Consulting</div>
     </div>
   </div>
 </section>
 
-<!-- TRUST -->
-<section class="banner"
- style="background-image:url('assets/it-team-working.jpg')">
+<section class="banner" style="background-image:url('assets/trust.jpg')">
   <div class="overlay">
-    <h2 class="text-3xl font-bold mb-3">
-      Trusted IT Partner for Growing Companies
-    </h2>
-    <p class="text-lg opacity-90">
-      24×7 Support • Certified Experts • Transparent Pricing
-    </p>
+    <h3 class="text-3xl font-bold mb-3">Trusted IT Partner</h3>
+    <p>24×7 Support • Certified Experts • Transparent Pricing</p>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="banner"
- style="background-image:url('assets/tech-bg-blue.jpg')">
-  <div class="overlay">
-    <h2 class="text-3xl font-bold mb-3">
-      Let’s Fix Your IT Challenges
-    </h2>
-    <p class="mb-6 opacity-90">
-      Book a free 15-minute consultation with our expert.
-    </p>
-    <a href="#contact"
-      class="bg-white text-indigo-700 px-8 py-4 rounded-full font-semibold">
-      Request Callback
-    </a>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-24 bg-white">
-  <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-10">
-      Talk to an IT Expert
-    </h2>
-
-    <form class="space-y-6">
-      <input class="w-full border p-4 rounded-lg" placeholder="Full Name">
-      <input class="w-full border p-4 rounded-lg" placeholder="Phone / WhatsApp">
-      <textarea class="w-full border p-4 rounded-lg" rows="4" placeholder="Your Requirement"></textarea>
-      <button class="w-full bg-indigo-600 text-white py-4 rounded-lg font-semibold">
-        Submit Request
-      </button>
-    </form>
-  </div>
+<section class="py-20 bg-white text-center">
+  <h3 class="text-3xl font-bold mb-6">Ready to Improve Your IT?</h3>
+  <a href="contact.html" class="bg-indigo-600 text-white px-8 py-4 rounded-full font-semibold">
+    Talk to an Expert
+  </a>
 </section>
 
 <footer class="bg-gray-900 text-gray-300 py-8 text-center">
-  © 2025 NexAI Tech. All rights reserved.
+  © 2025 NexAI Tech Solutions
 </footer>
 
 </body>
