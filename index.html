@@ -152,48 +152,42 @@ html{scroll-behavior:smooth}
 <body class="bg-gray-50 text-gray-900">
 
 <!-- ================= NAVBAR ================= -->
-<header id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+<header id="navbar" class="fixed top-0 w-full z-50 bg-[#0b0f1a]">
   <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
 
-    <!-- LOGO -->
-    <h1 class="text-xl md:text-2xl font-extrabold text-white">
+    <h1 class="text-xl font-extrabold text-white">
       NexAI <span class="text-yellow-300">Tech & Digital</span>
     </h1>
 
-    <!-- DESKTOP MENU -->
-    <nav class="hidden md:flex gap-6 text-white font-semibold items-center">
-      <a href="index.html" class="hover:text-yellow-300">Home</a>
-      <a href="#services" class="hover:text-yellow-300">Services</a>
-      <a href="careers.html" class="hover:text-yellow-300">Careers</a>
-      <a href="contact.html" class="hover:text-yellow-300">Contact</a>
-      <a href="tel:+919464642218"
-         class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-300">
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex gap-6 text-white font-semibold">
+      <a href="#services">Services</a>
+      <a href="#payment">Fast Payment</a>
+      <a href="contact.html"
+         class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full">
         Talk to Expert
       </a>
     </nav>
 
-    <!-- MOBILE MENU BUTTON -->
-    <button id="menuBtn"
-      class="md:hidden text-white text-2xl focus:outline-none">
+    <!-- Mobile Button -->
+    <button id="menuBtn" class="md:hidden text-white text-3xl">
       ☰
     </button>
   </div>
 
-  <!-- MOBILE MENU -->
-  <div id="mobileMenu"
-    class="hidden md:hidden bg-[#0b0f1a]/95 backdrop-blur-lg">
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-[#0b0f1a]">
     <nav class="flex flex-col px-6 py-4 gap-4 text-white font-semibold">
-      <a href="index.html" class="border-b border-white/10 pb-2">Home</a>
-      <a href="#services" class="border-b border-white/10 pb-2">Services</a>
-      <a href="careers.html" class="border-b border-white/10 pb-2">Careers</a>
-      <a href="contact.html" class="border-b border-white/10 pb-2">Contact</a>
-      <a href="tel:+919464642218"
-         class="mt-2 bg-yellow-400 text-gray-900 text-center py-2 rounded-full font-semibold">
-        Call Now
+      <a href="#services">Services</a>
+      <a href="#payment">Fast Payment</a>
+      <a href="contact.html"
+         class="bg-yellow-400 text-gray-900 text-center py-2 rounded-full">
+        Contact
       </a>
     </nav>
   </div>
 </header>
+
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-content text-center">
