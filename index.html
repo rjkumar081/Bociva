@@ -1,211 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>IT Support & AMC Services | Cybersecurity & IT Consulting Company</title>
-  <meta name="description" content="Professional IT support & AMC services, cybersecurity, cloud solutions and IT consulting for businesses across India.">
-  <meta name="keywords" content="IT support services, IT AMC services, cybersecurity services, IT consulting company">
+<title>Managed IT Services & AMC | Cybersecurity & Cloud Consulting</title>
+<meta name="description" content="Reliable managed IT services, AMC, cybersecurity and cloud consulting for growing businesses.">
 
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-  <style>
-    html { scroll-behavior: smooth; }
+<style>
+  body{
+    font-family: Inter, system-ui, sans-serif;
+    background:#f8fafc;
+    color:#0f172a;
+  }
 
-    body {
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.65;
-      background:#f9fafb;
-    }
+  /* Banner */
+  .banner{
+    height:520px;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .overlay{
+    background:rgba(2,6,23,.72);
+    padding:3.2rem 3.8rem;
+    border-radius:22px;
+    max-width:880px;
+    text-align:center;
+    color:#fff;
+  }
+  @media(max-width:768px){
+    .banner{height:380px}
+    .overlay{padding:2rem}
+  }
 
-    /* ===== UNIVERSAL BANNER ===== */
-    .wide-banner {
-      width: 100%;
-      height: 520px;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .banner-overlay {
-      background: rgba(30, 41, 120, 0.78);
-      backdrop-filter: blur(6px);
-      padding: 3.5rem 4rem;
-      border-radius: 24px;
-      max-width: 900px;
-      text-align: center;
-      color: #fff;
-    }
-
-    .banner-overlay h2 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-
-    .banner-overlay p {
-      font-size: 1.15rem;
-      margin-bottom: 2rem;
-      opacity: 0.95;
-    }
-
-    @media (max-width: 768px) {
-      .wide-banner { height: 380px; }
-      .banner-overlay {
-        padding: 2.4rem 2rem;
-        margin: 0 1rem;
-      }
-      .banner-overlay h2 { font-size: 1.9rem; }
-    }
-
-    /* ===== SERVICE CARD ===== */
-    .service-card {
-      background:#ffffff;
-      border:1px solid #e5e7eb;
-      border-radius:20px;
-      padding:2.2rem;
-      transition:all .3s ease;
-    }
-
-    .service-card:hover {
-      transform:translateY(-6px);
-      box-shadow:0 18px 40px rgba(0,0,0,.08);
-      border-color:#6366f1;
-    }
-
-    /* ===== FLOATING WHATSAPP ===== */
-    .floating-chat {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-      z-index: 50;
-    }
-  </style>
+  /* Service Card */
+  .card{
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+    padding:2rem;
+    background:#fff;
+    transition:.3s;
+  }
+  .card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+  }
+</style>
 </head>
 
 <body>
 
 <!-- HEADER -->
-<header class="bg-gradient-to-r from-indigo-700 to-blue-600 text-white fixed w-full z-50 shadow">
+<header class="fixed w-full bg-white z-50 shadow-sm">
   <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold">NexAI Tech & IT Solutions</h1>
+    <h1 class="text-xl font-bold text-indigo-700">NexAI Tech</h1>
     <a href="#contact"
-       class="bg-yellow-400 text-gray-900 px-6 py-2 rounded-full font-semibold">
+      class="bg-indigo-600 text-white px-5 py-2 rounded-full font-semibold">
       Talk to Expert
     </a>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="wide-banner"
- style="background-image:url('assets/it-support-team.jpg'); margin-top:64px;">
-  <div class="banner-overlay">
-    <h2>Reliable IT Support & AMC Services</h2>
-    <p>Professional IT support, cybersecurity, cloud solutions & consulting for businesses.</p>
+<section class="banner mt-16"
+ style="background-image:url('assets/it-support-team.jpg')">
+  <div class="overlay">
+    <h2 class="text-4xl font-extrabold mb-4">
+      Managed IT Services for Modern Businesses
+    </h2>
+    <p class="text-lg mb-8 opacity-90">
+      Reliable IT support, cybersecurity & cloud solutions — without the hassle.
+    </p>
     <a href="#contact"
-       class="bg-white text-indigo-700 px-8 py-4 rounded-full font-semibold text-lg">
+      class="bg-white text-indigo-700 px-8 py-4 rounded-full font-semibold text-lg">
       Get Free IT Consultation
     </a>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section class="py-20 bg-white">
+<section class="py-24 bg-white">
   <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-16">
+      What We Help You With
+    </h2>
+
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-      <div class="service-card">
-        <h3 class="text-xl font-semibold mb-3">IT Support & AMC</h3>
-        <p class="text-gray-600 mb-6">Monthly & annual IT AMC with remote and onsite support.</p>
-        <a href="it-support-amc-services.html" class="text-indigo-600 font-semibold">Know More →</a>
+      <div class="card">
+        <h3 class="font-semibold text-lg mb-2">IT Support & AMC</h3>
+        <p class="text-gray-600 text-sm mb-4">
+          End-to-end IT support with predictable AMC pricing.
+        </p>
+        <a class="text-indigo-600 font-semibold">Learn more →</a>
       </div>
 
-      <div class="service-card">
-        <h3 class="text-xl font-semibold mb-3">Cybersecurity</h3>
-        <p class="text-gray-600 mb-6">Website security, malware removal & data protection.</p>
-        <a href="cybersecurity-services.html" class="text-indigo-600 font-semibold">Know More →</a>
+      <div class="card">
+        <h3 class="font-semibold text-lg mb-2">Cybersecurity</h3>
+        <p class="text-gray-600 text-sm mb-4">
+          Secure systems, data and websites from cyber threats.
+        </p>
+        <a class="text-indigo-600 font-semibold">Learn more →</a>
       </div>
 
-      <div class="service-card">
-        <h3 class="text-xl font-semibold mb-3">Cloud Solutions</h3>
-        <p class="text-gray-600 mb-6">Business email, cloud backup & migration services.</p>
-        <a href="cloud-email-solutions.html" class="text-indigo-600 font-semibold">Know More →</a>
+      <div class="card">
+        <h3 class="font-semibold text-lg mb-2">Cloud Solutions</h3>
+        <p class="text-gray-600 text-sm mb-4">
+          Cloud email, backup and migration for teams.
+        </p>
+        <a class="text-indigo-600 font-semibold">Learn more →</a>
       </div>
 
-      <div class="service-card">
-        <h3 class="text-xl font-semibold mb-3">IT Consulting</h3>
-        <p class="text-gray-600 mb-6">Strategic IT consulting for growth & cost optimization.</p>
-        <a href="it-consulting-services.html" class="text-indigo-600 font-semibold">Know More →</a>
+      <div class="card">
+        <h3 class="font-semibold text-lg mb-2">IT Consulting</h3>
+        <p class="text-gray-600 text-sm mb-4">
+          Strategic IT decisions that scale with your business.
+        </p>
+        <a class="text-indigo-600 font-semibold">Learn more →</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- TRUST -->
+<section class="banner"
+ style="background-image:url('assets/it-team-working.jpg')">
+  <div class="overlay">
+    <h2 class="text-3xl font-bold mb-3">
+      Trusted IT Partner for Growing Companies
+    </h2>
+    <p class="text-lg opacity-90">
+      24×7 Support • Certified Experts • Transparent Pricing
+    </p>
+  </div>
+</section>
+
 <!-- CTA -->
-<section class="wide-banner"
- style="background-image:url('assets/tech-bg-blue.jpg');">
-  <div class="banner-overlay">
-    <h2>Get a Free 15-Minute IT Consultation</h2>
-    <p>Speak with an IT expert and get the right solution for your business.</p>
+<section class="banner"
+ style="background-image:url('assets/tech-bg-blue.jpg')">
+  <div class="overlay">
+    <h2 class="text-3xl font-bold mb-3">
+      Let’s Fix Your IT Challenges
+    </h2>
+    <p class="mb-6 opacity-90">
+      Book a free 15-minute consultation with our expert.
+    </p>
     <a href="#contact"
-       class="bg-white text-indigo-700 px-8 py-4 rounded-full font-semibold text-lg">
+      class="bg-white text-indigo-700 px-8 py-4 rounded-full font-semibold">
       Request Callback
     </a>
   </div>
 </section>
 
-<!-- CONTACT (FIXED ALIGNMENT) -->
+<!-- CONTACT -->
 <section id="contact" class="py-24 bg-white">
-  <div class="max-w-4xl mx-auto px-6">
-
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-10">
       Talk to an IT Expert
     </h2>
 
-    <form action="https://formspree.io/f/xnnojdpr"
-          method="POST"
-          class="w-full flex flex-col gap-6">
-
-      <input required name="name" placeholder="Full Name"
-        class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
-
-      <input required name="phone" placeholder="Phone / WhatsApp"
-        class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
-
-      <input type="email" name="email" placeholder="Email (optional)"
-        class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
-
-      <textarea name="message" rows="5" placeholder="Describe your IT requirement"
-        class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
-
-      <button
-        class="w-full bg-indigo-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition">
+    <form class="space-y-6">
+      <input class="w-full border p-4 rounded-lg" placeholder="Full Name">
+      <input class="w-full border p-4 rounded-lg" placeholder="Phone / WhatsApp">
+      <textarea class="w-full border p-4 rounded-lg" rows="4" placeholder="Your Requirement"></textarea>
+      <button class="w-full bg-indigo-600 text-white py-4 rounded-lg font-semibold">
         Submit Request
       </button>
-
     </form>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-gray-900 text-gray-300 py-10 text-center">
-  © 2025 NexAI Tech & IT Solutions. All rights reserved.
+<footer class="bg-gray-900 text-gray-300 py-8 text-center">
+  © 2025 NexAI Tech. All rights reserved.
 </footer>
-
-<a href="https://wa.me/919464642218" class="floating-chat">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
-       class="w-8 h-8" alt="WhatsApp">
-</a>
 
 </body>
 </html>
