@@ -1,6 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  /* ===== HERO BANNER (SAME AS HOMEPAGE) ===== */
+.hero{
+  height:280px;
+  background:
+    linear-gradient(
+      rgba(8,20,42,0.75),
+      rgba(8,20,42,0.85)
+    ),
+    url('assets/hero.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:72px;
+}
+
+.hero-content{
+  text-align:center;
+  color:#ffffff;
+}
+
+.hero-content h1{
+  font-size:2.2rem;
+  font-weight:800;
+  letter-spacing:-0.4px;
+}
+
+.hero-content p{
+  margin-top:.5rem;
+  color:#e5e7eb;
+}
+
+@media(max-width:768px){
+  .hero{height:200px}
+  .hero-content h1{font-size:1.5rem}
+}
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Careers at NexAI Tech & Digital Solutions</title>
