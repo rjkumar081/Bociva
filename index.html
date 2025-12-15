@@ -523,25 +523,22 @@ window.addEventListener("scroll", () => {
   }
 });
 </script>
-  
-<script>
-const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-const navbar = document.getElementById("navbar");
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
 
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
-});
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-// navbar solid on scroll
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 40) {
-    navbar.classList.add("nav-solid");
-  } else {
-    navbar.classList.remove("nav-solid");
+  console.log("menuBtn:", menuBtn);
+  console.log("mobileMenu:", mobileMenu);
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.onclick = function () {
+      mobileMenu.classList.toggle("hidden");
+    };
   }
+
 });
 </script>
-
 </body>
 </html>
