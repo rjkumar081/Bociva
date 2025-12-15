@@ -1,26 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Contact Us | NexAI Tech</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | NexAI Tech & Digital Solutions</title>
+<meta name="description" content="Contact NexAI Tech & Digital Solutions for IT support, AI automation, digital marketing and technology consulting. Talk to an expert today.">
+
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<style>
+html{scroll-behavior:smooth}
+
+/* ===== NAVBAR ===== */
+#navbar{
+  background:linear-gradient(135deg,rgba(11,15,26,.65),rgba(17,24,39,.75));
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+.nav-solid{
+  background:linear-gradient(135deg,#0b0f1a,#111827);
+}
+
+/* ===== HERO ===== */
+.hero{
+  height:260px;
+  background:
+    linear-gradient(rgba(8,20,42,.75),rgba(8,20,42,.85)),
+    url('assets/hero.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:72px;
+}
+.hero-content{
+  text-align:center;
+  color:#fff;
+}
+.hero-content h1{
+  font-size:2.2rem;
+  font-weight:800;
+  text-shadow:0 2px 8px rgba(0,0,0,.45);
+}
+.hero-content p{
+  margin-top:.6rem;
+  color:#e5e7eb;
+}
+@media(max-width:768px){
+  .hero{height:200px}
+  .hero-content h1{font-size:1.5rem}
+}
+</style>
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-gray-50 text-gray-900">
 
-<section class="py-24">
-  <div class="max-w-4xl mx-auto px-4">
-    <h1 class="text-4xl font-bold text-center mb-10">Contact Us</h1>
+<!-- ===== NAVBAR ===== -->
+<header id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-xl md:text-2xl font-extrabold text-white">
+      NexAI <span class="text-yellow-300">Tech & Digital</span>
+    </h1>
 
-    <form class="space-y-5">
-      <input class="w-full border p-4 rounded-lg" placeholder="Full Name">
-      <input class="w-full border p-4 rounded-lg" placeholder="Phone / WhatsApp">
-      <textarea class="w-full border p-4 rounded-lg" rows="4" placeholder="Your Requirement"></textarea>
-      <button class="w-full bg-indigo-600 text-white py-4 rounded-lg font-semibold">
+    <nav class="hidden md:flex gap-6 text-white font-semibold">
+      <a href="index.html" class="hover:text-yellow-300">Home</a>
+      <a href="services.html" class="hover:text-yellow-300">Services</a>
+      <a href="careers.html" class="hover:text-yellow-300">Careers</a>
+      <a href="contact.html" class="text-yellow-300">Contact</a>
+      <a href="tel:+919464642218"
+         class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-300">
+        Talk to Expert
+      </a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden text-white text-xl">☰</button>
+  </div>
+
+  <div id="mobileMenu" class="hidden bg-[#0b0f1a]/95 backdrop-blur-lg md:hidden">
+    <nav class="flex flex-col px-6 py-4 gap-3 text-white font-semibold">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="text-yellow-300">Contact</a>
+      <a href="tel:+919464642218"
+         class="bg-yellow-400 text-gray-900 text-center py-2 rounded-full">
+        Call Now
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Contact Us</h1>
+    <p>Let’s discuss how we can support your business with technology</p>
+  </div>
+</section>
+
+<!-- ===== CONTACT INFO ===== -->
+<section class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8 text-center">
+    <div class="p-6 bg-indigo-50 rounded-xl shadow">
+      📞 <h3 class="font-bold mt-2">Phone</h3>
+      <p class="text-gray-600 mt-1">+91 94646 42218</p>
+    </div>
+    <div class="p-6 bg-indigo-50 rounded-xl shadow">
+      📧 <h3 class="font-bold mt-2">Email</h3>
+      <p class="text-gray-600 mt-1">care@merapopi.com</p>
+    </div>
+    <div class="p-6 bg-indigo-50 rounded-xl shadow">
+      💬 <h3 class="font-bold mt-2">WhatsApp</h3>
+      <p class="text-gray-600 mt-1">Instant Support Available</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT FORM ===== -->
+<section class="py-20 bg-gradient-to-br from-indigo-100 via-white to-blue-50">
+  <div class="max-w-3xl mx-auto bg-white shadow-2xl p-8 rounded-2xl">
+    <h2 class="text-3xl font-bold text-center mb-6">Send Us a Message</h2>
+    <p class="text-center text-gray-600 mb-8">
+      Fill the form below and our team will get back to you shortly.
+    </p>
+
+    <!-- REUSABLE FORMSPREE FORM -->
+    <form action="https://formspree.io/f/xnnojdpr"
+          method="POST"
+          class="space-y-5">
+
+      <input name="name" required placeholder="Full Name"
+        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+
+      <input name="email" type="email" required placeholder="Email Address"
+        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+
+      <input name="phone" placeholder="Phone / WhatsApp"
+        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+
+      <select name="service"
+        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+        <option value="">Select Service</option>
+        <option>IT Support & AMC</option>
+        <option>AI Automation</option>
+        <option>Website / App Development</option>
+        <option>Digital Marketing</option>
+        <option>Cybersecurity</option>
+        <option>Cloud Solutions</option>
+        <option>Other</option>
+      </select>
+
+      <textarea name="message" rows="4"
+        placeholder="Your requirement"
+        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500"></textarea>
+
+      <button type="submit"
+        class="bg-indigo-600 text-white py-3 rounded-lg font-semibold w-full hover:bg-indigo-700 transition">
         Submit Request
       </button>
     </form>
   </div>
 </section>
+
+<footer class="bg-gray-900 text-gray-400 text-center py-6">
+  © 2025 NexAI Tech & Digital Solutions — Powered by MeraPopi
+</footer>
+
+<script>
+const navbar=document.getElementById('navbar');
+const btn=document.getElementById('menuBtn');
+const menu=document.getElementById('mobileMenu');
+
+btn.onclick=()=>menu.classList.toggle('hidden');
+window.addEventListener('scroll',()=>{
+  scrollY>40 ? navbar.classList.add('nav-solid') : navbar.classList.remove('nav-solid');
+});
+</script>
 
 </body>
 </html>
