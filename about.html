@@ -14,17 +14,13 @@ html{scroll-behavior:smooth}
 
 /* ===== NAVBAR ===== */
 #navbar{
-  background: linear-gradient(
-    135deg,
-    rgba(11,15,26,0.65),
-    rgba(17,24,39,0.75)
-  );
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background:linear-gradient(135deg,rgba(11,15,26,.65),rgba(17,24,39,.75));
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
   box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
 .nav-solid{
-  background: linear-gradient(135deg,#0b0f1a,#111827);
+  background:linear-gradient(135deg,#0b0f1a,#111827);
 }
 
 /* ===== HERO ===== */
@@ -37,23 +33,11 @@ html{scroll-behavior:smooth}
   align-items:center;
   justify-content:center;
   margin-top:72px;
-  position:relative;
 }
-.hero-content{
-  position:relative;
-  z-index:2;
-  text-align:center;
-  color:#fff;
-}
-.hero-content h1{
-  font-size:2.2rem;
-  font-weight:800;
-  letter-spacing:-.4px;
-}
-.hero-content p{
-  margin-top:.6rem;
-  color:#e5e7eb;
-}
+.hero-content{text-align:center;color:#fff}
+.hero-content h1{font-size:2.2rem;font-weight:800}
+.hero-content p{margin-top:.6rem;color:#e5e7eb}
+
 @media(max-width:768px){
   .hero{height:200px}
   .hero-content h1{font-size:1.5rem}
@@ -98,15 +82,14 @@ html{scroll-behavior:smooth}
   </div>
 </section>
 
-<!-- ===== ABOUT CONTENT ===== -->
+<!-- ===== ABOUT ===== -->
 <section class="py-20 bg-white">
   <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-3xl font-bold mb-6">Who We Are</h2>
     <p class="text-gray-600 max-w-4xl leading-relaxed">
       NexAI Tech & Digital Solutions is a technology-driven IT support and consulting company
-      focused on helping businesses operate securely, efficiently and intelligently.
-      We combine strong IT fundamentals with modern AI, cloud and digital solutions to
-      deliver real business value.
+      helping businesses operate securely, efficiently and intelligently through modern IT,
+      AI, cloud and digital solutions.
     </p>
   </div>
 </section>
@@ -116,54 +99,56 @@ html{scroll-behavior:smooth}
   <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
     <div>
       <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
-      <p class="text-gray-600 leading-relaxed">
-        To simplify technology for businesses by providing reliable IT support,
-        smart automation and strategic consulting that drives long-term growth.
+      <p class="text-gray-600">
+        Simplify technology with reliable IT support, smart automation
+        and strategic consulting that drives growth.
       </p>
     </div>
-
     <div>
       <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
-      <p class="text-gray-600 leading-relaxed">
-        To become a trusted global IT & digital consulting partner known for innovation,
-        integrity and customer success.
+      <p class="text-gray-600">
+        Become a trusted global IT & digital consulting partner
+        known for innovation and customer success.
       </p>
     </div>
   </div>
 </section>
 
-<!-- ===== WHY TRUST US ===== -->
-<section class="py-20 bg-white">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-10">Why Businesses Trust NexAI</h2>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div class="p-6 bg-indigo-50 rounded-xl shadow">
-        🔐 Secure & Reliable IT Support
-      </div>
-      <div class="p-6 bg-indigo-50 rounded-xl shadow">
-        🤝 Client-First Consulting Approach
-      </div>
-      <div class="p-6 bg-indigo-50 rounded-xl shadow">
-        ⚙️ Modern AI & Automation Expertise
-      </div>
-      <div class="p-6 bg-indigo-50 rounded-xl shadow">
-        📈 Scalable Solutions for Growth
-      </div>
-    </div>
+<!-- ===== WHY TRUST ===== -->
+<section class="py-20 bg-white text-center">
+  <h2 class="text-3xl font-bold mb-10">Why Businesses Trust NexAI</h2>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
+    <div class="p-6 bg-indigo-50 rounded-xl shadow">🔐 Secure IT Support</div>
+    <div class="p-6 bg-indigo-50 rounded-xl shadow">🤝 Client-First Consulting</div>
+    <div class="p-6 bg-indigo-50 rounded-xl shadow">⚙️ AI & Automation</div>
+    <div class="p-6 bg-indigo-50 rounded-xl shadow">📈 Scalable Growth</div>
   </div>
 </section>
 
-<!-- ===== CTA ===== -->
-<section class="py-20 bg-gradient-to-br from-indigo-100 via-white to-blue-50 text-center">
-  <h2 class="text-3xl font-bold mb-4">Let’s Build Your Technology Future</h2>
-  <p class="text-gray-600 mb-8">
-    Looking for reliable IT support or digital consulting? Talk to our experts today.
-  </p>
-  <a href="contact.html"
-     class="bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-indigo-700">
-    Contact Us
-  </a>
+<!-- ===== CONTACT FORM (REUSED) ===== -->
+<section class="py-20 bg-gradient-to-br from-indigo-100 via-white to-blue-50">
+  <div class="max-w-3xl mx-auto bg-white shadow-2xl p-8 rounded-2xl">
+    <h2 class="text-3xl font-bold text-center mb-6">Talk to Our Experts</h2>
+
+    <form action="https://formspree.io/f/xnnojdpr" method="POST" class="space-y-5">
+      <input name="name" required placeholder="Full Name"
+        class="border rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+
+      <input name="email" type="email" required placeholder="Email Address"
+        class="border rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+
+      <input name="phone" placeholder="Phone / WhatsApp"
+        class="border rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+
+      <textarea name="message" rows="4" placeholder="Your requirement..."
+        class="border rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500"></textarea>
+
+      <button type="submit"
+        class="bg-indigo-600 text-white py-3 rounded-lg font-semibold w-full hover:bg-indigo-700">
+        Submit Request
+      </button>
+    </form>
+  </div>
 </section>
 
 <footer class="bg-gray-900 text-gray-400 text-center py-6">
@@ -177,9 +162,7 @@ const menu=document.getElementById('mobileMenu');
 
 btn.onclick=()=>menu.classList.toggle('hidden');
 window.addEventListener('scroll',()=>{
-  window.scrollY>40
-    ? navbar.classList.add('nav-solid')
-    : navbar.classList.remove('nav-solid');
+  scrollY>40 ? navbar.classList.add('nav-solid') : navbar.classList.remove('nav-solid');
 });
 </script>
 
