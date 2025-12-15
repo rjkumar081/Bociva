@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>IT Support & AMC Services | Cybersecurity & IT Consulting Company</title>
-  <meta name="description" content="Professional IT support & AMC services, cybersecurity, cloud solutions and IT consulting for businesses across India. 24x7 support, fast response and trusted IT experts.">
-  <meta name="keywords" content="IT support services, IT AMC services, cybersecurity services, IT consulting company, cloud solutions for business">
+  <meta name="description" content="Professional IT support & AMC services, cybersecurity, cloud solutions and IT consulting for businesses across India.">
+  <meta name="keywords" content="IT support services, IT AMC services, cybersecurity services, IT consulting company">
 
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
@@ -19,7 +19,7 @@
       background:#f9fafb;
     }
 
-    /* ===== UNIVERSAL BANNER SYSTEM ===== */
+    /* ===== UNIVERSAL BANNER ===== */
     .wide-banner {
       width: 100%;
       height: 520px;
@@ -35,22 +35,21 @@
       backdrop-filter: blur(6px);
       padding: 3.5rem 4rem;
       border-radius: 24px;
-      max-width: 920px;
+      max-width: 900px;
       text-align: center;
       color: #fff;
     }
 
     .banner-overlay h2 {
-      font-size: 2.6rem;
+      font-size: 2.5rem;
       font-weight: 800;
       margin-bottom: 1rem;
-      letter-spacing: -0.02em;
     }
 
     .banner-overlay p {
       font-size: 1.15rem;
-      opacity: 0.95;
       margin-bottom: 2rem;
+      opacity: 0.95;
     }
 
     @media (max-width: 768px) {
@@ -62,7 +61,7 @@
       .banner-overlay h2 { font-size: 1.9rem; }
     }
 
-    /* ===== SERVICE CARD POLISH ===== */
+    /* ===== SERVICE CARD ===== */
     .service-card {
       background:#ffffff;
       border:1px solid #e5e7eb;
@@ -108,15 +107,12 @@
   </div>
 </header>
 
-<!-- HERO BANNER -->
+<!-- HERO -->
 <section class="wide-banner"
  style="background-image:url('assets/it-support-team.jpg'); margin-top:64px;">
   <div class="banner-overlay">
     <h2>Reliable IT Support & AMC Services</h2>
-    <p>
-      Professional IT support, cybersecurity, cloud solutions and consulting
-      for growing businesses.
-    </p>
+    <p>Professional IT support, cybersecurity, cloud solutions & consulting for businesses.</p>
     <a href="#contact"
        class="bg-white text-indigo-700 px-8 py-4 rounded-full font-semibold text-lg">
       Get Free IT Consultation
@@ -124,64 +120,38 @@
   </div>
 </section>
 
-<!-- SERVICES BANNER -->
-<section class="wide-banner"
- style="background-image:url('assets/managed-it-services.jpg');">
-  <div class="banner-overlay">
-    <h2>Managed IT Services</h2>
-    <p>IT AMC • Cybersecurity • Cloud Solutions • IT Consulting</p>
-  </div>
-</section>
-
-<!-- SERVICES CONTENT -->
+<!-- SERVICES -->
 <section class="py-20 bg-white">
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
       <div class="service-card">
         <h3 class="text-xl font-semibold mb-3">IT Support & AMC</h3>
-        <p class="text-gray-600 mb-6">
-          Monthly & annual IT AMC with remote and onsite support.
-        </p>
+        <p class="text-gray-600 mb-6">Monthly & annual IT AMC with remote and onsite support.</p>
         <a href="it-support-amc-services.html" class="text-indigo-600 font-semibold">Know More →</a>
       </div>
 
       <div class="service-card">
         <h3 class="text-xl font-semibold mb-3">Cybersecurity</h3>
-        <p class="text-gray-600 mb-6">
-          Website security, malware removal & business protection.
-        </p>
+        <p class="text-gray-600 mb-6">Website security, malware removal & data protection.</p>
         <a href="cybersecurity-services.html" class="text-indigo-600 font-semibold">Know More →</a>
       </div>
 
       <div class="service-card">
         <h3 class="text-xl font-semibold mb-3">Cloud Solutions</h3>
-        <p class="text-gray-600 mb-6">
-          Business email, cloud backup & migration solutions.
-        </p>
+        <p class="text-gray-600 mb-6">Business email, cloud backup & migration services.</p>
         <a href="cloud-email-solutions.html" class="text-indigo-600 font-semibold">Know More →</a>
       </div>
 
       <div class="service-card">
         <h3 class="text-xl font-semibold mb-3">IT Consulting</h3>
-        <p class="text-gray-600 mb-6">
-          Strategic IT consulting for business growth.
-        </p>
+        <p class="text-gray-600 mb-6">Strategic IT consulting for growth & cost optimization.</p>
         <a href="it-consulting-services.html" class="text-indigo-600 font-semibold">Know More →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TRUST BANNER -->
-<section class="wide-banner"
- style="background-image:url('assets/it-team-working.jpg');">
-  <div class="banner-overlay">
-    <h2>Why Businesses Trust Us</h2>
-    <p>24×7 Support • Certified Experts • Transparent Pricing • Long-Term Partner</p>
-  </div>
-</section>
-
-<!-- CTA BANNER -->
+<!-- CTA -->
 <section class="wide-banner"
  style="background-image:url('assets/tech-bg-blue.jpg');">
   <div class="banner-overlay">
@@ -194,22 +164,35 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="py-20 bg-white">
-  <div class="max-w-3xl mx-auto px-4 bg-gray-50 p-10 rounded-2xl shadow">
-    <h2 class="text-3xl font-bold text-center mb-8">Talk to an IT Expert</h2>
+<!-- CONTACT (FIXED ALIGNMENT) -->
+<section id="contact" class="py-24 bg-white">
+  <div class="max-w-4xl mx-auto px-6">
 
-    <form class="space-y-5">
-      <input placeholder="Full Name"
-        class="w-full p-4 border rounded-lg">
-      <input placeholder="Phone / WhatsApp"
-        class="w-full p-4 border rounded-lg">
-      <textarea rows="4" placeholder="Describe your IT requirement"
-        class="w-full p-4 border rounded-lg"></textarea>
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800">
+      Talk to an IT Expert
+    </h2>
+
+    <form action="https://formspree.io/f/xnnojdpr"
+          method="POST"
+          class="w-full flex flex-col gap-6">
+
+      <input required name="name" placeholder="Full Name"
+        class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+
+      <input required name="phone" placeholder="Phone / WhatsApp"
+        class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+
+      <input type="email" name="email" placeholder="Email (optional)"
+        class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+
+      <textarea name="message" rows="5" placeholder="Describe your IT requirement"
+        class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+
       <button
-        class="w-full bg-indigo-600 text-white py-4 rounded-lg font-semibold">
+        class="w-full bg-indigo-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition">
         Submit Request
       </button>
+
     </form>
   </div>
 </section>
