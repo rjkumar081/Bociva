@@ -1,33 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>About Us | NexAI Tech</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | NexAI Tech & Digital Solutions</title>
+<meta name="description" content="Learn about NexAI Tech & Digital Solutions — a trusted IT support, AI, cloud and digital consultancy company helping businesses grow with technology.">
+
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<style>
+html{scroll-behavior:smooth}
+
+/* ===== NAVBAR ===== */
+#navbar{
+  background: linear-gradient(
+    135deg,
+    rgba(11,15,26,0.65),
+    rgba(17,24,39,0.75)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+.nav-solid{
+  background: linear-gradient(135deg,#0b0f1a,#111827);
+}
+
+/* ===== HERO ===== */
+.hero{
+  height:260px;
+  background:
+    linear-gradient(rgba(8,20,42,.75),rgba(8,20,42,.85)),
+    url('assets/hero.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:72px;
+  position:relative;
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  color:#fff;
+}
+.hero-content h1{
+  font-size:2.2rem;
+  font-weight:800;
+  letter-spacing:-.4px;
+}
+.hero-content p{
+  margin-top:.6rem;
+  color:#e5e7eb;
+}
+@media(max-width:768px){
+  .hero{height:200px}
+  .hero-content h1{font-size:1.5rem}
+}
+</style>
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-gray-50 text-gray-900">
 
-<header class="bg-white shadow p-4 text-center font-bold text-indigo-600">
-  NexAI Tech Solutions
+<!-- ===== NAVBAR ===== -->
+<header id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-xl md:text-2xl font-extrabold text-white">
+      NexAI <span class="text-yellow-300">Tech & Digital</span>
+    </h1>
+
+    <nav class="hidden md:flex gap-6 text-white font-semibold">
+      <a href="index.html" class="hover:text-yellow-300">Home</a>
+      <a href="services.html" class="hover:text-yellow-300">Services</a>
+      <a href="about.html" class="text-yellow-300">About</a>
+      <a href="career.html" class="hover:text-yellow-300">Careers</a>
+      <a href="contact.html" class="hover:text-yellow-300">Contact</a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden text-white text-xl">☰</button>
+  </div>
+
+  <div id="mobileMenu" class="hidden bg-[#0b0f1a]/95 backdrop-blur-lg md:hidden">
+    <nav class="flex flex-col px-6 py-4 gap-3 text-white font-semibold">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html" class="text-yellow-300">About</a>
+      <a href="career.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<section class="py-24">
-  <div class="max-w-5xl mx-auto px-4">
-    <h1 class="text-4xl font-bold mb-6">About NexAI Tech</h1>
-    <p class="text-gray-700 text-lg mb-4">
-      NexAI Tech Solutions is a managed IT services company helping businesses
-      stay secure, productive and scalable.
-    </p>
-    <p class="text-gray-700">
-      We focus on reliable IT support, proactive maintenance and strategic consulting —
-      not just fixing issues, but preventing them.
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>About NexAI Tech & Digital Solutions</h1>
+    <p>Your trusted partner for IT support, AI & digital transformation</p>
+  </div>
+</section>
+
+<!-- ===== ABOUT CONTENT ===== -->
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-6">Who We Are</h2>
+    <p class="text-gray-600 max-w-4xl leading-relaxed">
+      NexAI Tech & Digital Solutions is a technology-driven IT support and consulting company
+      focused on helping businesses operate securely, efficiently and intelligently.
+      We combine strong IT fundamentals with modern AI, cloud and digital solutions to
+      deliver real business value.
     </p>
   </div>
 </section>
 
-<footer class="bg-gray-900 text-gray-300 py-6 text-center">
-  © 2025 NexAI Tech
+<!-- ===== MISSION / VISION ===== -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+    <div>
+      <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+      <p class="text-gray-600 leading-relaxed">
+        To simplify technology for businesses by providing reliable IT support,
+        smart automation and strategic consulting that drives long-term growth.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
+      <p class="text-gray-600 leading-relaxed">
+        To become a trusted global IT & digital consulting partner known for innovation,
+        integrity and customer success.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY TRUST US ===== -->
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-10">Why Businesses Trust NexAI</h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="p-6 bg-indigo-50 rounded-xl shadow">
+        🔐 Secure & Reliable IT Support
+      </div>
+      <div class="p-6 bg-indigo-50 rounded-xl shadow">
+        🤝 Client-First Consulting Approach
+      </div>
+      <div class="p-6 bg-indigo-50 rounded-xl shadow">
+        ⚙️ Modern AI & Automation Expertise
+      </div>
+      <div class="p-6 bg-indigo-50 rounded-xl shadow">
+        📈 Scalable Solutions for Growth
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="py-20 bg-gradient-to-br from-indigo-100 via-white to-blue-50 text-center">
+  <h2 class="text-3xl font-bold mb-4">Let’s Build Your Technology Future</h2>
+  <p class="text-gray-600 mb-8">
+    Looking for reliable IT support or digital consulting? Talk to our experts today.
+  </p>
+  <a href="contact.html"
+     class="bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-indigo-700">
+    Contact Us
+  </a>
+</section>
+
+<footer class="bg-gray-900 text-gray-400 text-center py-6">
+  © 2025 NexAI Tech & Digital Solutions — Powered by MeraPopi
 </footer>
+
+<script>
+const navbar=document.getElementById('navbar');
+const btn=document.getElementById('menuBtn');
+const menu=document.getElementById('mobileMenu');
+
+btn.onclick=()=>menu.classList.toggle('hidden');
+window.addEventListener('scroll',()=>{
+  window.scrollY>40
+    ? navbar.classList.add('nav-solid')
+    : navbar.classList.remove('nav-solid');
+});
+</script>
 
 </body>
 </html>
