@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>NexAI Tech & Digital Solutions — Powered by MeraPopi</title>
+<meta name="description" content="AI, IT & Digital Services including Web, App, Marketing, Automation, CSC & Digital Seva with fast UPI payment.">
 
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
@@ -23,14 +25,14 @@ html{scroll-behavior:smooth}
 /* ===== TOP BANNER ===== */
 .top-banner{
   width:100%;
-  height:320px;
+  height:300px;
   background-size:cover;
   background-position:center;
   position:relative;
   display:flex;
   align-items:center;
   justify-content:center;
-  margin-top:72px; /* fixed header */
+  margin-top:72px;
 }
 .top-banner::after{
   content:"";
@@ -45,14 +47,8 @@ html{scroll-behavior:smooth}
   color:#fff;
   padding:1.5rem 2rem;
 }
-.top-banner-content h2{
-  font-size:2rem;
-  font-weight:700;
-}
-.top-banner-content p{
-  margin-top:.5rem;
-  opacity:.9;
-}
+.top-banner-content h2{font-size:2rem;font-weight:700}
+.top-banner-content p{margin-top:.4rem;opacity:.9}
 @media(max-width:768px){
   .top-banner{height:220px}
   .top-banner-content h2{font-size:1.4rem}
@@ -68,6 +64,11 @@ html{scroll-behavior:smooth}
     <h1 class="text-xl font-bold md:text-2xl">
       NexAI <span class="text-yellow-300">Tech & Digital</span>
     </h1>
+    <nav class="hidden md:flex gap-6 font-semibold">
+      <a href="#services" class="hover:text-yellow-300">Services</a>
+      <a href="#payment" class="hover:text-yellow-300">Payment</a>
+      <a href="#contact" class="hover:text-yellow-300">Contact</a>
+    </nav>
     <a href="tel:+919464642218"
        class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold">
        Talk to Expert
@@ -85,13 +86,12 @@ html{scroll-behavior:smooth}
 
 <!-- HERO -->
 <section class="bg-gradient-to-br from-indigo-100 via-white to-blue-50 pt-10 pb-12 text-center">
-  <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-800">
+  <h2 class="text-3xl sm:text-4xl font-bold mb-4">
     AI-Powered, Trusted & Digital Tech Solutions
   </h2>
   <p class="text-gray-600 max-w-2xl mx-auto mb-6">
-    We empower your business with AI, Digital Marketing, App & Web Solutions — all under one roof.
+    Web, App, AI Automation, Digital Marketing & CSC Services — all under one roof.
   </p>
-
   <div class="flex flex-col sm:flex-row justify-center gap-4">
     <a href="https://wa.me/919464642218" target="_blank"
        class="bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700">
@@ -107,7 +107,7 @@ html{scroll-behavior:smooth}
 <!-- SERVICES -->
 <section id="services" class="py-12 bg-white">
   <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-8">Our Core Services</h2>
+    <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
     <div id="service-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
   </div>
 </section>
@@ -116,9 +116,47 @@ html{scroll-behavior:smooth}
 <section id="payment" class="py-20 bg-gradient-to-br from-indigo-50 via-white to-green-50">
   <div class="max-w-5xl mx-auto text-center px-4">
     <h2 class="text-3xl font-bold mb-6">💳 Fast & Secure Payment</h2>
-    <img class="mx-auto"
-      src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions&cu=INR"
-      alt="UPI QR">
+    <p class="text-gray-600 mb-10">Pay via UPI and share screenshot on WhatsApp for instant confirmation.</p>
+
+    <div class="bg-white rounded-2xl shadow-xl p-8 md:flex items-center gap-8">
+      <div class="flex-1 mb-6 md:mb-0">
+        <img class="mx-auto rounded-xl shadow"
+          src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions&cu=INR"
+          alt="UPI QR">
+        <p class="text-sm mt-3">Scan to pay (GPay / PhonePe / Paytm)</p>
+      </div>
+
+      <div class="flex-1 text-left">
+        <label class="font-semibold block mb-2">Select Service</label>
+        <select id="service" class="w-full border rounded-lg p-3 mb-4">
+          <option value="">Choose Service</option>
+          <option>Website Development</option>
+          <option>App Development</option>
+          <option>AI Automation</option>
+          <option>Digital Marketing</option>
+          <option>CSC / Govt Service</option>
+        </select>
+
+        <label class="font-semibold block mb-2">Enter Amount (₹)</label>
+        <input id="amount" type="number" class="w-full border rounded-lg p-3 mb-4" placeholder="Amount">
+
+        <a id="upi-link" target="_blank">
+          <button class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold">
+            Pay via UPI
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <!-- PAYMENT BADGES -->
+    <div class="flex flex-wrap justify-center gap-4 mt-10">
+      <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/upi.png" class="h-10 bg-white p-1 rounded shadow">
+      <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/gpay.png" class="h-10 bg-white p-1 rounded shadow">
+      <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/PhonePe.png" class="h-10 bg-white p-1 rounded shadow">
+      <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/paytm.png" class="h-10 bg-white p-1 rounded shadow">
+      <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/Visa.png" class="h-10 bg-white p-1 rounded shadow">
+      <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/mastercard.png" class="h-10 bg-white p-1 rounded shadow">
+    </div>
   </div>
 </section>
 
@@ -129,8 +167,7 @@ html{scroll-behavior:smooth}
     <form class="space-y-4">
       <input placeholder="Full Name" class="w-full border p-3 rounded-lg">
       <input placeholder="Phone / WhatsApp" class="w-full border p-3 rounded-lg">
-      <textarea placeholder="Your Requirement" rows="4"
-        class="w-full border p-3 rounded-lg"></textarea>
+      <textarea placeholder="Your Requirement" rows="4" class="w-full border p-3 rounded-lg"></textarea>
       <button class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold">
         Submit
       </button>
@@ -147,21 +184,31 @@ html{scroll-behavior:smooth}
 </a>
 
 <script>
-const services=[
- {icon:"🤖",name:"AI Automation",desc:"Chatbots & workflow automation",price:4999},
- {icon:"🌐",name:"Website Development",desc:"Business & eCommerce websites",price:2999},
- {icon:"📱",name:"App Development",desc:"Android & iOS apps",price:15000},
- {icon:"📈",name:"Digital Marketing",desc:"SEO, Ads & Social Media",price:3000},
- {icon:"🎨",name:"Graphic & Logo Design",desc:"Brand creatives",price:499},
- {icon:"🧠",name:"IT Consultancy",desc:"Business tech guidance",price:999}
-];
+const upiBase="upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions&cu=INR";
+const upiLink=document.getElementById("upi-link");
+function updateUPI(){
+  const amt=document.getElementById("amount").value;
+  const svc=document.getElementById("service").value;
+  let link=upiBase;
+  if(amt) link+=`&am=${amt}`;
+  if(svc) link+=`&tn=${encodeURIComponent(svc)}`;
+  upiLink.href=link;
+}
+document.getElementById("amount").addEventListener("input",updateUPI);
+document.getElementById("service").addEventListener("change",updateUPI);
 
+const services=[
+ {icon:"🤖",name:"AI Automation",desc:"Chatbots & workflows",price:4999},
+ {icon:"🌐",name:"Website Development",desc:"Business & eCommerce",price:2999},
+ {icon:"📱",name:"App Development",desc:"Android & iOS Apps",price:15000},
+ {icon:"📈",name:"Digital Marketing",desc:"SEO, Ads & Growth",price:3000},
+ {icon:"💼",name:"CSC / Govt Services",desc:"PAN, Aadhaar, GST, PF",price:199}
+];
 const grid=document.getElementById("service-grid");
 services.forEach(s=>{
   const d=document.createElement("div");
   d.className="bg-indigo-50 p-6 rounded-xl shadow";
-  d.innerHTML=`
-    <div class="text-4xl mb-3">${s.icon}</div>
+  d.innerHTML=`<div class="text-4xl mb-3">${s.icon}</div>
     <h3 class="font-bold text-xl mb-2">${s.name}</h3>
     <p class="text-gray-600 text-sm mb-3">${s.desc}</p>
     <p class="font-semibold text-indigo-700">Starting ₹${s.price}</p>`;
