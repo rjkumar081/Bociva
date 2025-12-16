@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="canonical" href="https://merapopi.com/">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Careers at NexAI Tech & Digital Solutions</title>
-<meta name="description" content="Explore career opportunities at NexAI Tech & Digital Solutions. Apply for IT support, AI, development and digital marketing roles.">
+<title>Careers | NexAI Tech & Digital Solutions</title>
+<meta name="description" content="Careers at NexAI Tech & Digital Solutions. Join our IT support, AI automation, digital marketing and tech consultancy team.">
 
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
 <style>
 html{scroll-behavior:smooth}
 
-/* ===== NAVBAR ===== */
+/* ================= NAVBAR ================= */
 #navbar{
-  background:linear-gradient(135deg,rgba(11,15,26,.65),rgba(17,24,39,.75));
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  box-shadow:0 10px 30px rgba(0,0,0,.35);
+  position:fixed;
+  top:0; left:0;
+  width:100%;
+  z-index:50;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg,#08142a,#0b2a55);
+  box-shadow:0 10px 25px rgba(0,0,0,.18);
 }
 .nav-solid{
-  background:linear-gradient(135deg,#0b0f1a,#111827);
+  background: linear-gradient(135deg,#0b0f1a,#111827);
 }
 
-/* ===== HERO ===== */
+/* BRAND */
+.brand{
+  font-size:1.4rem;
+  font-weight:800;
+  color:#fff;
+  line-height:1.1;
+}
+.brand span{color:#facc15}
+.brand small{
+  display:block;
+  font-size:.72rem;
+  color:#c7d2fe;
+}
+
+/* ================= HERO ================= */
 .hero{
-  height:280px;
+  height:260px;
   background:
     linear-gradient(rgba(8,20,42,.75),rgba(8,20,42,.85)),
     url('assets/hero.jpg') center/cover no-repeat;
@@ -35,152 +50,164 @@ html{scroll-behavior:smooth}
   align-items:center;
   justify-content:center;
   margin-top:72px;
-  position:relative;
-}
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:radial-gradient(circle at top center,
-    rgba(255,255,255,.12),
-    transparent 55%);
 }
 .hero-content{
-  position:relative;
-  z-index:2;
   text-align:center;
   color:#fff;
 }
 .hero-content h1{
   font-size:2.2rem;
   font-weight:800;
-  text-shadow:0 2px 8px rgba(0,0,0,.45);
 }
 .hero-content p{
-  margin-top:.6rem;
+  margin-top:.5rem;
   color:#e5e7eb;
 }
-@media(max-width:768px){
-  .hero{height:200px}
-  .hero-content h1{font-size:1.5rem}
+
+/* ================= CARDS ================= */
+.card{
+  background:#f8fafc;
+  border-radius:1rem;
+  padding:2rem;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 </style>
 </head>
 
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-gray-50 text-gray-900 pt-[72px]">
 
-<!-- ===== NAVBAR ===== -->
-<header id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+<!-- ================= NAVBAR ================= -->
+<header id="navbar">
   <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-    <h1 class="text-xl md:text-2xl font-extrabold text-white">
-      NexAI <span class="text-yellow-300">Tech & Digital</span>
-    </h1>
 
-    <nav class="hidden md:flex gap-6 text-white font-semibold">
-      <a href="index.html" class="hover:text-yellow-300">Home</a>
-      <a href="services.html" class="hover:text-yellow-300">Services</a>
+    <div class="brand">
+      NexAI <span>🏆Tech & Digital Solutions</span>
+      <small>Powered by MeraPopi</small>
+    </div>
+
+    <nav class="hidden md:flex gap-6 text-white font-semibold items-center">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
       <a href="careers.html" class="text-yellow-300">Careers</a>
-      <a href="contact.html" class="hover:text-yellow-300">Contact</a>
-      <a href="tel:+919464642218"
-         class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-300">
+      <a href="contact.html"
+         class="bg-indigo-600 hover:bg-indigo-700 transition
+                text-white px-5 py-2 rounded-full">
         Talk to Expert
       </a>
     </nav>
 
-    <button id="menuBtn" class="md:hidden text-white text-xl">☰</button>
+    <button id="menuBtn" class="md:hidden text-white text-3xl">☰</button>
   </div>
 
-  <div id="mobileMenu" class="hidden bg-[#0b0f1a]/95 backdrop-blur-lg md:hidden">
-    <nav class="flex flex-col px-6 py-4 gap-3 text-white font-semibold">
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-[#0b0f1a]">
+    <nav class="flex flex-col px-6 py-6 gap-4 text-white font-semibold">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
+      <a href="about.html">About</a>
       <a href="careers.html" class="text-yellow-300">Careers</a>
-      <a href="contact.html">Contact</a>
-      <a href="tel:+919464642218"
-         class="bg-yellow-400 text-gray-900 text-center py-2 rounded-full">
-        Call Now
+      <a href="contact.html"
+         class="bg-indigo-600 text-white py-2 rounded-full text-center">
+        Talk to Expert
       </a>
     </nav>
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
+<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-content">
     <h1>Careers at NexAI Tech & Digital Solutions</h1>
-    <p>Build your career with a fast-growing IT, AI & digital consultancy company.</p>
+    <p>Build your future with IT, AI & Digital Innovation</p>
   </div>
 </section>
 
-<!-- ===== WHY JOIN ===== -->
-<section class="py-16 bg-white text-center">
-  <h2 class="text-3xl font-bold mb-6">Why Join NexAI?</h2>
-  <p class="max-w-3xl mx-auto text-gray-600 mb-10">
-    Work on real client projects, modern technologies and grow your career with experts.
+<!-- ================= WHY JOIN ================= -->
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-10">Why Join NexAI?</h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="card">🚀 Fast Career Growth</div>
+      <div class="card">💼 Real Client Projects</div>
+      <div class="card">🌍 Remote & Flexible Work</div>
+      <div class="card">📚 Learning & Mentorship</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OPEN POSITIONS ================= -->
+<section class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Current Openings</h2>
+
+    <div class="grid sm:grid-cols-2 gap-8">
+
+      <div class="card">
+        <h3 class="text-xl font-bold mb-2">IT Support Executive</h3>
+        <p class="text-gray-600 mb-3">Remote / On-site</p>
+        <ul class="list-disc pl-5 text-gray-600 text-sm">
+          <li>Technical troubleshooting & support</li>
+          <li>Basic networking & systems</li>
+          <li>Client communication</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 class="text-xl font-bold mb-2">Digital Marketing Executive</h3>
+        <p class="text-gray-600 mb-3">Remote</p>
+        <ul class="list-disc pl-5 text-gray-600 text-sm">
+          <li>SEO & social media marketing</li>
+          <li>Campaign planning</li>
+          <li>Analytics & reporting</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 class="text-xl font-bold mb-2">Web / App Developer</h3>
+        <p class="text-gray-600 mb-3">Remote / Freelance</p>
+        <ul class="list-disc pl-5 text-gray-600 text-sm">
+          <li>HTML, CSS, JS / React / Flutter</li>
+          <li>API integration</li>
+          <li>Performance optimization</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 class="text-xl font-bold mb-2">AI & Automation Specialist</h3>
+        <p class="text-gray-600 mb-3">Remote</p>
+        <ul class="list-disc pl-5 text-gray-600 text-sm">
+          <li>AI tools & automation</li>
+          <li>Chatbots & workflows</li>
+          <li>Business automation</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPLY ================= -->
+<section class="py-20 bg-gradient-to-br from-indigo-100 via-white to-blue-50 text-center">
+  <h2 class="text-3xl font-bold mb-4">Apply Now</h2>
+  <p class="text-gray-600 mb-8">
+    Send your resume and our HR team will contact you.
   </p>
 
-  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto px-4">
-    <div class="p-6 bg-indigo-50 rounded-xl shadow">🚀 Fast Career Growth</div>
-    <div class="p-6 bg-indigo-50 rounded-xl shadow">💼 Real Client Projects</div>
-    <div class="p-6 bg-indigo-50 rounded-xl shadow">🌍 Remote / Flexible Work</div>
-    <div class="p-6 bg-indigo-50 rounded-xl shadow">📚 Learning & Mentorship</div>
-  </div>
-</section>
+  <div class="flex flex-col sm:flex-row justify-center gap-4">
+    <a href="mailto:careers@merapopi.com"
+       class="bg-indigo-600 hover:bg-indigo-700 transition
+              text-white px-6 py-3 rounded-full font-semibold">
+      📧 Apply via Email
+    </a>
 
-<!-- ===== APPLY FORM (WITH RESUME UPLOAD) ===== -->
-<section class="py-20 bg-gradient-to-br from-indigo-100 via-white to-blue-50">
-  <div class="max-w-3xl mx-auto bg-white shadow-2xl p-8 rounded-2xl">
-    <h2 class="text-3xl font-bold text-center mb-6">Apply for a Position</h2>
-    <p class="text-center text-gray-600 mb-8">
-      Upload your resume and our HR team will contact you shortly.
-    </p>
-
-    <form action="https://formspree.io/f/xnnojdpr"
-          method="POST"
-          enctype="multipart/form-data"
-          class="space-y-5">
-
-      <input name="name" required placeholder="Full Name"
-        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
-
-      <input name="email" type="email" required placeholder="Email Address"
-        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
-
-      <input name="phone" placeholder="Phone / WhatsApp"
-        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
-
-      <select name="position"
-        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
-        <option value="">Position Interested In</option>
-        <option>IT Support Executive</option>
-        <option>Digital Marketing Executive</option>
-        <option>Web / App Developer</option>
-        <option>AI & Automation Specialist</option>
-        <option>Other</option>
-      </select>
-
-      <label class="text-sm font-semibold text-gray-700">
-        Upload Resume (PDF / DOC)
-      </label>
-      <input type="file"
-             name="resume"
-             accept=".pdf,.doc,.docx"
-             required
-             class="border border-gray-300 rounded-lg w-full p-3 bg-white focus:ring-2 focus:ring-indigo-500">
-
-      <input name="resume_link"
-        placeholder="Resume Google Drive link (optional)"
-        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
-
-      <textarea name="message" rows="4"
-        placeholder="Your skills / experience"
-        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500"></textarea>
-
-      <button type="submit"
-        class="bg-indigo-600 text-white py-3 rounded-lg font-semibold w-full hover:bg-indigo-700 transition">
-        Submit Application
-      </button>
-    </form>
+    <a href="https://wa.me/919464642218?text=Hi, I want to apply for a job at NexAI Tech & Digital Solutions"
+       target="_blank"
+       class="bg-green-600 hover:bg-green-700 transition
+              text-white px-6 py-3 rounded-full font-semibold">
+      💬 Apply via WhatsApp
+    </a>
   </div>
 </section>
 
@@ -188,14 +215,20 @@ html{scroll-behavior:smooth}
   © 2025 NexAI Tech & Digital Solutions — Powered by MeraPopi
 </footer>
 
+<!-- ================= JS ================= -->
 <script>
-const navbar=document.getElementById('navbar');
-const btn=document.getElementById('menuBtn');
-const menu=document.getElementById('mobileMenu');
+document.addEventListener("DOMContentLoaded",function(){
+  const menuBtn=document.getElementById("menuBtn");
+  const mobileMenu=document.getElementById("mobileMenu");
+  const navbar=document.getElementById("navbar");
 
-btn.onclick=()=>menu.classList.toggle('hidden');
-window.addEventListener('scroll',()=>{
-  scrollY>40 ? navbar.classList.add('nav-solid') : navbar.classList.remove('nav-solid');
+  menuBtn.onclick=()=>mobileMenu.classList.toggle("hidden");
+
+  window.addEventListener("scroll",()=>{
+    window.scrollY>40
+      ? navbar.classList.add("nav-solid")
+      : navbar.classList.remove("nav-solid");
+  });
 });
 </script>
 
