@@ -14,98 +14,66 @@
 <style>
 html{scroll-behavior:smooth}
 
-/* ===== NAVBAR ===== */
+/* ================= NAVBAR ================= */
 #navbar{
-  background: linear-gradient(
-    135deg,
-    rgba(11,15,26,0.65),
-    rgba(17,24,39,0.75)
-  );
+  position:fixed;
+  top:0; left:0;
+  width:100%;
+  z-index:50;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow:0 10px 30px rgba(0,0,0,.35);
-}
-.nav-solid{
-  background: linear-gradient(135deg,#0b0f1a,#111827);
+  background: linear-gradient(135deg,#08142a,#0b2a55);
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.18),
+    inset 0 1px 0 rgba(255,255,255,.25);
 }
 
-/* ===== HERO ===== */
-.hero{
-  height:260px;
-  background:
-    linear-gradient(rgba(8,20,42,.75),rgba(8,20,42,.85)),
-    url('assets/hero.jpg') center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-top:72px;
+/* brand 3D text – CRISP */
+#navbar h1{
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.15),
+    0 1px 2px rgba(0,0,0,0.35);
+}
+
+/* highlight span */
+#navbar h1 span{
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.2),
+    0 1px 2px rgba(0,0,0,0.4);
+}
+
+
+/* nav underline hover */
+#navbar nav a{
   position:relative;
 }
-.hero::before{
+#navbar nav a::after{
   content:"";
   position:absolute;
-  inset:0;
-  background:radial-gradient(circle at top center,
-    rgba(255,255,255,.12),
-    transparent 55%);
+  left:0;
+  bottom:-4px;
+  width:0;
+  height:2px;
+  background:#fde68a;
+  transition:.3s;
 }
-.hero-content{
-  position:relative;
-  z-index:2;
-  text-align:center;
-  color:#fff;
+#navbar nav a:hover::after{width:100%}
+
+/* CTA 3D button only */
+#navbar a.bg-yellow-400{
+  box-shadow:
+    0 6px 0 #d97706,
+    0 10px 20px rgba(0,0,0,.25);
+  transition:.2s;
 }
-.hero-content h1{
-  font-size:2.2rem;
-  font-weight:800;
-  letter-spacing:-.4px;
+#navbar a.bg-yellow-400:hover{
+  transform:translateY(-1px);
 }
-.hero-content p{
-  margin-top:.6rem;
-  color:#e5e7eb;
+#navbar a.bg-yellow-400:active{
+  transform:translateY(1px);
+  box-shadow:0 3px 0 #d97706;
 }
-@media(max-width:768px){
-  .hero{height:200px}
-  .hero-content h1{font-size:1.5rem}
-}
-</style>
-</head>
 
-<body class="bg-gray-50 text-gray-900">
-
-<!-- ===== NAVBAR ===== -->
-<header id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-    <h1 class="text-xl md:text-2xl font-extrabold text-white">
-      NexAI <span class="text-yellow-300">Tech & Digital</span>
-    </h1>
-
-    <nav class="hidden md:flex gap-6 text-white font-semibold">
-      <a href="index.html" class="hover:text-yellow-300">Home</a>
-      <a href="services.html" class="text-yellow-300">Services</a>
-      <a href="careers.html" class="hover:text-yellow-300">Careers</a>
-      <a href="contact.html" class="hover:text-yellow-300">Contact</a>
-      <a href="tel:+919464642218"
-         class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-yellow-300">
-        Talk to Expert
-      </a>
-    </nav>
-
-    <button id="menuBtn" class="md:hidden text-white text-xl">☰</button>
-  </div>
-
-  <div id="mobileMenu" class="hidden bg-[#0b0f1a]/95 backdrop-blur-lg md:hidden">
-    <nav class="flex flex-col px-6 py-4 gap-3 text-white font-semibold">
-      <a href="index.html">Home</a>
-      <a href="services.html" class="text-yellow-300">Services</a>
-      <a href="careers.html">Careers</a>
-      <a href="contact.html">Contact</a>
-      <a href="tel:+919464642218"
-         class="bg-yellow-400 text-gray-900 text-center py-2 rounded-full">
-        Call Now
-      </a>
-    </nav>
-  </div>
 </header>
 
 <!-- ===== HERO ===== -->
