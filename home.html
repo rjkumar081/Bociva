@@ -161,6 +161,54 @@ footer{
   text-align:center;
   padding:35px;
 }
+  #site-footer{
+  background:#020617;               /* Deep navy */
+  color:#cbd5e1;
+  padding:70px 20px 45px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footer-container{
+  max-width:1200px;
+  margin:auto;
+  text-align:center;
+}
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:22px;
+  margin-bottom:30px;
+}
+
+.footer-links a{
+  color:#cbd5e1;
+  text-decoration:none;
+  font-size:15px;
+  font-weight:500;
+  transition:.25s;
+}
+
+.footer-links a:hover{
+  color:#ffffff;
+  text-decoration:underline;
+}
+
+.footer-divider{
+  width:90px;
+  height:2px;
+  background:#ff7a00;
+  margin:0 auto 25px;
+  border-radius:2px;
+}
+
+.footer-copy{
+  font-size:14px;
+  line-height:1.6;
+  color:#94a3b8;
+}
+
 </style>
 </head>
 
@@ -303,17 +351,30 @@ footer{
   <a href="contact.html" class="btn">Talk to Our Experts</a>
 </section>
 
-  <footer id="site-footer" class="text-gray-300 text-center py-10">
-  <div class="mb-6 flex flex-wrap justify-center items-center gap-4">
-    <a href="about.html" class="hover:text-white transition mx-3">About Us</a>
-        <a href="careers.html" class="hover:text-white transition mx-3">Careers</a>
-    <a href="refund.html" class="hover:text-white transition mx-3">Refund Policy</a>
-    <a href="terms.html" class="hover:text-white transition mx-3">Terms & Conditions</a>
-    <a href="privacy.html" class="hover:text-white transition mx-3">Privacy Policy</a>
+ <footer id="site-footer">
+  <div class="footer-container">
+
+    <!-- Footer Links -->
+    <div class="footer-links">
+      <a href="about.html">About Us</a>
+      <a href="careers.html">Careers</a>
+      <a href="refund.html">Refund Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+
+    <!-- Divider -->
+    <div class="footer-divider"></div>
+
+    <!-- Copyright -->
+    <p class="footer-copy">
+      © 2025 <strong>NexAI Tech & Digital Solutions</strong> — Powered by <strong>MeraPopi</strong><br>
+      All Rights Reserved.
+    </p>
+
   </div>
- 
-  <p>© 2025 NexAI Tech & Digital Solutions — Powered by MeraPopi</p>
 </footer>
+
 
 </body>
 </html>
