@@ -274,40 +274,76 @@ End-to-end IT services designed to improve performance, security, and Grow busin
 const whatsappNumber = "919464642218";
 const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR";
 const services = [
-  { icon: "🌐", name: "Website Development", desc: "Create professional, responsive business or e-commerce websites." },
-  { icon: "📱", name: "App Development", desc: "Build Android & iOS apps tailored to your business needs." },
-  { icon: "📈", name: "Digital Marketing", desc: "Promote your brand through SEO, ads, and social media growth." },
-  { icon: "🎨", name: "Graphic & Logo Design", desc: "Custom logos, posters & creatives that make your brand shine." },
-  { icon: "🧠", name: "Business & IT Consultancy", desc: "Expert consultancy for business setup & tech growth." },
-  { icon: "⚙️", name: "Website Maintenance & Support", desc: "Ongoing updates, bug fixes & uptime monitoring." },
-  { icon: "🧩", name: "Social Media Management", desc: "Plan, post & manage social content for consistent growth." },
-  { icon: "💡", name: "SEO & Google Ads Setup", desc: "Boost visibility with SEO optimization & ad campaigns." },
-  { icon: "✉️", name: "Email & WhatsApp Marketing", desc: "Send personalized campaigns that convert leads into clients." },
-  { icon: "🎥", name: "Video Editing & Reels Creation", desc: "Create short videos & reels for social media engagement." },
-
-  /* ===== New Professional IT Services ===== */
-
-  { icon: "🛠️", name: "Managed IT Support", desc: "24/7 monitoring, helpdesk support, infrastructure management, and proactive IT services." },
-
-  { icon: "🤖", name: "AI & Automation", desc: "AI chatbots, predictive analytics, intelligent systems, and process automation solutions." },
-
-  { icon: "☁️", name: "Cloud & DevOps", desc: "Cloud migration, AWS/Azure/GCP solutions, DevOps practices, and CI/CD pipelines." },
-
-  { icon: "🔐", name: "Cybersecurity", desc: "Threat detection, SOC services, compliance, data protection, and risk management." },
-
-  { icon: "💻", name: "Software Development", desc: "Custom web applications, enterprise software, SaaS platforms, and system integrations." },
-
-  { icon: "🧭", name: "IT Consulting", desc: "Technology roadmap planning, digital transformation, and strategic IT advisory." },
-
-  /* ===== Digital Seva / Utility Services ===== */
-
-  { icon: "💼", name: "PF Withdrawal & Correction", desc: "EPF withdrawal, name correction, and KYC linking made easy." },
-  { icon: "💰", name: "IT & GST Services", desc: "ITR filing, GST registration, and business tax solutions." },
-  { icon: "🪪", name: "PAN Card Services", desc: "Apply, update or reprint PAN Card quickly." },
-  { icon: "🆔", name: "Aadhaar Update", desc: "Aadhaar name, address or mobile correction support." },
-  { icon: "🏢", name: "MSME Registration", desc: "Udyam / MSME registration for new and existing businesses." },
-  { icon: "🛂", name: "Passport Services", desc: "Apply or renew passport with document verification." },
-  { icon: "✈️", name: "Travel & Ticket Booking", desc: "Book IRCTC train, flight, hotel or visa assistance." }
+ {
+  category: "IT Services",
+  items: [
+    { icon: "🛠️", name: "Managed IT Support", desc: "24/7 monitoring, helpdesk, infrastructure management and proactive IT support." },
+    { icon: "🧭", name: "IT Consulting", desc: "Technology roadmap, digital transformation and strategic IT advisory." },
+    { icon: "🏢", name: "Enterprise IT Solutions", desc: "End-to-end IT solutions for enterprises and large organizations." },
+    { icon: "🧩", name: "IT Infrastructure Management", desc: "Servers, networks, storage and endpoint management." },
+    { icon: "🔁", name: "IT Asset & License Management", desc: "Hardware, software licensing and lifecycle management." }
+  ]
+}
+{
+  category: "Cloud Based Services",
+  items: [
+    { icon: "☁️", name: "Cloud Migration", desc: "Migrate applications and infrastructure to cloud platforms." },
+    { icon: "☁️", name: "AWS / Azure / GCP Solutions", desc: "Cloud architecture, deployment and optimization." },
+    { icon: "🔄", name: "DevOps & CI/CD", desc: "Automation pipelines, CI/CD workflows and DevOps practices." },
+    { icon: "📦", name: "Containerization & Kubernetes", desc: "Docker, Kubernetes orchestration and microservices." },
+    { icon: "💾", name: "Backup & Disaster Recovery", desc: "Cloud backup, disaster recovery and business continuity." }
+  ]
+}
+{
+  category: "AI Based Services",
+  items: [
+    { icon: "🤖", name: "AI Automation", desc: "Business process automation using AI-powered tools." },
+    { icon: "💬", name: "AI Chatbots & Virtual Assistants", desc: "Customer support and sales automation chatbots." },
+    { icon: "📊", name: "Predictive Analytics", desc: "Data-driven insights and forecasting models." },
+    { icon: "🧠", name: "Machine Learning Solutions", desc: "Custom ML models for business intelligence." },
+    { icon: "🔍", name: "Computer Vision & NLP", desc: "Image recognition, OCR and natural language processing." }
+  ]
+}
+{
+  category: "Software & App Development",
+  items: [
+    { icon: "💻", name: "Custom Software Development", desc: "Tailored enterprise and business software solutions." },
+    { icon: "🌐", name: "SaaS Product Development", desc: "Cloud-based SaaS platforms and applications." },
+    { icon: "📱", name: "Mobile App Development", desc: "Android, iOS and cross-platform mobile apps." },
+    { icon: "🧩", name: "API & System Integrations", desc: "Third-party API and enterprise system integrations." },
+    { icon: "🧪", name: "QA & Software Testing", desc: "Manual and automated testing for quality assurance." }
+  ]
+}
+{
+  category: "Website & Experience Services",
+  items: [
+    { icon: "🌐", name: "Website Development", desc: "Corporate, eCommerce and custom websites." },
+    { icon: "🛒", name: "E-Commerce Solutions", desc: "Shopify, WooCommerce and custom eCommerce platforms." },
+    { icon: "🎨", name: "UI / UX Design", desc: "User experience and interface design." },
+    { icon: "⚡", name: "Website Performance Optimization", desc: "Speed, SEO and core web vitals optimization." },
+    { icon: "🔧", name: "Website Maintenance & Support", desc: "Ongoing support and website management." }
+  ]
+}
+{
+  category: "Digital Marketing Services",
+  items: [
+    { icon: "📈", name: "Digital Marketing Strategy", desc: "End-to-end online growth strategy." },
+    { icon: "🔍", name: "SEO & SEM", desc: "Search engine optimization and paid marketing." },
+    { icon: "📢", name: "Social Media Marketing", desc: "Brand building and audience engagement." },
+    { icon: "✉️", name: "Email & WhatsApp Marketing", desc: "Automated and personalized marketing campaigns." },
+    { icon: "🎥", name: "Video Marketing & Reels", desc: "Short-form videos and promotional content." }
+  ]
+}
+{
+  category: "Cybersecurity Services",
+  items: [
+    { icon: "🔐", name: "Cybersecurity Consulting", desc: "Security strategy and risk assessment." },
+    { icon: "🛡️", name: "SOC & Threat Monitoring", desc: "24/7 security operations center and monitoring." },
+    { icon: "📜", name: "Compliance & Audits", desc: "ISO, GDPR, SOC2 and regulatory compliance." },
+    { icon: "🧬", name: "Data Protection & Privacy", desc: "Encryption, access control and privacy management." },
+    { icon: "🚨", name: "Incident Response", desc: "Security incident handling and recovery." }
+  ]
+}
 ];
 
 function renderServices() {
