@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-75FCFK6Z8F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-75FCFK6Z8F');
+</script>
+  <link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png">
+
+  <link rel="canonical" href="https://merapopi.com/">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexAI Tech & Digital Solutions | IT Support, AI & Digital Consultancy</title>
+  <meta name="description" content="NexAI Tech & Digital Solutions provides IT support, AI automation, website & app development, digital marketing and tech consultancy services for businesses.">
+<meta name="keywords" content="IT support services, AI automation, digital consultancy, website development, app development, digital marketing company">
+
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<style>
+html{scroll-behavior:smooth}
+
+/* ================= NAVBAR ================= */
+#navbar{
+  position:fixed;
+  top:0; left:0;
+  width:100%;
+  z-index:50;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: linear-gradient(135deg,#08142a,#0b2a55);
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.18),
+    inset 0 1px 0 rgba(255,255,255,.25);
+}
+
+/* brand 3D text – CRISP */
+#navbar h1{
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.15),
+    0 1px 2px rgba(0,0,0,0.35);
+}
+
+/* highlight span */
+#navbar h1 span{
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.2),
+    0 1px 2px rgba(0,0,0,0.4);
+}
+
+
+/* nav underline hover */
+#navbar nav a{
+  position:relative;
+}
+#navbar nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0;
+  height:2px;
+  background:#fde68a;
+  transition:.3s;
+}
+#navbar nav a:hover::after{width:100%}
+
+/* CTA 3D button only */
+#navbar a.bg-yellow-400{
+  box-shadow:
+    0 6px 0 #d97706,
+    0 10px 20px rgba(0,0,0,.25);
+  transition:.2s;
+}
+#navbar a.bg-yellow-400:hover{
+  transform:translateY(-1px);
+}
+#navbar a.bg-yellow-400:active{
+  transform:translateY(1px);
+  box-shadow:0 3px 0 #d97706;
+}
+
+/* ================= HERO BANNER ================= */
+.hero{
+  height:280px;
+  background:url('assets/hero.jpg') center/cover no-repeat;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:72px;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(15,23,42,.55);
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  color:#fff;
+  text-align:center;
+}
+.hero-content h2{
+  font-size:2rem;
+  font-weight:700;
+}
+.hero-content p{opacity:.9}
+
+@media(max-width:768px){
+  .hero{height:200px}
+  .hero-content h2{font-size:1.4rem}
+}
+
+/* floating chat */
+.floating-chat{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:60px;
+  height:60px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 15px rgba(0,0,0,.25);
+  z-index:50;
+}
+  /* ===== STYLE FOOTER ===== */
+#site-footer{
+    background: linear-gradient(135deg,#08142a,#0b2a55);
+  color:#e5e7eb;
+  position:relative;
+}
+
+/* footer links */
+#site-footer a{
+  color:#c7d2fe;
+  transition:color .2s ease;
+}
+#site-footer a:hover{
+  color:#ffffff;
+}
+
+/* subtle premium glow */
+#site-footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at top right,
+      rgba(255,255,255,0.06),
+      transparent 45%);
+  pointer-events:none;
+}
+/* ===== BRAND LOGO TEXT ===== */
+.brand{
+  font-size:1.4rem;
+  font-weight:800;
+  color:#ffffff;
+  line-height:1.1;
+  letter-spacing:.2px;
+}
+
+.brand span{
+  color:#facc15; /* premium gold */
+  font-weight:800;
+}
+
+.brand small{
+  display:block;
+  font-size:.72rem;
+  font-weight:500;
+  color:#c7d2fe;
+  letter-spacing:.4px;
+  margin-top:2px;
+}
+
+/* Mobile adjustment */
+@media(max-width:768px){
+  .brand{
+    font-size:1.2rem;
+  }
+  .brand small{
+    font-size:.65rem;
+  }
+}
+
+</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "NexAI Tech & Digital Solutions",
+  "url": "https://merapopi.com",
+  "logo": "https://merapopi.com/favicon.png"
+}
+</script>
+
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+<!-- ================= NAVBAR ================= -->
+<header id="navbar" class="fixed top-0 w-full z-50 bg-[#0b0f1a]">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+
+   <h1 class="brand">
+   NexAI <span>Tech & Digital Solutions
+</span>
+  <small>Powered by MeraPopi</small>
+</h1>
+
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex gap-6 text-white font-semibold">
+      <a href="#services">Services</a>
+      <a href="#payment">Fast Payment</a>
+      <a href="contact.html"
+   class="bg-indigo-600 text-white px-4 py-2 rounded-full font-semibold
+          hover:bg-indigo-700 transition">
+  Talk to Expert
+</a>
+
+
+
+    </nav>
+
+    <!-- Mobile Button -->
+    <button id="menuBtn" class="md:hidden text-white text-3xl">
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-[#0b0f1a]">
+    <nav class="flex flex-col px-6 py-4 gap-4 text-white font-semibold">
+      <a href="#services">Services</a>
+      <a href="#payment">Fast Payment</a>
+    <a href="contact.html"
+   class="bg-indigo-600 text-white px-4 py-2 rounded-full font-semibold
+          hover:bg-indigo-700 transition
+          inline-flex items-center justify-center text-center">
+  Talk to Expert
+</a>
+
+
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-content text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white animate-bounce drop-shadow-lg">
+Trusted IT Support & Technology Consultancy Company
+   </h2>
+    <p class="text-gray-200 max-w-2xl mx-auto mb-6 drop-shadow">
+End-to-end IT services designed to improve performance, security, and Grow business continuity.    </p>
+  </div>
+</section>
+
+
+<script>
+const whatsappNumber = "919464642218";
+const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR";
+const services = [
+  { icon: "🌐", name: "Website Development", desc: "Create professional, responsive business or e-commerce websites." },
+  { icon: "📱", name: "App Development", desc: "Build Android & iOS apps tailored to your business needs." },
+  { icon: "📈", name: "Digital Marketing", desc: "Promote your brand through SEO, ads, and social media growth." },
+  { icon: "🎨", name: "Graphic & Logo Design", desc: "Custom logos, posters & creatives that make your brand shine." },
+  { icon: "🧠", name: "Business & IT Consultancy", desc: "Expert consultancy for business setup & tech growth." },
+  { icon: "⚙️", name: "Website Maintenance & Support", desc: "Ongoing updates, bug fixes & uptime monitoring." },
+  { icon: "🧩", name: "Social Media Management", desc: "Plan, post & manage social content for consistent growth." },
+  { icon: "💡", name: "SEO & Google Ads Setup", desc: "Boost visibility with SEO optimization & ad campaigns." },
+  { icon: "✉️", name: "Email & WhatsApp Marketing", desc: "Send personalized campaigns that convert leads into clients." },
+  { icon: "🎥", name: "Video Editing & Reels Creation", desc: "Create short videos & reels for social media engagement." },
+
+  /* ===== New Professional IT Services ===== */
+
+  { icon: "🛠️", name: "Managed IT Support", desc: "24/7 monitoring, helpdesk support, infrastructure management, and proactive IT services." },
+
+  { icon: "🤖", name: "AI & Automation", desc: "AI chatbots, predictive analytics, intelligent systems, and process automation solutions." },
+
+  { icon: "☁️", name: "Cloud & DevOps", desc: "Cloud migration, AWS/Azure/GCP solutions, DevOps practices, and CI/CD pipelines." },
+
+  { icon: "🔐", name: "Cybersecurity", desc: "Threat detection, SOC services, compliance, data protection, and risk management." },
+
+  { icon: "💻", name: "Software Development", desc: "Custom web applications, enterprise software, SaaS platforms, and system integrations." },
+
+  { icon: "🧭", name: "IT Consulting", desc: "Technology roadmap planning, digital transformation, and strategic IT advisory." },
+
+  /* ===== Digital Seva / Utility Services ===== */
+
+  { icon: "💼", name: "PF Withdrawal & Correction", desc: "EPF withdrawal, name correction, and KYC linking made easy." },
+  { icon: "💰", name: "IT & GST Services", desc: "ITR filing, GST registration, and business tax solutions." },
+  { icon: "🪪", name: "PAN Card Services", desc: "Apply, update or reprint PAN Card quickly." },
+  { icon: "🆔", name: "Aadhaar Update", desc: "Aadhaar name, address or mobile correction support." },
+  { icon: "🏢", name: "MSME Registration", desc: "Udyam / MSME registration for new and existing businesses." },
+  { icon: "🛂", name: "Passport Services", desc: "Apply or renew passport with document verification." },
+  { icon: "✈️", name: "Travel & Ticket Booking", desc: "Book IRCTC train, flight, hotel or visa assistance." }
+];
+
+function renderServices() {
+  const grid = document.getElementById('service-grid');
+  if (!grid) return;
+  services.forEach(s => {
+    const upiLink = `${upiBase}&am=${s.price}&tn=${encodeURIComponent(s.name)}`;
+    const chatLink = `https://wa.me/${whatsappNumber}?text=Hi! I am interested in ${encodeURIComponent(s.name)}`;
+    // Share link/text for Web Share API or fallback
+    const shareText = `Check out this service: ${s.name} - ${s.desc}. Starting at ₹${s.price}. Powered by NexAI Tech & Digital Solutions.`;
+
+    const div = document.createElement('div');
+    div.className = "bg-indigo-50 p-6 rounded-xl shadow hover:shadow-xl transition";
+    div.innerHTML = `
+      <div class='text-4xl mb-4'>${s.icon}</div>
+      <h3 class='text-xl font-bold mb-2'>${s.name}</h3>
+      <p class='text-gray-600 text-sm mb-3'>${s.desc}</p>
+      <div class='flex flex-wrap gap-2 items-center'>
+        
+        <a href='${chatLink}' target='_blank'
+           class='bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
+           💬 Free Consultation
+        </a>
+      <a href='${upiLink}' target='_blank' 
+           class='bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
+          ⚡ Quick Pay
+        </a>
+        </button>
+      </div>
+    `;
+    grid.appendChild(div);
+  });
+}
+
+function shareService(name, desc, price) {
+    const shareData = {
+        title: 'NexAI Service: ' + name,
+        text: `Check out this service: ${name} - ${desc}. Starting at ₹${price}. Get in touch now!`,
+        url: window.location.href // Shares the current page link
+    };
+
+    if (navigator.share) {
+        navigator.share(shareData)
+            .catch((error) => console.log('Error sharing', error));
+    } else {
+        // Fallback for browsers that do not support Web Share API
+        alert(`Share this service: ${shareData.text}\nPage URL: ${shareData.url}\n\n(Note: Your browser does not support the native Share feature, please copy and paste the details.)`);
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", renderServices);
+</script>
+
+
+
+<script>
+// NOTE: I am removing the duplicate script block that re-renders services to avoid conflict.
+// The first, updated script block above handles the full rendering now.
+</script>
+
+
+
+<section id="services" class="py-4 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Our Core AI, Tech & Digital Services</h2>
+    <div id="service-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </div>
+</section>
+
+<section id="payment" class="py-20 bg-gradient-to-br from-indigo-50 via-white to-green-50">
+  <div class="max-w-5xl mx-auto text-center px-4">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">💳 Book Your Slot with Fast Payment</h2>
+    <p class="text-gray-600 mb-10 max-w-2xl mx-auto">Select your service, enter the amount, and pay securely using UPI. Share the screenshot on WhatsApp for quick confirmation.</p>
+    <div class="bg-white rounded-2xl shadow-xl p-8 md:flex items-center justify-between gap-8">
+      <div class="flex-1 mb-6 md:mb-0">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR&size=220x220"
+          alt="UPI QR" class="mx-auto rounded-xl shadow-lg" />
+        <p class="text-gray-700 text-sm mt-3">Scan to pay via any UPI app (GPay / PhonePe / Paytm)</p>
+      </div>
+      <div class="flex-1 text-left">
+        <label class="block text-gray-700 font-semibold mb-2">Select Service</label>
+        <select id="service" class="border border-gray-300 rounded-lg w-full p-3 mb-4 focus:ring-2 focus:ring-indigo-500">
+          <option value="">-- Choose a Service --</option>
+          <option>Website Development</option>
+          <option>App Development</option>
+          <option>AI Automation Setup</option>
+          <option>Digital Marketing</option>
+          <option>Graphic & Logo Design</option>
+          <option>Business & IT Consultancy</option>
+          <option>SEO & Google Ads Setup</option>
+          <option>Email & WhatsApp Marketing</option>
+          <option>Video Editing & Reels Creation</option>
+          <option>PF Withdrawal & Correction</option>
+          <option>ITR & GST Services</option>
+          <option>PAN Card Services</option>
+          <option>Aadhaar Update</option>
+          <option>MSME Registration</option>
+          <option>Passport Services</option>
+          <option>Any Other Requirement</option>
+        </select>
+        <label class="block text-gray-700 font-semibold mb-2">Enter Amount (₹)</label>
+        <input id="amount" type="number" placeholder="Enter Amount"
+          class="border border-gray-300 rounded-lg w-full p-3 mb-6 focus:ring-2 focus:ring-indigo-500" />
+        <a id="upi-link" target="_blank">
+          <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition">
+            Pay via UPI
+          </button>
+        </a>
+        <p class="text-xs text-gray-500 mt-3">Your payment is 100% secure via UPI.</p>
+      </div>
+    </div>
+    <script>
+      const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR";
+      const upiLink = document.getElementById('upi-link');
+      function updateUPILink() {
+        const amount = document.getElementById('amount').value || '';
+        const service = document.getElementById('service').value || '';
+        let link = upiBase;
+        if (amount) link += `&am=${amount}`;
+        if (service) link += `&tn=${encodeURIComponent(service)}`;
+        upiLink.href = link;
+      }
+      document.getElementById('amount').addEventListener('input', updateUPILink);
+      document.getElementById('service').addEventListener('change', updateUPILink);
+    </script>
+</section>
+
+<section id="contact" class="bg-gray-50 py-20">
+  <div class="max-w-3xl mx-auto bg-white shadow-2xl p-8 rounded-2xl">
+    <h2 class="text-3xl font-bold text-center mb-6 text-gray-800">Tell Us About Your Project
+</h2>
+    <p class="text-center text-gray-600 mb-8">Fill the form and we’ll get back to you within a few hours.</p>
+    <form action="https://formspree.io/f/xnnojdpr" method="POST" class="space-y-5">
+      <input name="name" required placeholder="Full Name" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
+      <input name="email" type="email" required placeholder="Email Address" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
+      <input name="phone" required placeholder="Phone / WhatsApp" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
+      <select name="service" id="serviceSelect" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+        <option value="">Select a Service</option>
+        <option>Website Development</option>
+        <option>App Development</option>
+        <option>AI Automation Setup</option>
+        <option>Digital Marketing</option>
+        <option>Graphic & Logo Design</option>
+        <option>Business & IT Consultancy</option>
+        <option>SEO & Google Ads Setup</option>
+        <option>Email & WhatsApp Marketing</option>
+        <option>Video Editing & Reels Creation</option>
+        <option>PF Withdrawal & Correction</option>
+        <option>IT & GST Services</option>
+        <option>PAN Card Services</option>
+        <option>Aadhaar Update</option>
+        <option>MSME Registration</option>
+        <option>Passport Services</option>
+        <option>Any Other Requirement</option>
+      </select>
+      <textarea name="message" rows="4" placeholder="Share your project details, including timeline and budget"
+        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500"></textarea>
+      <button type="submit" class="bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold w-full hover:bg-indigo-700">Submit Request</button>
+    </form>
+  </div>
+</section>
+
+<footer id="site-footer" class="text-gray-300 text-center py-10">
+  <div class="mb-6 flex flex-wrap justify-center items-center gap-4">
+    <a href="about.html" class="hover:text-white transition mx-3">About Us</a>
+        <a href="careers.html" class="hover:text-white transition mx-3">Careers</a>
+    <a href="refund.html" class="hover:text-white transition mx-3">Refund Policy</a>
+    <a href="terms.html" class="hover:text-white transition mx-3">Terms & Conditions</a>
+    <a href="privacy.html" class="hover:text-white transition mx-3">Privacy Policy</a>
+  </div>
+  <p class="text-sm text-yellow-300 font-semibold mb-4">
+    🔒 Secure Payment — All Major UPI, Cards, Wallets & CRED Supported
+  </p>
+  <div class="flex flex-wrap justify-center items-center gap-4 mb-6">
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/Visa.png" alt="Visa" class="h-10 w-auto bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/mastercard.png" alt="MasterCard" class="h-10 w-auto bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/upi.png" alt="UPI" class="h-10 w-auto bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/paytm.png" alt="Paytm" class="h-10 w-auto bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/PhonePe.png" alt="PhonePe" class="h-10 w-auto bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/gpay.png" alt="Google Pay" class="h-10 w-auto bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/cred.png" alt="CRED" class="h-10 w-auto bg-white rounded-md p-1 shadow-sm object-contain" />
+  </div>
+  <p>© 2025 NexAI Tech & Digital Solutions — Powered by MeraPopi</p>
+</footer>
+
+<a href="https://wa.me/919464642218" target="_blank" class="floating-chat">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Chat" class="w-8 h-8" />
+</a>
+
+<script>
+  const whatsappNumber = "919464642218";
+  const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR";
+
+  const services = [
+    { icon: "🤖", name: "AI Automation Setup", desc: "Integrate AI tools, chatbots, and workflows into your business.", price: 4999 },
+    { icon: "🌐", name: "Website Development", desc: "Create professional, responsive business or e-commerce websites.", price: 2999 },
+    { icon: "📱", name: "App Development", desc: "Build Android & iOS apps tailored to your business needs.", price: 15000 },
+    { icon: "📈", name: "Digital Marketing", desc: "Promote your brand through SEO, ads, and social media growth.", price: 3000 },
+    { icon: "🎨", name: "Graphic & Logo Design", desc: "Custom logos, posters & creatives that make your brand shine.", price: 499 },
+    { icon: "🧠", name: "Business & IT Consultancy", desc: "Expert consultancy for business setup & tech growth.", price: 999 },
+    { icon: "⚙️", name: "Website Maintenance & Support", desc: "Ongoing updates, bug fixes & uptime monitoring.", price: 999 },
+    { icon: "🧩", name: "Social Media Management", desc: "Plan, post & manage social content for consistent growth.", price: 2499 },
+    { icon: "💡", name: "SEO & Google Ads Setup", desc: "Boost visibility with SEO optimization & ad campaigns.", price: 2999 },
+    { icon: "✉️", name: "Email & WhatsApp Marketing", desc: "Send personalized campaigns that convert leads into clients.", price: 1499 },
+    { icon: "🎥", name: "Video Editing & Reels Creation", desc: "Create short videos & reels for social media engagement.", price: 499 },
+    { icon: "💼", name: "PF Withdrawal & Correction", desc: "EPF withdrawal, name correction, and KYC linking made easy.", price: 299 },
+    { icon: "💰", name: "IT & GST Services", desc: "ITR filing, GST registration, and business tax solutions.", price: 499 },
+    { icon: "🪪", name: "PAN Card Services", desc: "Apply, update or reprint PAN Card quickly.", price: 150 },
+    { icon: "🆔", name: "Aadhaar Update", desc: "Aadhaar name, address or mobile correction support.", price: 199 },
+    { icon: "🏢", name: "MSME Registration", desc: "Udyam / MSME registration for new and existing businesses.", price: 299 },
+    { icon: "🛂", name: "Passport Services", desc: "Apply or renew passport with document verification.", price: 999 },
+    { icon: "✈️", name: "Travel & Ticket Booking", desc: "Book IRCTC train, flight, hotel or visa assistance.", price: 99 }
+  ];
+
+  function renderServices() {
+    const grid = document.getElementById('service-grid');
+    if (!grid) return;
+    services.forEach(s => {
+      const upiLink = `${upiBase}&am=${s.price}&tn=${encodeURIComponent(s.name)}`;
+      const chatLink = `https://wa.me/${whatsappNumber}?text=Hi! I am interested in ${encodeURIComponent(s.name)}`;
+      // Share link/text for Web Share API or fallback
+      const shareText = `Check out this service: ${s.name} - ${s.desc}. Starting at ₹${s.price}. Powered by NexAI Tech & Digital Solutions.`;
+
+      const div = document.createElement('div');
+      div.className = "bg-indigo-50 p-6 rounded-xl shadow hover:shadow-xl transition";
+      div.innerHTML = `
+        <div class='text-4xl mb-4'>${s.icon}</div>
+        <h3 class='text-xl font-bold mb-2'>${s.name}</h3>
+        <p class='text-gray-600 text-sm mb-3'>${s.desc}</p>
+        <p class='text-indigo-700 font-semibold mb-4'>Starting ₹${s.price}</p>
+        <div class='flex flex-wrap gap-2 items-center'>
+          <a href='${upiLink}' target='_blank' 
+             class='bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
+             Buy Now
+          </a>
+          <a href='${chatLink}' target='_blank'
+             class='bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
+             💬 Chat
+          </a>
+          <button onclick="shareService('${s.name}', '${s.desc}', '${s.price}')"
+              class='bg-gray-400 hover:bg-gray-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
+              🔗 Share
+          </button>
+        </div>
+      `;
+      grid.appendChild(div);
+    });
+  }
+
+  function shareService(name, desc, price) {
+      const shareData = {
+          title: 'NexAI Service: ' + name,
+          text: `Check out this service: ${name} - ${desc}. Starting at ₹${price}. Get in touch now!`,
+          url: window.location.href // Shares the current page link
+      };
+
+      if (navigator.share) {
+          navigator.share(shareData)
+              .catch((error) => console.log('Error sharing', error));
+      } else {
+          // Fallback for browsers that do not support Web Share API
+          alert(`Share this service: ${shareData.text}\nPage URL: ${shareData.url}\n\n(Note: Your browser does not support the native Share feature, please copy and paste the details.)`);
+      }
+  }
+
+
+  document.addEventListener("DOMContentLoaded", renderServices);
+</script>
+  <script>
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.remove("nav-transparent");
+    navbar.classList.add("nav-solid");
+  } else {
+    navbar.classList.add("nav-transparent");
+    navbar.classList.remove("nav-solid");
+  }
+});
+</script>
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const navbar = document.getElementById("navbar");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+
+// navbar solid on scroll
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 40) {
+    navbar.classList.add("nav-solid");
+  } else {
+    navbar.classList.remove("nav-solid");
+  }
+});
+</script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  console.log("menuBtn:", menuBtn);
+  console.log("mobileMenu:", mobileMenu);
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.onclick = function () {
+      mobileMenu.classList.toggle("hidden");
+    };
+  }
+
+});
+</script>
+</body>
+</html>
