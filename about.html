@@ -167,6 +167,32 @@ window.addEventListener('scroll',()=>{
   scrollY>40 ? navbar.classList.add('nav-solid') : navbar.classList.remove('nav-solid');
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const navbar = document.getElementById("navbar");
+
+  // mobile menu toggle
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // navbar solid on scroll
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 40) {
+      navbar.classList.add("nav-solid");
+    } else {
+      navbar.classList.remove("nav-solid");
+    }
+  });
+
+});
+</script>
+
 
 </body>
 </html>
