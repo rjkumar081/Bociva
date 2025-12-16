@@ -1,218 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>IT Support & Technology Services</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
+body{color:#1f2937;line-height:1.7;background:#fff}
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Inter}
-body{background:#ffffff;color:#1f2937;line-height:1.75}
-
-/* GLOBAL SPACING (itssin-style) */
-section{padding:110px 9%}
-h1{font-size:44px;font-weight:500}
-h2{font-size:32px;font-weight:500;margin-bottom:14px}
-p{font-size:16.5px;color:#4b5563;max-width:880px}
+.container{max-width:1200px;margin:auto;padding:0 20px}
+.section{padding:90px 0}
+h1,h2,h3{font-weight:800}
+p{color:#4b5563}
 
 /* HERO */
 .hero{
-min-height:85vh;
-display:flex;
-align-items:center;
-background:
-linear-gradient(90deg,rgba(255,255,255,.97),rgba(255,255,255,.8)),
-url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover;
+  background:url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover no-repeat;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+}
+.hero-overlay{
+  background:rgba(0,0,0,.55); /* less blur */
+  width:100%;
+  padding:110px 0;
+  color:#fff;
+}
+.hero h1{font-size:52px;max-width:850px}
+.hero p{font-size:18px;max-width:750px;margin-top:15px}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:15px 38px;
+  background:#ff6a00;
+  color:#fff;
+  font-weight:700;
+  text-decoration:none;
+  border-radius:8px;
 }
 
-/* SPLIT SECTIONS */
-.split{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:90px;
-align-items:center;
+/* TRUST */
+.trust{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:30px;
+  margin-top:60px;
 }
-.split img{
-width:100%;
-border-radius:4px;
-}
-
-/* SIMPLE LIST */
-.list{
-margin-top:22px;
-}
-.list div{
-padding:7px 0;
-border-bottom:1px solid #e5e7eb;
-font-size:15.5px;
+.trust div{
+  background:rgba(255,255,255,.12);
+  padding:20px;
+  border-radius:10px;
+  font-size:17px;
 }
 
-/* GRAY BACKGROUND */
-.gray{background:#f9fafb}
-
-/* STATS (minimal like itssin) */
-.stats{
-display:flex;
-gap:80px;
-margin-top:35px;
+/* SERVICES */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
+  margin-top:60px;
 }
-.stats div{
-font-size:26px;
-font-weight:500;
+.card{
+  padding:35px;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+  background:#fff;
+  text-align:center;
+}
+.card img{
+  width:60px;
+  margin-bottom:15px;
+}
+
+/* DARK */
+.dark{background:#0b1220;color:#fff}
+.dark p{color:#cbd5e1}
+
+/* WHY */
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  margin-top:50px;
+}
+.why-box{
+  background:#fff;
+  padding:35px;
+  border-radius:16px;
+  text-align:center;
+}
+.why-box img{
+  width:55px;
+  margin-bottom:15px;
+}
+
+/* PROCESS */
+.process{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+  margin-top:50px;
+}
+.step{
+  background:#f8fafc;
+  padding:30px;
+  border-radius:16px;
+  text-align:center;
+}
+.step img{
+  width:65px;
+  margin-bottom:15px;
+}
+
+/* CTA */
+.cta{
+  background:
+    linear-gradient(rgba(11,42,85,.85),rgba(11,42,85,.85)),
+    url("https://images.unsplash.com/photo-1519389950473-47ba0277781c") center/cover no-repeat;
+  color:#fff;
+  text-align:center;
+  padding:120px 20px;
 }
 
 /* FOOTER */
 footer{
-background:#0f172a;
-color:#cbd5e1;
-padding:45px;
-text-align:center;
-font-size:14px;
+  background:#0f172a;
+  color:#94a3b8;
+  text-align:center;
+  padding:35px;
 }
-</style>
-</head>
-
-<body>
-
-<!-- HERO (SHORT & PRACTICAL) -->
-<section class="hero">
-<div>
-<h1>IT Support & Technology Services</h1>
-<p>
-We provide professional IT support, managed services and
-technology solutions to help organizations operate securely
-and efficiently.
-</p>
-
-<div class="stats">
-<div>20+<br><small>Years</small></div>
-<div>24×7<br><small>Support</small></div>
-<div>Global<br><small>Clients</small></div>
-</div>
-</div>
-</section>
-
-<!-- COMPANY PROFILE -->
-<section>
-<h2>Company Overview</h2>
-<p>
-We are an IT services and consulting company delivering reliable
-technology support, infrastructure management and digital
-solutions for businesses across industries.
-</p>
-<p>
-Our approach focuses on stability, security and long-term
-technology partnerships.
-</p>
-</section>
-
-<!-- IT SUPPORT -->
-<section class="gray">
-<div class="split">
-<div>
-<h2>Managed IT Support Services</h2>
-<p>
-Our managed IT services ensure continuous availability
-of systems and applications through proactive monitoring
-and responsive support.
-</p>
-
-<div class="list">
-<div>Helpdesk & Remote Support</div>
-<div>Server & Network Management</div>
-<div>Desktop & End-User Support</div>
-<div>IT Asset & Vendor Management</div>
-</div>
-</div>
-
-<img src="https://images.unsplash.com/photo-1581092919534-3c8f0b1b9b89" alt="">
-</div>
-</section>
-
-<!-- CLOUD & DIGITAL -->
-<section>
-<div class="split">
-<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31" alt="">
-<div>
-<h2>Cloud & Digital Services</h2>
-<p>
-We assist organizations with cloud adoption and digital
-modernization to improve performance, scalability and
-operational efficiency.
-</p>
-
-<div class="list">
-<div>Cloud Migration (AWS / Azure)</div>
-<div>Application Modernization</div>
-<div>Infrastructure Automation</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- AI SERVICES -->
-<section class="gray">
-<div class="split">
-<div>
-<h2>AI & Automation</h2>
-<p>
-Our AI services help organizations automate processes,
-analyze data and enhance decision-making.
-</p>
-
-<div class="list">
-<div>AI Chatbots & Virtual Assistants</div>
-<div>Predictive Analytics</div>
-<div>Process Automation (RPA)</div>
-<div>AI Strategy & Advisory</div>
-</div>
-</div>
-
-<img src="https://images.unsplash.com/photo-1677442135136-760c813028c0" alt="">
-</div>
-</section>
-
-<!-- CONSULTING -->
-<section>
-<h2>IT Consulting & Advisory</h2>
-<p>
-We work with management teams to align IT strategy
-with business objectives, manage risks and optimize
-technology investments.
-</p>
-</section>
-
-<!-- CAREERS -->
-<section class="gray">
-<h2>Careers</h2>
-<p>
-We offer opportunities for professionals looking to grow
-their careers in IT services and technology consulting.
-</p>
-
-<div class="list">
-<div>IT Support Engineer</div>
-<div>Cloud Engineer</div>
-<div>Cybersecurity Analyst</div>
-<div>AI / ML Engineer</div>
-</div>
-</section>
-
-<!-- CONTACT -->
-<section>
-<h2>Contact Information</h2>
-<p>
-Email: info@yourcompany.com<br>
-Phone: +91-XXXXXXXXXX<br>
-Support Availability: 24×7
-</p>
-</section>
-
-<footer>
-© 2025 IT Support & Technology Services
-</footer>
-
-</body>
-</html>
