@@ -471,6 +471,40 @@ footer{
   }
 }
 
+.hero-title{
+  font-size:2.2rem;
+  font-weight:800;
+  line-height:1.25;
+  color:#ffffff;
+}
+
+.hero-title span{
+  font-weight:600;
+  opacity:.92;
+}
+
+.hero-powered{
+  margin-top:8px;
+  font-size:.75rem;              /* small & elegant */
+  letter-spacing:.6px;
+  text-transform:uppercase;
+  color:#c7d2fe;
+}
+
+.hero-subtitle{
+  margin-top:14px;
+  font-size:1rem;
+  line-height:1.6;
+  max-width:680px;
+  color:#e5e7eb;
+}
+
+/* mobile */
+@media(max-width:768px){
+  .hero-title{
+    font-size:1.55rem;
+  }
+}
 
 </style>
 </head>
@@ -481,18 +515,25 @@ footer{
 <section class="hero">
   <div class="hero-overlay">
     <div class="container">
-     <h1 class="hero-title">
-  Global AI, Technology & Digital Services for Future-Ready Businesses</span>
-</h1>
 
-<p class="hero-subtitle">
-  Enterprise IT support, AI automation, cloud transformation,
-  cybersecurity and digital innovation — delivered globally.
-</p>
+      <h1 class="hero-title">
+        Global AI, Technology & Digital Services<br>
+        <span>for Future-Ready Businesses</span>
+      </h1>
 
-<p class="hero-powered">
-  Powered by NexAI Tech & Digital Solutions
-</p>
+      <p class="hero-powered">
+        Powered by <strong>NexAI Tech & Digital Solutions</strong>
+      </p>
+
+      <p class="hero-subtitle">
+        Enterprise IT support, AI automation, cloud transformation,
+        cybersecurity and digital innovation — delivered globally.
+      </p>
+
+    </div>
+  </div>
+</section>
+
 
 
       <a href="home.html" class="btn">Explore Our Services</a>
