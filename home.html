@@ -272,42 +272,89 @@ End-to-end IT services designed to improve performance, security, and Grow busin
 
 <script>
 const whatsappNumber = "919464642218";
+const upiBase =
+  "upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR";
 
 const serviceCategories = [
-  {
-    category: "IT Services",
-    items: [
-      { icon:"🛠️", name:"Managed IT Support", desc:"24/7 monitoring and proactive IT support." },
-      { icon:"🧭", name:"IT Consulting", desc:"Technology roadmap and advisory." },
-      { icon:"🧩", name:"Infrastructure Management", desc:"Servers, networks and endpoints." },
-      { icon:"📡", name:"Network & Firewall", desc:"LAN, WAN, VPN and firewall setup." }
-    ]
-  },
-  {
-    category: "Cloud & DevOps",
-    items: [
-      { icon:"☁️", name:"Cloud Migration", desc:"AWS / Azure / GCP migration." },
-      { icon:"🔄", name:"DevOps & CI/CD", desc:"Automation and deployment pipelines." },
-      { icon:"💾", name:"Backup & DR", desc:"Business continuity solutions." }
-    ]
-  },
-  {
-    category: "AI & Automation",
-    items: [
-      { icon:"🤖", name:"AI Automation", desc:"Business process automation." },
-      { icon:"💬", name:"AI Chatbots", desc:"Customer support automation." },
-      { icon:"📊", name:"Predictive Analytics", desc:"Data forecasting & insights." }
-    ]
-  },
-  {
-    category: "Software & Digital",
-    items: [
-      { icon:"💻", name:"Software Development", desc:"Enterprise & SaaS solutions." },
-      { icon:"🌐", name:"Website Development", desc:"Business & eCommerce websites." },
-      { icon:"📱", name:"Mobile Apps", desc:"Android & iOS apps." },
-      { icon:"📈", name:"Digital Marketing", desc:"SEO & growth marketing." }
-    ]
-  }
+
+/* ================= IT SERVICES ================= */
+{
+  category: "IT Services",
+  items: [
+    { icon:"🛠️", name:"Managed IT Support", desc:"24/7 monitoring, helpdesk and proactive IT support.", allowPay:false },
+    { icon:"🧩", name:"IT Infrastructure Management", desc:"Servers, networks, storage and endpoint management.", allowPay:false },
+    { icon:"📡", name:"Network & Firewall Management", desc:"LAN, WAN, VPN, firewall & security setup.", allowPay:false },
+    { icon:"🔁", name:"IT Asset & License Management", desc:"Hardware, software & license lifecycle management.", allowPay:false },
+    { icon:"🧭", name:"IT Consulting & Strategy", desc:"Technology roadmap & digital transformation.", allowPay:false },
+    { icon:"🏢", name:"Enterprise IT Solutions", desc:"End-to-end IT solutions for enterprises.", allowPay:false }
+  ]
+},
+
+/* ================= CLOUD & DEVOPS ================= */
+{
+  category: "Cloud & DevOps",
+  items: [
+    { icon:"☁️", name:"Cloud Migration", desc:"AWS, Azure & GCP cloud migration.", allowPay:false },
+    { icon:"⚙️", name:"Cloud Architecture Design", desc:"Secure & scalable cloud architecture.", allowPay:false },
+    { icon:"🔄", name:"DevOps & CI/CD Pipelines", desc:"Automation & deployment pipelines.", allowPay:false },
+    { icon:"📦", name:"Docker & Kubernetes", desc:"Containerization & orchestration.", allowPay:false },
+    { icon:"💾", name:"Backup & Disaster Recovery", desc:"Business continuity & data protection.", allowPay:false },
+    { icon:"📊", name:"Cloud Cost Optimization", desc:"Reduce cloud cost & improve performance.", allowPay:false }
+  ]
+},
+
+/* ================= AI & AUTOMATION ================= */
+{
+  category: "AI & Automation",
+  items: [
+    { icon:"🤖", name:"AI Business Automation", desc:"Workflow & process automation using AI.", allowPay:false },
+    { icon:"💬", name:"AI Chatbots & Virtual Assistants", desc:"Customer support & sales chatbots.", allowPay:false },
+    { icon:"📊", name:"Predictive Analytics", desc:"Forecasting & business insights.", allowPay:false },
+    { icon:"🧠", name:"Machine Learning Solutions", desc:"Custom ML models for enterprises.", allowPay:false },
+    { icon:"🔍", name:"Computer Vision & OCR", desc:"Image recognition & document OCR.", allowPay:false },
+    { icon:"🗣️", name:"NLP & Voice AI", desc:"Speech recognition & language processing.", allowPay:false }
+  ]
+},
+
+/* ================= SOFTWARE & APP DEVELOPMENT ================= */
+{
+  category: "Software & App Development",
+  items: [
+    { icon:"💻", name:"Custom Software Development", desc:"Enterprise & SaaS software solutions.", allowPay:false },
+    { icon:"🌐", name:"Web Application Development", desc:"Secure & scalable web applications.", allowPay:false },
+    { icon:"📱", name:"Mobile App Development", desc:"Android & iOS mobile apps.", allowPay:false },
+    { icon:"🧩", name:"API & System Integration", desc:"Third-party & enterprise integrations.", allowPay:false },
+    { icon:"🧪", name:"QA & Software Testing", desc:"Manual & automated testing.", allowPay:false },
+    { icon:"☁️", name:"SaaS Product Development", desc:"Cloud-based SaaS platforms.", allowPay:false }
+  ]
+},
+
+/* ================= WEBSITE & DIGITAL MARKETING ================= */
+{
+  category: "Website & Digital Marketing",
+  items: [
+    { icon:"🌐", name:"Website Development", desc:"Business & eCommerce websites.", price:2999, allowPay:true },
+    { icon:"🛒", name:"E-Commerce Store Setup", desc:"Shopify & WooCommerce stores.", price:3999, allowPay:true },
+    { icon:"🎨", name:"UI / UX Design", desc:"Modern user experience design.", price:1999, allowPay:true },
+    { icon:"📈", name:"SEO & Performance Optimization", desc:"Google ranking & speed optimization.", price:2499, allowPay:true },
+    { icon:"📢", name:"Social Media Management", desc:"Brand growth & content planning.", price:1999, allowPay:true },
+    { icon:"✉️", name:"Email & WhatsApp Marketing", desc:"Automated marketing campaigns.", price:1499, allowPay:true }
+  ]
+},
+
+/* ================= CSC / DIGITAL SEVA ================= */
+{
+  category: "CSC / Digital Seva Services",
+  items: [
+    { icon:"🪪", name:"PAN Card Services", desc:"New PAN, correction & reprint.", price:150, allowPay:true },
+    { icon:"🆔", name:"Aadhaar Update Services", desc:"Name, address & mobile update.", price:199, allowPay:true },
+    { icon:"💼", name:"PF Withdrawal & Correction", desc:"EPF withdrawal & KYC fix.", price:299, allowPay:true },
+    { icon:"💰", name:"ITR & GST Filing", desc:"Income tax & GST services.", price:499, allowPay:true },
+    { icon:"🏢", name:"MSME / Udyam Registration", desc:"Business registration support.", price:299, allowPay:true },
+    { icon:"🛂", name:"Passport & Government Services", desc:"New & renewal assistance.", price:999, allowPay:true }
+  ]
+}
+
 ];
 
 function renderServicesCategoryWise() {
