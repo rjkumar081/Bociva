@@ -2,115 +2,82 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Global IT Services | Digital, AI & Consulting</title>
+<title>Enterprise IT, AI & Digital Transformation</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
-body{color:#1f2937;line-height:1.8}
+:root{
+ --dark:#020617;
+ --glass:rgba(255,255,255,.08);
+ --text:#e5e7eb;
+ --muted:#94a3b8;
+ --accent:#4f46e5;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter}
+body{background:var(--dark);color:var(--text);line-height:1.7}
 
 /* COMMON */
-.section{padding:100px 20px}
-.container{max-width:1200px;margin:auto}
-h1{font-size:54px}
-h2{font-size:40px;margin-bottom:20px}
-h3{font-size:24px}
-p{color:#4b5563;font-size:17px}
+section{padding:120px 8%}
+h1{font-size:64px;line-height:1.1}
+h2{font-size:44px;margin-bottom:20px}
+p{color:var(--muted);font-size:18px;max-width:900px}
+.btn{
+display:inline-block;margin-top:30px;
+padding:16px 42px;border-radius:40px;
+background:var(--accent);color:#fff;
+font-weight:600;text-decoration:none;
+}
 
 /* HERO */
 .hero{
 min-height:100vh;
-background:url("hero-it.jpg") center/cover no-repeat;
-display:flex;
-align-items:center;
-}
-.hero-overlay{
-background:rgba(0,0,0,.72);
-width:100%;
-color:#fff;
-padding:100px 0;
-}
-.hero p{color:#e5e7eb}
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:16px 40px;
-background:#ff6a00;
-color:#fff;
-font-weight:700;
-border-radius:10px;
-text-decoration:none;
+background:
+linear-gradient(180deg,rgba(2,6,23,.75),rgba(2,6,23,.9)),
+url("https://images.unsplash.com/photo-1518770660439-4636190af475") center/cover;
+display:flex;align-items:center;
 }
 
-/* TRUST */
-.trust{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-margin-top:50px;
-font-weight:600;
+/* GLASS */
+.glass{
+background:var(--glass);
+backdrop-filter:blur(14px);
+border-radius:28px;
+padding:50px;
 }
 
-/* SERVICES */
+/* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:35px;
-margin-top:50px;
-}
-.card{
-padding:35px;
-border-radius:18px;
-box-shadow:0 20px 45px rgba(0,0,0,.1);
-background:#fff;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:40px;
 }
 
-/* DARK */
-.dark{background:#0b1220;color:#fff}
-.dark p{color:#cbd5e1}
-.dark .card{background:#111827;color:#fff}
-
-/* IMAGE BLOCK */
-.img-block{
+/* IMAGE SPLIT */
+.split{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:40px;
+gap:70px;
 align-items:center;
 }
-.img-block img{
-width:100%;
-border-radius:20px;
+.split img{
+width:100%;border-radius:28px;
 }
 
-/* COUNTERS */
-.counter{
-display:flex;
-gap:40px;
-flex-wrap:wrap;
-justify-content:center;
-margin-top:40px;
-}
-.counter div{
-font-size:28px;
-font-weight:800;
-}
-
-/* CAREERS */
-.career{
-background:#f8fafc;
-padding:30px;
-border-radius:16px;
-margin-top:20px;
+/* STATS */
+.stats{
+display:flex;gap:80px;flex-wrap:wrap;
+font-size:34px;font-weight:800;
 }
 
 /* FOOTER */
 footer{
-background:#020617;
-color:#94a3b8;
-padding:50px;
+padding:60px;
 text-align:center;
+color:var(--muted);
+border-top:1px solid #1e293b;
 }
 </style>
 </head>
@@ -119,134 +86,107 @@ text-align:center;
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-overlay">
-<div class="container">
-<h1>Global IT Support, Digital Transformation & AI Services</h1>
-<p>We deliver enterprise-grade IT support, digital innovation, AI automation and technology consulting for businesses worldwide.</p>
-<a class="btn" href="#contact">Talk to Experts</a>
-
-<div class="trust">
-<div>✔ 20+ Years Experience</div>
-<div>✔ Global Clients</div>
-<div>✔ 24/7 IT Support</div>
-<div>✔ Secure & Scalable</div>
-</div>
-</div>
+<div class="glass">
+<h1>Enterprise IT.<br>AI-Driven Digital Transformation.</h1>
+<p>
+We partner with global enterprises to modernize IT operations, deploy AI at scale,
+secure digital infrastructure and deliver measurable business outcomes.
+</p>
+<a class="btn">Consult Our Experts</a>
 </div>
 </section>
 
-<!-- ABOUT -->
-<section class="section">
-<div class="container">
-<h2>About Our Global IT Company</h2>
+<!-- TRUST -->
+<section>
+<h2>Trusted Global Technology Partner</h2>
 <p>
-We are a full-service IT services and digital technology company helping organizations modernize infrastructure, secure operations and adopt AI-driven innovation.
+For over two decades, we have helped organizations across industries adopt cloud,
+AI, cybersecurity and digital platforms with confidence.
 </p>
-<p>
-From managed IT support to cloud, cybersecurity, software engineering and AI consulting — we act as a long-term technology partner for global enterprises.
-</p>
+<div class="stats">
+<div>20+<br><small>Years</small></div>
+<div>300+<br><small>Clients</small></div>
+<div>18<br><small>Countries</small></div>
+<div>99.9%<br><small>Uptime</small></div>
 </div>
 </section>
 
 <!-- IT SERVICES -->
-<section class="section dark">
-<div class="container">
-<h2>Enterprise IT Support & Digital Services</h2>
+<section>
+<h2>Enterprise IT Services</h2>
 <div class="grid">
-
-<div class="card">
-<h3>Managed IT Support</h3>
-<p>24/7 helpdesk, monitoring, incident management and infrastructure support.</p>
+<div class="glass">
+<h3>Managed IT & Support</h3>
+<p>24/7 enterprise monitoring, ITSM, helpdesk, infrastructure & cloud operations.</p>
 </div>
-
-<div class="card">
+<div class="glass">
 <h3>Cloud & DevOps</h3>
-<p>AWS, Azure & GCP cloud migration, CI/CD pipelines and automation.</p>
+<p>Large-scale cloud migration, multi-cloud strategy, DevOps & automation.</p>
 </div>
-
-<div class="card">
+<div class="glass">
 <h3>Cybersecurity</h3>
-<p>Threat detection, SOC, compliance, data protection and risk management.</p>
-</div>
-
-<div class="card">
-<h3>Software Development</h3>
-<p>Enterprise web apps, SaaS platforms, system integrations.</p>
-</div>
-
-<div class="card">
-<h3>IT Consulting</h3>
-<p>Digital strategy, technology roadmap, cost optimization.</p>
-</div>
-
-<div class="card">
-<h3>Digital Transformation</h3>
-<p>Legacy modernization and process automation.</p>
-</div>
-
+<p>SOC, zero-trust security, compliance, threat detection & response.</p>
 </div>
 </div>
 </section>
 
-<!-- AI SERVICES -->
-<section class="section">
-<div class="container img-block">
+<!-- AI -->
+<section>
+<div class="split">
 <div>
 <h2>AI & Intelligent Automation</h2>
 <p>
-We design and deploy AI-powered solutions that automate operations, enhance customer experience and drive data-driven decisions.
+We embed AI into enterprise workflows — improving efficiency, decision-making
+and customer experience.
 </p>
 <ul>
-<li>AI Chatbots & Virtual Assistants</li>
-<li>Machine Learning Models</li>
+<li>AI Strategy & Governance</li>
+<li>LLM & Chatbots</li>
 <li>Predictive Analytics</li>
-<li>Process Automation (RPA)</li>
+<li>RPA & Process Automation</li>
 <li>Computer Vision</li>
 </ul>
 </div>
-
-<img src="ai-services.jpg" alt="AI Services">
+<img src="https://images.unsplash.com/photo-1677442135136-760c813028c0">
 </div>
 </section>
 
-<!-- COUNTERS -->
-<section class="section dark">
-<div class="container">
-<h2>Trusted by Businesses Worldwide</h2>
-<div class="counter">
-<div>500+<br><small>Projects</small></div>
-<div>150+<br><small>Clients</small></div>
-<div>20+<br><small>Years</small></div>
-<div>18+<br><small>Countries</small></div>
+<!-- CONSULTING -->
+<section>
+<div class="split">
+<img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df">
+<div>
+<h2>IT Consulting & Transformation</h2>
+<p>
+From legacy modernization to enterprise architecture and cost optimization,
+we guide CXOs through complex technology decisions.
+</p>
 </div>
 </div>
 </section>
 
 <!-- CAREERS -->
-<section class="section">
-<div class="container">
-<h2>Careers – Join Our Global Team</h2>
-<p>Work on cutting-edge technologies with industry experts.</p>
-
-<div class="career">Software Engineer – Cloud & AI</div>
-<div class="career">Cybersecurity Analyst</div>
-<div class="career">IT Support Engineer</div>
-<div class="career">AI / ML Engineer</div>
+<section>
+<h2>Careers at Our Company</h2>
+<p>
+Join a global team solving complex enterprise problems with AI, cloud and security.
+</p>
+<div class="grid">
+<div class="glass">Senior Cloud Architect</div>
+<div class="glass">AI / ML Engineer</div>
+<div class="glass">Cybersecurity Analyst</div>
 </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section dark" id="contact">
-<div class="container">
-<h2>Contact Our IT Experts</h2>
-<p>Email: contact@yourcompany.com</p>
-<p>Phone: +91-XXXXXXXXXX</p>
-<p>Global Delivery | 24/7 Support</p>
-</div>
+<section>
+<h2>Let’s Build the Future Together</h2>
+<p>Email: enterprise@yourcompany.com<br>Global Delivery • 24×7 Support</p>
+<a class="btn">Start a Conversation</a>
 </section>
 
 <footer>
-© 2025 Global IT Services Company • Digital • AI • Consulting
+© 2025 Enterprise IT & AI Services Company
 </footer>
 
 </body>
