@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="canonical" href="https://merapopi.com/">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>IT Support & Technology Services | NexAI Tech & Digital Solutions</title>
-<meta name="description" content="Professional IT support, cybersecurity, cloud solutions and IT consulting services by NexAI Tech & Digital Solutions. Trusted technology partner for businesses.">
+<title>Our Services | NexAI Tech & Digital Solutions</title>
+<meta name="description" content="Explore IT support, AI automation, website & app development, digital marketing and consultancy services by NexAI Tech & Digital Solutions.">
 
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
@@ -21,148 +19,178 @@ html{scroll-behavior:smooth}
   width:100%;
   z-index:50;
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   background: linear-gradient(135deg,#08142a,#0b2a55);
-  box-shadow:
-    0 10px 25px rgba(0,0,0,.18),
-    inset 0 1px 0 rgba(255,255,255,.25);
+  box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+.nav-solid{
+  background: linear-gradient(135deg,#0b0f1a,#111827);
 }
 
-/* brand 3D text – CRISP */
-#navbar h1{
-  text-shadow:
-    0 1px 0 rgba(255,255,255,0.15),
-    0 1px 2px rgba(0,0,0,0.35);
+/* BRAND */
+.brand{
+  font-size:1.4rem;
+  font-weight:800;
+  color:#fff;
+  line-height:1.1;
+}
+.brand span{color:#facc15}
+.brand small{
+  display:block;
+  font-size:.72rem;
+  color:#c7d2fe;
 }
 
-/* highlight span */
-#navbar h1 span{
-  text-shadow:
-    0 1px 0 rgba(255,255,255,0.2),
-    0 1px 2px rgba(0,0,0,0.4);
+/* ================= HERO ================= */
+.hero{
+  height:260px;
+  background:
+    linear-gradient(rgba(8,20,42,.75),rgba(8,20,42,.85)),
+    url('assets/hero.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:72px;
+}
+.hero-content{
+  text-align:center;
+  color:#fff;
+}
+.hero-content h1{
+  font-size:2.2rem;
+  font-weight:800;
+}
+.hero-content p{
+  margin-top:.5rem;
+  color:#e5e7eb;
 }
 
-
-/* nav underline hover */
-#navbar nav a{
-  position:relative;
-}
-#navbar nav a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-4px;
-  width:0;
-  height:2px;
-  background:#fde68a;
+/* ================= SERVICES ================= */
+.service-card{
+  background:#f8fafc;
+  border-radius:1rem;
+  padding:1.5rem;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
   transition:.3s;
 }
-#navbar nav a:hover::after{width:100%}
+.service-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+</style>
+</head>
 
-/* CTA 3D button only */
-#navbar a.bg-yellow-400{
-  box-shadow:
-    0 6px 0 #d97706,
-    0 10px 20px rgba(0,0,0,.25);
-  transition:.2s;
-}
-#navbar a.bg-yellow-400:hover{
-  transform:translateY(-1px);
-}
-#navbar a.bg-yellow-400:active{
-  transform:translateY(1px);
-  box-shadow:0 3px 0 #d97706;
-}
+<body class="bg-gray-50 text-gray-900 pt-[72px]">
 
+<!-- ================= NAVBAR ================= -->
+<header id="navbar">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+
+    <div class="brand">
+      NexAI <span>Tech & Digital Solutions</span>
+      <small>Powered by MeraPopi</small>
+    </div>
+
+    <nav class="hidden md:flex gap-6 text-white font-semibold items-center">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="text-yellow-300">Services</a>
+      <a href="contact.html"
+         class="bg-indigo-600 hover:bg-indigo-700 transition
+                text-white px-5 py-2 rounded-full">
+        Talk to Expert
+      </a>
+    </nav>
+
+    <button id="menuBtn" class="md:hidden text-white text-3xl">☰</button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-[#0b0f1a]">
+    <nav class="flex flex-col px-6 py-6 gap-4 text-white font-semibold">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="text-yellow-300">Services</a>
+      <a href="contact.html"
+         class="bg-indigo-600 text-white py-2 rounded-full text-center">
+        Talk to Expert
+      </a>
+    </nav>
+  </div>
 </header>
 
-<!-- ===== HERO ===== -->
+<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-content">
-    <h1>IT Support & Technology Services</h1>
-    <p>Reliable, secure and scalable IT solutions for modern businesses</p>
+    <h1>Our IT, AI & Digital Services</h1>
+    <p>End-to-end technology solutions designed for business growth</p>
   </div>
 </section>
 
-<!-- ===== SERVICES INTRO ===== -->
-<section class="py-16 bg-white text-center">
-  <h2 class="text-3xl font-bold mb-6">Our Core IT & Consulting Services</h2>
-  <p class="max-w-3xl mx-auto text-gray-600">
-    We provide end-to-end IT services designed to keep your business secure,
-    productive and future-ready.
-  </p>
-</section>
+<!-- ================= SERVICES GRID ================= -->
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">
+      What We Offer
+    </h2>
 
-<!-- ===== SERVICES GRID ===== -->
-<section class="pb-20">
-  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-    <!-- Service -->
-    <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-      <h3 class="text-2xl font-bold mb-3">IT Support & AMC</h3>
-      <p class="text-gray-600 mb-4">
-        Complete IT infrastructure support with proactive monitoring and fast issue resolution.
-      </p>
-      <ul class="list-disc pl-5 text-gray-600 text-sm">
-        <li>24×7 remote & on-site support</li>
-        <li>Annual Maintenance Contracts (AMC)</li>
-        <li>Server, desktop & network support</li>
-        <li>Preventive maintenance</li>
-      </ul>
+      <div class="service-card">
+        <h3 class="text-xl font-bold mb-2">🤖 AI Automation</h3>
+        <p class="text-gray-600">
+          Automate workflows, chatbots, CRM tasks and business operations using AI.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3 class="text-xl font-bold mb-2">🌐 Website Development</h3>
+        <p class="text-gray-600">
+          High-performance, SEO-optimized websites for businesses and e-commerce.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3 class="text-xl font-bold mb-2">📱 App Development</h3>
+        <p class="text-gray-600">
+          Android & iOS apps built for scalability, speed and user experience.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3 class="text-xl font-bold mb-2">📈 Digital Marketing</h3>
+        <p class="text-gray-600">
+          SEO, Google Ads, social media and performance marketing for lead growth.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3 class="text-xl font-bold mb-2">⚙️ IT Support & AMC</h3>
+        <p class="text-gray-600">
+          Reliable IT support, monitoring, maintenance and issue resolution.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3 class="text-xl font-bold mb-2">🧠 IT & Business Consultancy</h3>
+        <p class="text-gray-600">
+          Expert guidance to align technology with your business goals.
+        </p>
+      </div>
+
     </div>
-
-    <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-      <h3 class="text-2xl font-bold mb-3">Cybersecurity Services</h3>
-      <p class="text-gray-600 mb-4">
-        Protect your business from cyber threats with enterprise-grade security solutions.
-      </p>
-      <ul class="list-disc pl-5 text-gray-600 text-sm">
-        <li>Endpoint & network security</li>
-        <li>Firewall & antivirus solutions</li>
-        <li>Data protection & backup</li>
-        <li>Security audits & compliance</li>
-      </ul>
-    </div>
-
-    <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-      <h3 class="text-2xl font-bold mb-3">Cloud Solutions</h3>
-      <p class="text-gray-600 mb-4">
-        Scalable and secure cloud services to support your growing business.
-      </p>
-      <ul class="list-disc pl-5 text-gray-600 text-sm">
-        <li>Business email & collaboration tools</li>
-        <li>Cloud backup & disaster recovery</li>
-        <li>Server & data migration</li>
-        <li>Cloud cost optimization</li>
-      </ul>
-    </div>
-
-    <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-      <h3 class="text-2xl font-bold mb-3">IT Consulting & Strategy</h3>
-      <p class="text-gray-600 mb-4">
-        Expert guidance to align technology decisions with your business goals.
-      </p>
-      <ul class="list-disc pl-5 text-gray-600 text-sm">
-        <li>IT infrastructure planning</li>
-        <li>Digital transformation consulting</li>
-        <li>Vendor & technology selection</li>
-        <li>Cost & performance optimization</li>
-      </ul>
-    </div>
-
   </div>
 </section>
 
-<!-- ===== CTA ===== -->
+<!-- ================= CTA ================= -->
 <section class="py-20 bg-gradient-to-br from-indigo-100 via-white to-blue-50 text-center">
-  <h2 class="text-3xl font-bold mb-4">Talk to an IT Expert</h2>
+  <h2 class="text-3xl font-bold mb-4">
+    Need the Right Tech Solution?
+  </h2>
   <p class="text-gray-600 mb-8">
-    Need reliable IT support or consulting? Let’s discuss your requirements.
+    Talk to our experts and get a customized solution for your business.
   </p>
-  <a href="https://wa.me/919464642218"
-     target="_blank"
-     class="bg-green-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-green-700">
-    💬 Speak with an Expert
+  <a href="contact.html"
+     class="bg-indigo-600 hover:bg-indigo-700 transition
+            text-white px-8 py-3 rounded-full font-semibold">
+    Contact Us
   </a>
 </section>
 
@@ -170,16 +198,20 @@ html{scroll-behavior:smooth}
   © 2025 NexAI Tech & Digital Solutions — Powered by MeraPopi
 </footer>
 
+<!-- ================= JS ================= -->
 <script>
-const navbar=document.getElementById('navbar');
-const btn=document.getElementById('menuBtn');
-const menu=document.getElementById('mobileMenu');
+document.addEventListener("DOMContentLoaded",function(){
+  const menuBtn=document.getElementById("menuBtn");
+  const mobileMenu=document.getElementById("mobileMenu");
+  const navbar=document.getElementById("navbar");
 
-btn.onclick=()=>menu.classList.toggle('hidden');
-window.addEventListener('scroll',()=>{
-  window.scrollY>40
-    ? navbar.classList.add('nav-solid')
-    : navbar.classList.remove('nav-solid');
+  menuBtn.onclick=()=>mobileMenu.classList.toggle("hidden");
+
+  window.addEventListener("scroll",()=>{
+    window.scrollY>40
+      ? navbar.classList.add("nav-solid")
+      : navbar.classList.remove("nav-solid");
+  });
 });
 </script>
 
