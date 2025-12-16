@@ -9,64 +9,50 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
-body{color:#1f2937;line-height:1.7;background:#fff}
+body{color:#e5e7eb;line-height:1.7;background:#020617}
 
 /* COMMON */
 .container{max-width:1200px;margin:auto;padding:0 20px}
-.section{padding:90px 0}
-h1,h2,h3{font-weight:800}
-p{color:#4b5563}
+.section{padding:100px 0}
+h1,h2,h3{font-weight:800;color:#fff}
+p{color:#cbd5e1}
 
 /* HERO */
 .hero{
-  background:url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover no-repeat;
   min-height:100vh;
+  background:
+    linear-gradient(120deg,rgba(2,6,23,.9),rgba(15,23,42,.75)),
+    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover no-repeat;
   display:flex;
   align-items:center;
 }
-.hero-overlay{
-  background:rgba(0,0,0,.55);
-  width:100%;
-  padding:110px 0;
-  color:#fff;
-}
-.hero h1{font-size:52px;max-width:850px}
-.hero p{font-size:18px;max-width:750px;margin-top:15px;color:#e5e7eb}
+.hero h1{font-size:54px;max-width:850px}
+.hero p{font-size:18px;max-width:760px;margin-top:18px}
 
 /* BUTTON */
 .btn{
   display:inline-block;
-  margin-top:30px;
-  padding:15px 38px;
-  background:#ff6a00;
+  margin-top:35px;
+  padding:16px 40px;
+  background:#ff7a00;
   color:#fff;
   font-weight:700;
   text-decoration:none;
-  border-radius:8px;
+  border-radius:10px;
 }
 
 /* TRUST */
 .trust{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:30px;
-  margin-top:60px;
+  gap:25px;
+  margin-top:70px;
 }
 .trust div{
-  background:rgba(255,255,255,.12);
-  padding:20px;
-  border-radius:10px;
-  font-size:17px;
-  color:#fff;
-}
-
-/* DARK SECTION */
-.dark{
-  background:#0b1220;
-  color:#fff;
-}
-.dark > .container > p{
-  color:#cbd5e1;
+  background:rgba(255,255,255,.08);
+  padding:22px;
+  border-radius:14px;
+  font-size:16px;
 }
 
 /* SERVICES */
@@ -74,92 +60,95 @@ p{color:#4b5563}
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:35px;
-  margin-top:60px;
+  margin-top:70px;
 }
 .card{
-  padding:35px;
-  border-radius:16px;
-  box-shadow:0 15px 40px rgba(0,0,0,.08);
-  background:#ffffff;
-  text-align:center;
-  border:1px solid #e5e7eb;
+  padding:40px 35px;
+  border-radius:18px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.15);
+  backdrop-filter: blur(8px);
 }
 .card img{
-  width:60px;
-  margin-bottom:15px;
+  width:58px;
+  margin-bottom:18px;
 }
-
-/* FIX: TEXT VISIBILITY INSIDE DARK SECTION CARDS */
-.dark .card h3{
-  color:#0f172a;
-}
-.dark .card p{
-  color:#475569;
-}
+.card h3{color:#fff}
+.card p{color:#cbd5e1}
 
 /* WHY */
 .why-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-  margin-top:50px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
+  margin-top:60px;
 }
 .why-box{
-  background:#ffffff;
-  padding:35px;
-  border-radius:16px;
-  text-align:center;
-  border:1px solid #e5e7eb;
+  background:rgba(255,255,255,.05);
+  padding:40px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.12);
 }
 .why-box img{
-  width:55px;
-  margin-bottom:15px;
-}
-.why-box p{
-  color:#334155;
+  width:50px;
+  margin-bottom:18px;
 }
 
 /* PROCESS */
 .process{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:30px;
-  margin-top:50px;
+  gap:35px;
+  margin-top:60px;
 }
 .step{
-  background:#f8fafc;
-  padding:30px;
-  border-radius:16px;
-  text-align:center;
-  border:1px solid #e5e7eb;
+  background:rgba(255,255,255,.04);
+  padding:35px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.12);
 }
 .step img{
-  width:65px;
+  width:55px;
   margin-bottom:15px;
-}
-.step b{
-  color:#0f172a;
 }
 
 /* CTA */
 .cta{
   background:
-    linear-gradient(rgba(11,42,85,.85),rgba(11,42,85,.85)),
+    linear-gradient(120deg,rgba(2,6,23,.92),rgba(15,23,42,.8)),
     url("https://images.unsplash.com/photo-1519389950473-47ba0277781c") center/cover no-repeat;
-  color:#fff;
   text-align:center;
-  padding:120px 20px;
+  padding:140px 20px;
 }
-.cta p{
-  color:#e5e7eb;
-}
+.cta p{color:#e5e7eb}
 
 /* FOOTER */
 footer{
-  background:#0f172a;
-  color:#94a3b8;
+  background:#020617;
+  padding:70px 20px 30px;
+  border-top:1px solid rgba(255,255,255,.1);
+}
+.footer-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+}
+footer h4{margin-bottom:15px}
+footer a{
+  display:block;
+  color:#cbd5e1;
+  text-decoration:none;
+  margin-bottom:8px;
+  font-size:14px;
+}
+.footer-bottom{
   text-align:center;
-  padding:35px;
+  margin-top:40px;
+  color:#94a3b8;
+  font-size:14px;
 }
 </style>
 </head>
@@ -168,143 +157,95 @@ footer{
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-overlay">
-    <div class="container">
-      <h1>Global IT Support, Digital Transformation & AI-Driven Solutions</h1>
-      <p>
-        We deliver enterprise IT support, AI automation, cloud transformation,
-        cybersecurity and digital innovation for businesses worldwide.
-      </p>
-      <a href="services.html" class="btn">Explore Our Services</a>
+<div class="container">
+<h1>Global IT Support, Digital Transformation & AI-Driven Solutions</h1>
+<p>
+We deliver enterprise IT support, AI automation, cloud transformation,
+cybersecurity and digital innovation for businesses worldwide.
+</p>
+<a class="btn" href="#">Explore Our Services</a>
 
-      <div class="trust">
-        <div>✔ 20+ Years Experience</div>
-        <div>✔ Global Delivery</div>
-        <div>✔ Enterprise Security</div>
-        <div>✔ 24/7 IT Support</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section">
-  <div class="container">
-    <h2>About Our IT & Digital Technology Company</h2>
-    <p>
-      We help organizations modernize IT infrastructure, optimize operations
-      and achieve sustainable growth through digital technologies.
-    </p>
-  </div>
+<div class="trust">
+  <div>✔ 20+ Years Experience</div>
+  <div>✔ Global Delivery</div>
+  <div>✔ Enterprise Security</div>
+  <div>✔ 24/7 IT Support</div>
+</div>
+</div>
 </section>
 
 <!-- SERVICES -->
-<section class="section dark">
-  <div class="container">
-    <h2>Our Global IT Services</h2>
-    <p>Comprehensive end-to-end IT and digital services tailored for modern enterprises.</p>
-
-    <div class="services-grid">
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png">
-        <h3>Managed IT Support</h3>
-        <p>24/7 monitoring, helpdesk, infrastructure management and proactive IT support.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149640.png">
-        <h3>AI & Automation</h3>
-        <p>AI chatbots, predictive analytics, process automation and intelligent systems.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png">
-        <h3>Cloud & DevOps</h3>
-        <p>Cloud migration, AWS/Azure/GCP solutions, DevOps & CI/CD pipelines.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png">
-        <h3>Cybersecurity</h3>
-        <p>Threat detection, SOC, compliance, data protection and risk management.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">
-        <h3>Software Development</h3>
-        <p>Custom web apps, enterprise software, SaaS platforms & integrations.</p>
-      </div>
-
-      <div class="card">
-        <img src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png">
-        <h3>IT Consulting</h3>
-        <p>Technology roadmap, digital strategy, cost optimization & IT governance.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY US -->
 <section class="section">
-  <div class="container">
-    <h2>Why Global Companies Choose Us</h2>
+<div class="container">
+<h2>Our Global IT Services</h2>
+<p>End-to-end IT and digital services for modern enterprises.</p>
 
-    <div class="why-grid">
-      <div class="why-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png">
-        <p>Proven delivery across industries & geographies</p>
-      </div>
-      <div class="why-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-        <p>Certified engineers & technology consultants</p>
-      </div>
-      <div class="why-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png">
-        <p>AI-first & automation-driven approach</p>
-      </div>
-      <div class="why-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png">
-        <p>Strong focus on security & compliance</p>
-      </div>
-    </div>
+<div class="services-grid">
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png">
+    <h3>Managed IT Support</h3>
+    <p>24/7 monitoring, helpdesk, infrastructure & proactive support.</p>
   </div>
-</section>
-
-<!-- PROCESS -->
-<section class="section">
-  <div class="container">
-    <h2>Our Delivery & Support Process</h2>
-
-    <div class="process">
-      <div class="step">
-        <img src="https://cdn-icons-png.flaticon.com/512/3208/3208723.png">
-        <b>Assessment</b><br>Business & IT analysis
-      </div>
-      <div class="step">
-        <img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png">
-        <b>Strategy</b><br>Solution architecture
-      </div>
-      <div class="step">
-        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">
-        <b>Implementation</b><br>Agile execution
-      </div>
-      <div class="step">
-        <img src="https://cdn-icons-png.flaticon.com/512/4320/4320346.png">
-        <b>Support</b><br>Continuous monitoring
-      </div>
-    </div>
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/4149/4149640.png">
+    <h3>AI & Automation</h3>
+    <p>Chatbots, analytics, intelligent workflows & automation.</p>
   </div>
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png">
+    <h3>Cloud & DevOps</h3>
+    <p>AWS, Azure, CI/CD pipelines & optimization.</p>
+  </div>
+  <div class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png">
+    <h3>Cybersecurity</h3>
+    <p>SOC, compliance, threat detection & protection.</p>
+  </div>
+</div>
+</div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-  <h2>Transform Your Business with Future-Ready IT Solutions</h2>
-  <p>Partner with a trusted global IT services & digital transformation company.</p>
-  <a href="contact.html" class="btn">Talk to Our Experts</a>
+<h2>Transform Your Business with Future-Ready IT Solutions</h2>
+<p>Partner with a trusted global IT services company.</p>
+<a class="btn" href="#">Talk to Our Experts</a>
 </section>
 
+<!-- FOOTER -->
 <footer>
+<div class="footer-grid">
+  <div>
+    <h4>Company</h4>
+    <a href="#">About Us</a>
+    <a href="#">Careers</a>
+    <a href="#">Contact</a>
+  </div>
+  <div>
+    <h4>Services</h4>
+    <a href="#">IT Support</a>
+    <a href="#">Cloud & DevOps</a>
+    <a href="#">AI Services</a>
+    <a href="#">Cybersecurity</a>
+  </div>
+  <div>
+    <h4>Policies</h4>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms & Conditions</a>
+    <a href="#">Refund Policy</a>
+    <a href="#">Disclaimer</a>
+  </div>
+  <div>
+    <h4>Support</h4>
+    <a href="#">Help Center</a>
+    <a href="#">Security</a>
+    <a href="#">Compliance</a>
+  </div>
+</div>
+
+<div class="footer-bottom">
 © 2025 Global IT Services Company | All Rights Reserved
+</div>
 </footer>
 
 </body>
