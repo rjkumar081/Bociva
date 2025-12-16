@@ -398,6 +398,19 @@ const serviceCategories = [
   ]
 },
 
+/* ================= CYBERSECURITY ================= */
+{
+  category: "Cybersecurity",
+  items: [
+    { icon:"🔐", name:"Cybersecurity Consulting", desc:"Security strategy & risk assessment.", allowPay:false },
+    { icon:"🛡️", name:"SOC & Threat Monitoring", desc:"24/7 monitoring & incident alerts.", allowPay:false },
+    { icon:"📜", name:"Compliance & Security Audits", desc:"ISO, GDPR, SOC2 compliance.", allowPay:false },
+    { icon:"🧬", name:"Data Protection & Privacy", desc:"Encryption & access control.", allowPay:false },
+    { icon:"🧪", name:"VAPT & Penetration Testing", desc:"Vulnerability assessment & testing.", allowPay:false },
+    { icon:"🚨", name:"Incident Response & Recovery", desc:"Security breach response.", allowPay:false }
+  ]
+},
+
 /* ================= SOFTWARE & APP DEVELOPMENT ================= */
 {
   category: "Software & App Development",
@@ -424,6 +437,32 @@ const serviceCategories = [
   ]
 },
 
+/* ================= CREATIVE & MEDIA ================= */
+{
+  category: "Creative & Media",
+  items: [
+    { icon:"🎨", name:"Graphic & Logo Design", desc:"Brand logos & marketing creatives.", price:499, allowPay:true },
+    { icon:"🎥", name:"Video Editing & Reels Creation", desc:"Short videos & reels.", price:499, allowPay:true },
+    { icon:"📊", name:"Pitch Deck & Presentation Design", desc:"Investor & sales decks.", price:1999, allowPay:true },
+    { icon:"🖼️", name:"Ad Creatives & Banners", desc:"Marketing banners & ads.", price:799, allowPay:true },
+    { icon:"🎬", name:"Promo & Explainer Videos", desc:"Business promo videos.", price:2999, allowPay:true },
+    { icon:"📦", name:"Packaging & Print Design", desc:"Product & print designs.", price:1999, allowPay:true }
+  ]
+},
+
+/* ================= BUSINESS & CONSULTANCY ================= */
+{
+  category: "Business & Consultancy",
+  items: [
+    { icon:"🧠", name:"Business & IT Consultancy", desc:"Expert business & tech consulting.", price:999, allowPay:true },
+    { icon:"🚀", name:"Startup Consulting", desc:"Technology & growth guidance.", price:2999, allowPay:true },
+    { icon:"🔄", name:"Digital Transformation Consulting", desc:"Modernize business processes.", price:4999, allowPay:true },
+    { icon:"⚙️", name:"Process Optimization", desc:"Efficiency & cost optimization.", price:1999, allowPay:true },
+    { icon:"📍", name:"Technology Roadmap Planning", desc:"Future-ready planning.", price:2999, allowPay:true },
+    { icon:"🤝", name:"Automation Consulting", desc:"Automation strategy & execution.", price:2499, allowPay:true }
+  ]
+},
+
 /* ================= CSC / DIGITAL SEVA ================= */
 {
   category: "CSC / Digital Seva Services",
@@ -433,11 +472,24 @@ const serviceCategories = [
     { icon:"💼", name:"PF Withdrawal & Correction", desc:"EPF withdrawal & KYC fix.", price:299, allowPay:true },
     { icon:"💰", name:"ITR & GST Filing", desc:"Income tax & GST services.", price:499, allowPay:true },
     { icon:"🏢", name:"MSME / Udyam Registration", desc:"Business registration support.", price:299, allowPay:true },
-    { icon:"🛂", name:"Passport & Government Services", desc:"New & renewal assistance.", price:999, allowPay:true }
+    { icon:"🧾", name:"Online Form Filling", desc:"Government & private online forms.", price:99, allowPay:true }
+  ]
+},
+  /* ================= GOVERNMENT SERVICES ================= */
+{
+  category: "Government Services",
+  items: [
+    { icon:"🛂", name:"Passport Services", desc:"New passport & renewal assistance.", price:999, allowPay:true },
+    { icon:"🌍", name:"Visa Assistance", desc:"Tourist & business visa support.", price:1999, allowPay:true },
+    { icon:"✈️", name:"Travel & Ticket Booking", desc:"Train, flight & hotel booking.", price:99, allowPay:true },
+    { icon:"📜", name:"Digital Certificates", desc:"Income, caste, domicile certificates.", price:299, allowPay:true },
+    { icon:"💡", name:"Bill Payments & Recharge", desc:"Electricity, gas, mobile & DTH.", price:49, allowPay:true },
+    { icon:"📝", name:"Notary & Documentation Support", desc:"Legal & documentation help.", price:499, allowPay:true }
   ]
 }
 
 ];
+
 
 function renderServicesCategoryWise() {
   const grid = document.getElementById("service-grid");
