@@ -505,6 +505,76 @@ footer{
     font-size:1.55rem;
   }
 }
+   .hero{
+  height:90vh;
+  background:url('YOUR_IMAGE.jpg') center/cover no-repeat;
+  position:relative;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  display:flex;
+  align-items:center;     /* vertical center */
+}
+
+.hero-content{
+  max-width:780px;
+  padding:0 24px;
+  color:#fff;
+}
+
+/* text styles */
+.hero-title{
+  font-size:2.2rem;
+  font-weight:800;
+  line-height:1.25;
+}
+
+.hero-title span{
+  font-weight:600;
+  opacity:.92;
+}
+
+.hero-powered{
+  margin-top:8px;
+  font-size:.75rem;
+  letter-spacing:.6px;
+  text-transform:uppercase;
+  color:#c7d2fe;
+}
+
+.hero-subtitle{
+  margin-top:14px;
+  font-size:1rem;
+  line-height:1.6;
+  max-width:640px;
+  color:#e5e7eb;
+}
+
+/* CTA */
+.hero-btn{
+  display:inline-block;
+  margin-top:22px;
+  background:#f97316;
+  color:#fff;
+  padding:12px 22px;
+  border-radius:8px;
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* mobile */
+@media(max-width:768px){
+  .hero{
+    height:70vh;
+  }
+  .hero-title{
+    font-size:1.55rem;
+  }
+}
+
 
 </style>
 </head>
@@ -514,7 +584,7 @@ footer{
 <!-- HERO -->
 <section class="hero">
   <div class="hero-overlay">
-    <div class="container">
+    <div class="hero-content">
 
       <h1 class="hero-title">
         Global AI, Technology & Digital Services<br>
@@ -522,7 +592,7 @@ footer{
       </h1>
 
       <p class="hero-powered">
-        Powered by <strong>NexAI Tech & Digital Solutions</strong>
+        Powered by NexAI Tech & Digital Solutions
       </p>
 
       <p class="hero-subtitle">
@@ -530,9 +600,12 @@ footer{
         cybersecurity and digital innovation — delivered globally.
       </p>
 
+      <a href="#services" class="hero-btn">Explore Our Services</a>
+
     </div>
   </div>
 </section>
+
 
 
 
