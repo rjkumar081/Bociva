@@ -661,5 +661,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+  <section id="services" class="py-20 bg-white">
+  <div id="services-container" class="max-w-7xl mx-auto px-4"></div>
+</section>
+<script>
+const serviceCategories = [
+  {
+    category: "IT Services",
+    items: [
+      { icon: "🛠️", name: "Managed IT Support", desc: "24/7 monitoring, helpdesk, infrastructure management and proactive IT support." },
+      { icon: "🧭", name: "IT Consulting", desc: "Technology roadmap, digital transformation and strategic IT advisory." }
+    ]
+  }
+];
+
+function renderServices() {
+  const container = document.getElementById("services-container");
+  container.innerHTML = "";
+
+  serviceCategories.forEach(cat => {
+    const section = document.createElement("section");
+    section.innerHTML = `
+      <h3>${cat.category}</h3>
+      <div>
+        ${cat.items.map(item => `
+          <div>
+            <h4>${item.icon} ${item.name}</h4>
+            <p>${item.desc}</p>
+          </div>
+        `).join("")}
+      </div>
+    `;
+    container.appendChild(section);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", renderServices);
+</script>
+
 </body>
 </html>
