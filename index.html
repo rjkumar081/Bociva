@@ -145,6 +145,38 @@ html{scroll-behavior:smooth}
       transparent 45%);
   pointer-events:none;
 }
+/* ===== BRAND LOGO TEXT ===== */
+.brand{
+  font-size:1.4rem;
+  font-weight:800;
+  color:#ffffff;
+  line-height:1.1;
+  letter-spacing:.2px;
+}
+
+.brand span{
+  color:#facc15; /* premium gold */
+  font-weight:800;
+}
+
+.brand small{
+  display:block;
+  font-size:.72rem;
+  font-weight:500;
+  color:#c7d2fe;
+  letter-spacing:.4px;
+  margin-top:2px;
+}
+
+/* Mobile adjustment */
+@media(max-width:768px){
+  .brand{
+    font-size:1.2rem;
+  }
+  .brand small{
+    font-size:.65rem;
+  }
+}
 
 </style>
 </head>
@@ -155,9 +187,11 @@ html{scroll-behavior:smooth}
 <header id="navbar" class="fixed top-0 w-full z-50 bg-[#0b0f1a]">
   <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
 
-    <h1 class="text-xl font-extrabold text-white">
-      NexAI <span class="text-yellow-300">Tech & Digital</span>
-    </h1>
+   <h1 class="brand">
+  NexAI <span>Tech & Digital</span>
+  <small>Powered by MeraPopi</small>
+</h1>
+
 
     <!-- Desktop Menu -->
     <nav class="hidden md:flex gap-6 text-white font-semibold">
