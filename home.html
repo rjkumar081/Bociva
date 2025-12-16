@@ -272,94 +272,77 @@ End-to-end IT services designed to improve performance, security, and Grow busin
 
 <script>
 const whatsappNumber = "919464642218";
-const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR";
-const services = [
-  { icon: "🌐", name: "Website Development", desc: "Create professional, responsive business or e-commerce websites." },
-  { icon: "📱", name: "App Development", desc: "Build Android & iOS apps tailored to your business needs." },
-  { icon: "📈", name: "Digital Marketing", desc: "Promote your brand through SEO, ads, and social media growth." },
-  { icon: "🎨", name: "Graphic & Logo Design", desc: "Custom logos, posters & creatives that make your brand shine." },
-  { icon: "🧠", name: "Business & IT Consultancy", desc: "Expert consultancy for business setup & tech growth." },
-  { icon: "⚙️", name: "Website Maintenance & Support", desc: "Ongoing updates, bug fixes & uptime monitoring." },
-  { icon: "🧩", name: "Social Media Management", desc: "Plan, post & manage social content for consistent growth." },
-  { icon: "💡", name: "SEO & Google Ads Setup", desc: "Boost visibility with SEO optimization & ad campaigns." },
-  { icon: "✉️", name: "Email & WhatsApp Marketing", desc: "Send personalized campaigns that convert leads into clients." },
-  { icon: "🎥", name: "Video Editing & Reels Creation", desc: "Create short videos & reels for social media engagement." },
 
-  /* ===== New Professional IT Services ===== */
-
-  { icon: "🛠️", name: "Managed IT Support", desc: "24/7 monitoring, helpdesk support, infrastructure management, and proactive IT services." },
-
-  { icon: "🤖", name: "AI & Automation", desc: "AI chatbots, predictive analytics, intelligent systems, and process automation solutions." },
-
-  { icon: "☁️", name: "Cloud & DevOps", desc: "Cloud migration, AWS/Azure/GCP solutions, DevOps practices, and CI/CD pipelines." },
-
-  { icon: "🔐", name: "Cybersecurity", desc: "Threat detection, SOC services, compliance, data protection, and risk management." },
-
-  { icon: "💻", name: "Software Development", desc: "Custom web applications, enterprise software, SaaS platforms, and system integrations." },
-
-  { icon: "🧭", name: "IT Consulting", desc: "Technology roadmap planning, digital transformation, and strategic IT advisory." },
-
-  /* ===== Digital Seva / Utility Services ===== */
-
-  { icon: "💼", name: "PF Withdrawal & Correction", desc: "EPF withdrawal, name correction, and KYC linking made easy." },
-  { icon: "💰", name: "IT & GST Services", desc: "ITR filing, GST registration, and business tax solutions." },
-  { icon: "🪪", name: "PAN Card Services", desc: "Apply, update or reprint PAN Card quickly." },
-  { icon: "🆔", name: "Aadhaar Update", desc: "Aadhaar name, address or mobile correction support." },
-  { icon: "🏢", name: "MSME Registration", desc: "Udyam / MSME registration for new and existing businesses." },
-  { icon: "🛂", name: "Passport Services", desc: "Apply or renew passport with document verification." },
-  { icon: "✈️", name: "Travel & Ticket Booking", desc: "Book IRCTC train, flight, hotel or visa assistance." }
+const serviceCategories = [
+  {
+    category: "IT Services",
+    items: [
+      { icon:"🛠️", name:"Managed IT Support", desc:"24/7 monitoring and proactive IT support." },
+      { icon:"🧭", name:"IT Consulting", desc:"Technology roadmap and advisory." },
+      { icon:"🧩", name:"Infrastructure Management", desc:"Servers, networks and endpoints." },
+      { icon:"📡", name:"Network & Firewall", desc:"LAN, WAN, VPN and firewall setup." }
+    ]
+  },
+  {
+    category: "Cloud & DevOps",
+    items: [
+      { icon:"☁️", name:"Cloud Migration", desc:"AWS / Azure / GCP migration." },
+      { icon:"🔄", name:"DevOps & CI/CD", desc:"Automation and deployment pipelines." },
+      { icon:"💾", name:"Backup & DR", desc:"Business continuity solutions." }
+    ]
+  },
+  {
+    category: "AI & Automation",
+    items: [
+      { icon:"🤖", name:"AI Automation", desc:"Business process automation." },
+      { icon:"💬", name:"AI Chatbots", desc:"Customer support automation." },
+      { icon:"📊", name:"Predictive Analytics", desc:"Data forecasting & insights." }
+    ]
+  },
+  {
+    category: "Software & Digital",
+    items: [
+      { icon:"💻", name:"Software Development", desc:"Enterprise & SaaS solutions." },
+      { icon:"🌐", name:"Website Development", desc:"Business & eCommerce websites." },
+      { icon:"📱", name:"Mobile Apps", desc:"Android & iOS apps." },
+      { icon:"📈", name:"Digital Marketing", desc:"SEO & growth marketing." }
+    ]
+  }
 ];
 
-function renderServices() {
-  const grid = document.getElementById('service-grid');
+function renderServicesCategoryWise() {
+  const grid = document.getElementById("service-grid");
   if (!grid) return;
-  services.forEach(s => {
-    const upiLink = `${upiBase}&am=${s.price}&tn=${encodeURIComponent(s.name)}`;
-    const chatLink = `https://wa.me/${whatsappNumber}?text=Hi! I am interested in ${encodeURIComponent(s.name)}`;
-    // Share link/text for Web Share API or fallback
-    const shareText = `Check out this service: ${s.name} - ${s.desc}. Starting at ₹${s.price}. Powered by NexAI Tech & Digital Solutions.`;
 
-    const div = document.createElement('div');
-    div.className = "bg-indigo-50 p-6 rounded-xl shadow hover:shadow-xl transition";
-    div.innerHTML = `
-      <div class='text-4xl mb-4'>${s.icon}</div>
-      <h3 class='text-xl font-bold mb-2'>${s.name}</h3>
-      <p class='text-gray-600 text-sm mb-3'>${s.desc}</p>
-      <div class='flex flex-wrap gap-2 items-center'>
-        
-        <a href='${chatLink}' target='_blank'
-           class='bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
-           💬 Free Consultation
-        </a>
-      <a href='${upiLink}' target='_blank' 
-           class='bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
-          ⚡ Quick Pay
-        </a>
-        </button>
-      </div>
-    `;
-    grid.appendChild(div);
+  grid.innerHTML = "";
+
+  serviceCategories.forEach(cat => {
+    grid.insertAdjacentHTML(
+      "beforeend",
+      `<div class="col-span-full mt-10 mb-4">
+        <h3 class="text-2xl font-bold text-gray-800">${cat.category}</h3>
+      </div>`
+    );
+
+    cat.items.forEach(s => {
+      const chat = `https://wa.me/${whatsappNumber}?text=Hi! I am interested in ${encodeURIComponent(s.name)}`;
+      grid.insertAdjacentHTML(
+        "beforeend",
+        `<div class="bg-indigo-50 p-6 rounded-xl shadow hover:shadow-xl transition">
+          <div class="text-4xl mb-4">${s.icon}</div>
+          <h4 class="text-xl font-semibold mb-2">${s.name}</h4>
+          <p class="text-gray-600 text-sm mb-4">${s.desc}</p>
+          <a href="${chat}" target="_blank"
+             class="inline-block bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold">
+            💬 Free Consultation
+          </a>
+        </div>`
+      );
+    });
   });
 }
 
-function shareService(name, desc, price) {
-    const shareData = {
-        title: 'NexAI Service: ' + name,
-        text: `Check out this service: ${name} - ${desc}. Starting at ₹${price}. Get in touch now!`,
-        url: window.location.href // Shares the current page link
-    };
-
-    if (navigator.share) {
-        navigator.share(shareData)
-            .catch((error) => console.log('Error sharing', error));
-    } else {
-        // Fallback for browsers that do not support Web Share API
-        alert(`Share this service: ${shareData.text}\nPage URL: ${shareData.url}\n\n(Note: Your browser does not support the native Share feature, please copy and paste the details.)`);
-    }
-}
-
-
-document.addEventListener("DOMContentLoaded", renderServices);
+document.addEventListener("DOMContentLoaded", renderServicesCategoryWise);
 </script>
 
 
