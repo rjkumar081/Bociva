@@ -31,7 +31,7 @@ p{color:#4b5563}
   color:#fff;
 }
 .hero h1{font-size:52px;max-width:850px}
-.hero p{font-size:18px;max-width:750px;margin-top:15px}
+.hero p{font-size:18px;max-width:750px;margin-top:15px;color:#e5e7eb}
 
 /* BUTTON */
 .btn{
@@ -57,6 +57,16 @@ p{color:#4b5563}
   padding:20px;
   border-radius:10px;
   font-size:17px;
+  color:#fff;
+}
+
+/* DARK SECTION */
+.dark{
+  background:#0b1220;
+  color:#fff;
+}
+.dark > .container > p{
+  color:#cbd5e1;
 }
 
 /* SERVICES */
@@ -70,17 +80,22 @@ p{color:#4b5563}
   padding:35px;
   border-radius:16px;
   box-shadow:0 15px 40px rgba(0,0,0,.08);
-  background:#fff;
+  background:#ffffff;
   text-align:center;
+  border:1px solid #e5e7eb;
 }
 .card img{
   width:60px;
   margin-bottom:15px;
 }
 
-/* DARK */
-.dark{background:#0b1220;color:#fff}
-.dark p{color:#cbd5e1}
+/* FIX: TEXT VISIBILITY INSIDE DARK SECTION CARDS */
+.dark .card h3{
+  color:#0f172a;
+}
+.dark .card p{
+  color:#475569;
+}
 
 /* WHY */
 .why-grid{
@@ -90,14 +105,18 @@ p{color:#4b5563}
   margin-top:50px;
 }
 .why-box{
-  background:#fff;
+  background:#ffffff;
   padding:35px;
   border-radius:16px;
   text-align:center;
+  border:1px solid #e5e7eb;
 }
 .why-box img{
   width:55px;
   margin-bottom:15px;
+}
+.why-box p{
+  color:#334155;
 }
 
 /* PROCESS */
@@ -112,10 +131,14 @@ p{color:#4b5563}
   padding:30px;
   border-radius:16px;
   text-align:center;
+  border:1px solid #e5e7eb;
 }
 .step img{
   width:65px;
   margin-bottom:15px;
+}
+.step b{
+  color:#0f172a;
 }
 
 /* CTA */
@@ -126,6 +149,9 @@ p{color:#4b5563}
   color:#fff;
   text-align:center;
   padding:120px 20px;
+}
+.cta p{
+  color:#e5e7eb;
 }
 
 /* FOOTER */
@@ -142,139 +168,139 @@ footer{
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-overlay">
-<div class="container">
-<h1>Global IT Support, Digital Transformation & AI-Driven Solutions</h1>
-<p>
-We deliver enterprise IT support, AI automation, cloud transformation,
-cybersecurity and digital innovation for businesses worldwide.
-</p>
-<a href="services.html" class="btn">Explore Our Services</a>
+  <div class="hero-overlay">
+    <div class="container">
+      <h1>Global IT Support, Digital Transformation & AI-Driven Solutions</h1>
+      <p>
+        We deliver enterprise IT support, AI automation, cloud transformation,
+        cybersecurity and digital innovation for businesses worldwide.
+      </p>
+      <a href="services.html" class="btn">Explore Our Services</a>
 
-<div class="trust">
-<div>✔ 20+ Years Experience</div>
-<div>✔ Global Delivery</div>
-<div>✔ Enterprise Security</div>
-<div>✔ 24/7 IT Support</div>
-</div>
-</div>
-</div>
+      <div class="trust">
+        <div>✔ 20+ Years Experience</div>
+        <div>✔ Global Delivery</div>
+        <div>✔ Enterprise Security</div>
+        <div>✔ 24/7 IT Support</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ABOUT -->
 <section class="section">
-<div class="container">
-<h2>About Our IT & Digital Technology Company</h2>
-<p>
-We help organizations modernize IT infrastructure, optimize operations
-and achieve sustainable growth through digital technologies.
-</p>
-</div>
+  <div class="container">
+    <h2>About Our IT & Digital Technology Company</h2>
+    <p>
+      We help organizations modernize IT infrastructure, optimize operations
+      and achieve sustainable growth through digital technologies.
+    </p>
+  </div>
 </section>
 
 <!-- SERVICES -->
 <section class="section dark">
-<div class="container">
-<h2>Our Global IT Services</h2>
-<p>End-to-end IT and digital services for modern enterprises.</p>
+  <div class="container">
+    <h2>Our Global IT Services</h2>
+    <p>Comprehensive end-to-end IT and digital services tailored for modern enterprises.</p>
 
-<div class="services-grid">
-  <div class="card">
-    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png">
-    <h3>Managed IT Support</h3>
-    <p>24/7 monitoring, helpdesk & infrastructure support.</p>
-  </div>
+    <div class="services-grid">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png">
+        <h3>Managed IT Support</h3>
+        <p>24/7 monitoring, helpdesk, infrastructure management and proactive IT support.</p>
+      </div>
 
-  <div class="card">
-    <img src="https://cdn-icons-png.flaticon.com/512/4149/4149640.png">
-    <h3>AI & Automation</h3>
-    <p>Chatbots, analytics & intelligent workflows.</p>
-  </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149640.png">
+        <h3>AI & Automation</h3>
+        <p>AI chatbots, predictive analytics, process automation and intelligent systems.</p>
+      </div>
 
-  <div class="card">
-    <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png">
-    <h3>Cloud & DevOps</h3>
-    <p>AWS, Azure, CI/CD & cloud optimization.</p>
-  </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png">
+        <h3>Cloud & DevOps</h3>
+        <p>Cloud migration, AWS/Azure/GCP solutions, DevOps & CI/CD pipelines.</p>
+      </div>
 
-  <div class="card">
-    <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png">
-    <h3>Cybersecurity</h3>
-    <p>SOC, compliance & threat protection.</p>
-  </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png">
+        <h3>Cybersecurity</h3>
+        <p>Threat detection, SOC, compliance, data protection and risk management.</p>
+      </div>
 
-  <div class="card">
-    <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">
-    <h3>Software Development</h3>
-    <p>Enterprise software & SaaS solutions.</p>
-  </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">
+        <h3>Software Development</h3>
+        <p>Custom web apps, enterprise software, SaaS platforms & integrations.</p>
+      </div>
 
-  <div class="card">
-    <img src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png">
-    <h3>IT Consulting</h3>
-    <p>Technology roadmap & cost optimization.</p>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png">
+        <h3>IT Consulting</h3>
+        <p>Technology roadmap, digital strategy, cost optimization & IT governance.</p>
+      </div>
+    </div>
   </div>
-</div>
-</div>
 </section>
 
 <!-- WHY US -->
 <section class="section">
-<div class="container">
-<h2>Why Global Companies Choose Us</h2>
+  <div class="container">
+    <h2>Why Global Companies Choose Us</h2>
 
-<div class="why-grid">
-  <div class="why-box">
-    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png">
-    <p>Proven global delivery</p>
+    <div class="why-grid">
+      <div class="why-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png">
+        <p>Proven delivery across industries & geographies</p>
+      </div>
+      <div class="why-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+        <p>Certified engineers & technology consultants</p>
+      </div>
+      <div class="why-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png">
+        <p>AI-first & automation-driven approach</p>
+      </div>
+      <div class="why-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png">
+        <p>Strong focus on security & compliance</p>
+      </div>
+    </div>
   </div>
-  <div class="why-box">
-    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-    <p>Certified IT experts</p>
-  </div>
-  <div class="why-box">
-    <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png">
-    <p>AI-first approach</p>
-  </div>
-  <div class="why-box">
-    <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png">
-    <p>Security focused</p>
-  </div>
-</div>
-</div>
 </section>
 
 <!-- PROCESS -->
 <section class="section">
-<div class="container">
-<h2>Our Delivery & Support Process</h2>
+  <div class="container">
+    <h2>Our Delivery & Support Process</h2>
 
-<div class="process">
-  <div class="step">
-    <img src="https://cdn-icons-png.flaticon.com/512/3208/3208723.png">
-    <b>Assessment</b><br>IT & business analysis
+    <div class="process">
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/3208/3208723.png">
+        <b>Assessment</b><br>Business & IT analysis
+      </div>
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png">
+        <b>Strategy</b><br>Solution architecture
+      </div>
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">
+        <b>Implementation</b><br>Agile execution
+      </div>
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/4320/4320346.png">
+        <b>Support</b><br>Continuous monitoring
+      </div>
+    </div>
   </div>
-  <div class="step">
-    <img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png">
-    <b>Strategy</b><br>Solution planning
-  </div>
-  <div class="step">
-    <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">
-    <b>Implementation</b><br>Agile execution
-  </div>
-  <div class="step">
-    <img src="https://cdn-icons-png.flaticon.com/512/4320/4320346.png">
-    <b>Support</b><br>Continuous monitoring
-  </div>
-</div>
-</div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-<h2>Transform Your Business with Future-Ready IT Solutions</h2>
-<p>Partner with a trusted global IT services company.</p>
-<a href="contact.html" class="btn">Talk to Our Experts</a>
+  <h2>Transform Your Business with Future-Ready IT Solutions</h2>
+  <p>Partner with a trusted global IT services & digital transformation company.</p>
+  <a href="contact.html" class="btn">Talk to Our Experts</a>
 </section>
 
 <footer>
