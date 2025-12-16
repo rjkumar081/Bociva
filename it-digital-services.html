@@ -2,32 +2,33 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>IT Support, Digital & AI Services</title>
+<title>IT Support & Digital Technology Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Inter}
-body{color:#1f2937;line-height:1.7;background:#fff}
+body{background:#fff;color:#1f2937;line-height:1.7}
 
 /* COMMON */
 section{padding:90px 8%}
-h1{font-size:52px;font-weight:700}
-h2{font-size:38px;font-weight:600;margin-bottom:15px}
-p{color:#4b5563;font-size:17px;max-width:900px}
-.btn{
-display:inline-block;margin-top:25px;
-padding:14px 34px;border-radius:6px;
+h1{font-size:48px;font-weight:600}
+h2{font-size:34px;font-weight:600;margin-bottom:14px}
+p{color:#4b5563;font-size:16.5px;max-width:900px}
+a.btn{
+display:inline-block;margin-top:22px;
+padding:13px 32px;
 background:#0b5ed7;color:#fff;
-text-decoration:none;font-weight:600;
+text-decoration:none;border-radius:4px;
+font-weight:500;
 }
 
 /* HERO */
 .hero{
-min-height:95vh;
+min-height:90vh;
 background:
-linear-gradient(90deg,rgba(255,255,255,.95),rgba(255,255,255,.75)),
+linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.75)),
 url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover;
 display:flex;align-items:center;
 }
@@ -35,46 +36,40 @@ display:flex;align-items:center;
 /* SPLIT */
 .split{
 display:grid;
-grid-template-columns:1.1fr .9fr;
-gap:60px;
+grid-template-columns:1fr 1fr;
+gap:70px;
 align-items:center;
 }
 .split img{
-width:100%;border-radius:10px;
+width:100%;
+border-radius:6px;
 }
 
-/* SERVICES */
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:35px;
-margin-top:40px;
+/* LIST */
+.list{
+margin-top:18px;
 }
-.service{
-border-left:4px solid #0b5ed7;
-padding-left:20px;
+.list div{
+padding:6px 0;
+border-bottom:1px solid #e5e7eb;
 }
+
+/* GRAY */
+.gray{background:#f9fafb}
 
 /* STATS */
 .stats{
-display:flex;gap:60px;flex-wrap:wrap;
+display:flex;gap:70px;flex-wrap:wrap;
 margin-top:30px;
 }
-.stats div{font-size:32px;font-weight:700}
-
-/* LIGHT GRAY */
-.gray{background:#f8fafc}
-
-/* CAREER */
-.career{
-border-bottom:1px solid #e5e7eb;
-padding:18px 0;
-}
+.stats div{font-size:28px;font-weight:600}
 
 /* FOOTER */
 footer{
-background:#0f172a;color:#cbd5e1;
-padding:40px;text-align:center;
+background:#0f172a;
+color:#cbd5e1;
+padding:35px;
+text-align:center;
 }
 </style>
 </head>
@@ -84,16 +79,16 @@ padding:40px;text-align:center;
 <!-- HERO -->
 <section class="hero">
 <div>
-<h1>Reliable IT Support & Digital Technology Services</h1>
+<h1>IT Support, Digital Technology & Consulting Services</h1>
 <p>
-We provide end-to-end IT support, digital transformation, AI solutions and
-technology consulting to businesses across industries.
+We provide reliable IT support services, digital technology solutions,
+cloud services, cybersecurity and IT consulting to organizations
+across industries.
 </p>
-<a class="btn">Request a Consultation</a>
 
 <div class="stats">
-<div>20+<br><small>Years Experience</small></div>
-<div>24×7<br><small>IT Support</small></div>
+<div>20+<br><small>Years</small></div>
+<div>24×7<br><small>Support</small></div>
 <div>Global<br><small>Delivery</small></div>
 </div>
 </div>
@@ -101,14 +96,13 @@ technology consulting to businesses across industries.
 
 <!-- ABOUT -->
 <section>
-<h2>About Our IT Services Company</h2>
+<h2>About Our Company</h2>
 <p>
-We are a professional IT services and consulting company helping organizations
-manage, modernize and secure their technology infrastructure.
+We are an IT services and consulting company helping businesses manage
+their technology infrastructure and adopt modern digital solutions.
 </p>
 <p>
-Our services include managed IT support, cloud solutions, cybersecurity,
-software development, AI automation and strategic IT consulting.
+Our focus is on stability, security and long-term technology partnerships.
 </p>
 </section>
 
@@ -118,15 +112,15 @@ software development, AI automation and strategic IT consulting.
 <div>
 <h2>Managed IT Support Services</h2>
 <p>
-We ensure uninterrupted business operations with proactive monitoring,
-helpdesk services, infrastructure management and rapid incident resolution.
+We deliver proactive IT support to ensure uninterrupted operations,
+reduced downtime and predictable IT costs.
 </p>
 
-<div class="services">
-<div class="service">24/7 Helpdesk & Remote Support</div>
-<div class="service">Server & Network Management</div>
-<div class="service">End-User Support</div>
-<div class="service">IT Asset Management</div>
+<div class="list">
+<div>Helpdesk & Remote IT Support</div>
+<div>Server, Network & Infrastructure Management</div>
+<div>End-User & Desktop Support</div>
+<div>IT Asset & Vendor Management</div>
 </div>
 </div>
 
@@ -134,20 +128,21 @@ helpdesk services, infrastructure management and rapid incident resolution.
 </div>
 </section>
 
-<!-- DIGITAL & CLOUD -->
+<!-- CLOUD -->
 <section>
 <div class="split">
 <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
 <div>
 <h2>Cloud & Digital Transformation</h2>
 <p>
-We help organizations move to the cloud, modernize legacy systems and
-adopt digital platforms for scalability and efficiency.
+We help organizations migrate to cloud platforms and modernize
+legacy systems to improve scalability and performance.
 </p>
-<div class="services">
-<div class="service">Cloud Migration (AWS, Azure)</div>
-<div class="service">DevOps & Automation</div>
-<div class="service">Application Modernization</div>
+
+<div class="list">
+<div>Cloud Migration (AWS, Azure)</div>
+<div>Application Modernization</div>
+<div>DevOps & Infrastructure Automation</div>
 </div>
 </div>
 </div>
@@ -159,16 +154,18 @@ adopt digital platforms for scalability and efficiency.
 <div>
 <h2>AI & Intelligent Automation</h2>
 <p>
-Leverage artificial intelligence to automate processes, improve decision-making
-and enhance customer experience.
+We enable organizations to leverage artificial intelligence
+for operational efficiency and better decision-making.
 </p>
-<div class="services">
-<div class="service">AI Chatbots & Virtual Assistants</div>
-<div class="service">Predictive Analytics</div>
-<div class="service">Process Automation (RPA)</div>
-<div class="service">AI Consulting & Strategy</div>
+
+<div class="list">
+<div>AI Chatbots & Virtual Assistants</div>
+<div>Predictive Analytics & Reporting</div>
+<div>Process Automation (RPA)</div>
+<div>AI Consulting & Roadmap</div>
 </div>
 </div>
+
 <img src="https://images.unsplash.com/photo-1677442135136-760c813028c0">
 </div>
 </section>
@@ -177,32 +174,36 @@ and enhance customer experience.
 <section>
 <h2>IT Consulting & Advisory</h2>
 <p>
-Our consultants work closely with leadership teams to align technology
-with business goals, optimize IT costs and ensure security compliance.
+Our IT consultants work with leadership teams to align technology
+with business objectives, improve governance and control IT risks.
 </p>
 </section>
 
 <!-- CAREERS -->
 <section class="gray">
 <h2>Careers</h2>
-<p>Be part of a growing IT services organization.</p>
+<p>We are always looking for skilled IT professionals.</p>
 
-<div class="career">IT Support Engineer</div>
-<div class="career">Cloud Engineer</div>
-<div class="career">Cybersecurity Analyst</div>
-<div class="career">AI / ML Engineer</div>
+<div class="list">
+<div>IT Support Engineer</div>
+<div>Cloud Engineer</div>
+<div>Cybersecurity Analyst</div>
+<div>AI / ML Engineer</div>
+</div>
 </section>
 
 <!-- CONTACT -->
 <section>
 <h2>Contact Us</h2>
-<p>Email: info@yourcompany.com<br>
+<p>
+Email: info@yourcompany.com<br>
 Phone: +91-XXXXXXXXXX<br>
-Business Hours: 24×7 Support</p>
+Support Availability: 24×7
+</p>
 </section>
 
 <footer>
-© 2025 IT Support & Digital Services Company
+© 2025 IT Support & Digital Technology Services
 </footer>
 
 </body>
