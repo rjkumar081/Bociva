@@ -398,6 +398,19 @@ const serviceCategories = [
   ]
 },
 
+/* ================= CYBERSECURITY ================= */
+{
+  category: "Cybersecurity",
+  items: [
+    { icon:"🔐", name:"Cybersecurity Consulting", desc:"Security strategy & risk assessment.", allowPay:false },
+    { icon:"🛡️", name:"SOC & Threat Monitoring", desc:"24/7 monitoring & incident alerts.", allowPay:false },
+    { icon:"📜", name:"Compliance & Security Audits", desc:"ISO, GDPR, SOC2 compliance.", allowPay:false },
+    { icon:"🧬", name:"Data Protection & Privacy", desc:"Encryption & access control.", allowPay:false },
+    { icon:"🧪", name:"VAPT & Penetration Testing", desc:"Vulnerability assessment & testing.", allowPay:false },
+    { icon:"🚨", name:"Incident Response & Recovery", desc:"Security breach response.", allowPay:false }
+  ]
+},
+
 /* ================= SOFTWARE & APP DEVELOPMENT ================= */
 {
   category: "Software & App Development",
@@ -424,6 +437,32 @@ const serviceCategories = [
   ]
 },
 
+/* ================= CREATIVE & MEDIA ================= */
+{
+  category: "Creative & Media",
+  items: [
+    { icon:"🎨", name:"Graphic & Logo Design", desc:"Brand logos & marketing creatives.", price:499, allowPay:true },
+    { icon:"🎥", name:"Video Editing & Reels Creation", desc:"Short videos & reels.", price:499, allowPay:true },
+    { icon:"📊", name:"Pitch Deck & Presentation Design", desc:"Investor & sales decks.", price:1999, allowPay:true },
+    { icon:"🖼️", name:"Ad Creatives & Banners", desc:"Marketing banners & ads.", price:799, allowPay:true },
+    { icon:"🎬", name:"Promo & Explainer Videos", desc:"Business promo videos.", price:2999, allowPay:true },
+    { icon:"📦", name:"Packaging & Print Design", desc:"Product & print designs.", price:1999, allowPay:true }
+  ]
+},
+
+/* ================= BUSINESS & CONSULTANCY ================= */
+{
+  category: "Business & Consultancy",
+  items: [
+    { icon:"🧠", name:"Business & IT Consultancy", desc:"Expert business & tech consulting.", price:999, allowPay:true },
+    { icon:"🚀", name:"Startup Consulting", desc:"Technology & growth guidance.", price:2999, allowPay:true },
+    { icon:"🔄", name:"Digital Transformation Consulting", desc:"Modernize business processes.", price:4999, allowPay:true },
+    { icon:"⚙️", name:"Process Optimization", desc:"Efficiency & cost optimization.", price:1999, allowPay:true },
+    { icon:"📍", name:"Technology Roadmap Planning", desc:"Future-ready planning.", price:2999, allowPay:true },
+    { icon:"🤝", name:"Automation Consulting", desc:"Automation strategy & execution.", price:2499, allowPay:true }
+  ]
+},
+
 /* ================= CSC / DIGITAL SEVA ================= */
 {
   category: "CSC / Digital Seva Services",
@@ -433,11 +472,24 @@ const serviceCategories = [
     { icon:"💼", name:"PF Withdrawal & Correction", desc:"EPF withdrawal & KYC fix.", price:299, allowPay:true },
     { icon:"💰", name:"ITR & GST Filing", desc:"Income tax & GST services.", price:499, allowPay:true },
     { icon:"🏢", name:"MSME / Udyam Registration", desc:"Business registration support.", price:299, allowPay:true },
-    { icon:"🛂", name:"Passport & Government Services", desc:"New & renewal assistance.", price:999, allowPay:true }
+    { icon:"🧾", name:"Online Form Filling", desc:"Government & private online forms.", price:99, allowPay:true }
+  ]
+},
+  /* ================= GOVERNMENT SERVICES ================= */
+{
+  category: "Government Services",
+  items: [
+    { icon:"🛂", name:"Passport Services", desc:"New passport & renewal assistance.", price:999, allowPay:true },
+    { icon:"🌍", name:"Visa Assistance", desc:"Tourist & business visa support.", price:1999, allowPay:true },
+    { icon:"✈️", name:"Travel & Ticket Booking", desc:"Train, flight & hotel booking.", price:99, allowPay:true },
+    { icon:"📜", name:"Digital Certificates", desc:"Income, caste, domicile certificates.", price:299, allowPay:true },
+    { icon:"💡", name:"Bill Payments & Recharge", desc:"Electricity, gas, mobile & DTH.", price:49, allowPay:true },
+    { icon:"📝", name:"Notary & Documentation Support", desc:"Legal & documentation help.", price:499, allowPay:true }
   ]
 }
 
 ];
+
 
 function renderServicesCategoryWise() {
   const grid = document.getElementById("service-grid");
@@ -506,22 +558,97 @@ document.addEventListener("DOMContentLoaded", renderServicesCategoryWise);
         <label class="block text-gray-700 font-semibold mb-2">Select Service</label>
         <select id="service" class="border border-gray-300 rounded-lg w-full p-3 mb-4 focus:ring-2 focus:ring-indigo-500">
           <option value="">-- Choose a Service --</option>
-          <option>Website Development</option>
-          <option>App Development</option>
-          <option>AI Automation Setup</option>
-          <option>Digital Marketing</option>
-          <option>Graphic & Logo Design</option>
-          <option>Business & IT Consultancy</option>
-          <option>SEO & Google Ads Setup</option>
-          <option>Email & WhatsApp Marketing</option>
-          <option>Video Editing & Reels Creation</option>
-          <option>PF Withdrawal & Correction</option>
-          <option>ITR & GST Services</option>
-          <option>PAN Card Services</option>
-          <option>Aadhaar Update</option>
-          <option>MSME Registration</option>
-          <option>Passport Services</option>
-          <option>Any Other Requirement</option>
+       <!-- ===== AI & AUTOMATION ===== -->
+<option>AI Automation Setup</option>
+<option>AI Chatbots & Virtual Assistants</option>
+<option>Machine Learning Solutions</option>
+<option>Predictive Analytics</option>
+<option>Computer Vision & OCR</option>
+<option>NLP Solutions</option>
+
+<!-- ===== CLOUD & DEVOPS ===== -->
+<option>Cloud Migration</option>
+<option>AWS / Azure / GCP Solutions</option>
+<option>DevOps & CI/CD Pipelines</option>
+<option>Containerization & Kubernetes</option>
+<option>Backup & Disaster Recovery</option>
+<option>Cloud Cost Optimization</option>
+
+<!-- ===== IT SERVICES ===== -->
+<option>Managed IT Support</option>
+<option>IT Consulting</option>
+<option>Enterprise IT Solutions</option>
+<option>IT Infrastructure Management</option>
+<option>Network & Server Management</option>
+<option>IT Asset & License Management</option>
+
+<!-- ===== CYBERSECURITY ===== -->
+<option>Cybersecurity Consulting</option>
+<option>SOC & Threat Monitoring</option>
+<option>Compliance & Security Audits</option>
+<option>Data Protection & Privacy</option>
+<option>VAPT & Penetration Testing</option>
+<option>Incident Response & Recovery</option>
+
+<!-- ===== SOFTWARE & APP DEVELOPMENT ===== -->
+<option>Custom Software Development</option>
+<option>Web Application Development</option>
+<option>App Development (Android & iOS)</option>
+<option>SaaS Product Development</option>
+<option>API & System Integrations</option>
+<option>QA & Software Testing</option>
+
+<!-- ===== WEBSITE & EXPERIENCE ===== -->
+<option>Website Development</option>
+<option>E-Commerce Solutions</option>
+<option>UI / UX Design</option>
+<option>Website Performance Optimization</option>
+<option>Website Maintenance & Support</option>
+<option>Landing Page Development</option>
+
+<!-- ===== DIGITAL MARKETING ===== -->
+<option>Digital Marketing Strategy</option>
+<option>SEO & SEM</option>
+<option>Google Ads Setup & Management</option>
+<option>Social Media Management</option>
+<option>Email & WhatsApp Marketing</option>
+<option>Video Editing & Reels Creation</option>
+
+<!-- ===== CREATIVE & BRANDING ===== -->
+<option>Graphic & Logo Design</option>
+<option>Brand Identity Design</option>
+<option>Ad Creatives & Banners</option>
+<option>Pitch Deck & Presentation Design</option>
+<option>Promo & Explainer Videos</option>
+<option>Packaging & Print Design</option>
+
+<!-- ===== BUSINESS & CONSULTANCY ===== -->
+<option>Business & IT Consultancy</option>
+<option>Startup Consulting</option>
+<option>Digital Transformation Consulting</option>
+<option>Process Optimization</option>
+<option>Automation Consulting</option>
+<option>Technology Roadmap Planning</option>
+
+<!-- ===== CSC / DIGITAL SEVA ===== -->
+<option>PF Withdrawal & Correction</option>
+<option>ITR Filing</option>
+<option>IT & GST Services</option>
+<option>PAN Card Services</option>
+<option>Aadhaar Update</option>
+<option>MSME / Udyam Registration</option>
+
+<!-- ===== GOVERNMENT & UTILITY ===== -->
+<option>Passport Services</option>
+<option>Travel & Ticket Booking</option>
+<option>Visa Assistance</option>
+<option>Online Form Filling</option>
+<option>Bill Payments & Recharge</option>
+<option>Digital Certificates & Documentation</option>
+<option>Notary & Documentation Support</option>
+
+<!-- ===== OTHER ===== -->
+<option>Other / Custom Requirement</option>
         </select>
         <label class="block text-gray-700 font-semibold mb-2">Enter Amount (₹)</label>
         <input id="amount" type="number" placeholder="Enter Amount"
@@ -560,23 +687,98 @@ document.addEventListener("DOMContentLoaded", renderServicesCategoryWise);
       <input name="email" type="email" required placeholder="Email Address" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
       <input name="phone" required placeholder="Phone / WhatsApp" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
       <select name="service" id="serviceSelect" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
-        <option value="">Select a Service</option>
-        <option>Website Development</option>
-        <option>App Development</option>
-        <option>AI Automation Setup</option>
-        <option>Digital Marketing</option>
-        <option>Graphic & Logo Design</option>
-        <option>Business & IT Consultancy</option>
-        <option>SEO & Google Ads Setup</option>
-        <option>Email & WhatsApp Marketing</option>
-        <option>Video Editing & Reels Creation</option>
-        <option>PF Withdrawal & Correction</option>
-        <option>IT & GST Services</option>
-        <option>PAN Card Services</option>
-        <option>Aadhaar Update</option>
-        <option>MSME Registration</option>
-        <option>Passport Services</option>
-        <option>Any Other Requirement</option>
+         <option value="">Select a Service</option>
+       <!-- ===== AI & AUTOMATION ===== -->
+<option>AI Automation Setup</option>
+<option>AI Chatbots & Virtual Assistants</option>
+<option>Machine Learning Solutions</option>
+<option>Predictive Analytics</option>
+<option>Computer Vision & OCR</option>
+<option>NLP Solutions</option>
+
+<!-- ===== CLOUD & DEVOPS ===== -->
+<option>Cloud Migration</option>
+<option>AWS / Azure / GCP Solutions</option>
+<option>DevOps & CI/CD Pipelines</option>
+<option>Containerization & Kubernetes</option>
+<option>Backup & Disaster Recovery</option>
+<option>Cloud Cost Optimization</option>
+
+<!-- ===== IT SERVICES ===== -->
+<option>Managed IT Support</option>
+<option>IT Consulting</option>
+<option>Enterprise IT Solutions</option>
+<option>IT Infrastructure Management</option>
+<option>Network & Server Management</option>
+<option>IT Asset & License Management</option>
+
+<!-- ===== CYBERSECURITY ===== -->
+<option>Cybersecurity Consulting</option>
+<option>SOC & Threat Monitoring</option>
+<option>Compliance & Security Audits</option>
+<option>Data Protection & Privacy</option>
+<option>VAPT & Penetration Testing</option>
+<option>Incident Response & Recovery</option>
+
+<!-- ===== SOFTWARE & APP DEVELOPMENT ===== -->
+<option>Custom Software Development</option>
+<option>Web Application Development</option>
+<option>App Development (Android & iOS)</option>
+<option>SaaS Product Development</option>
+<option>API & System Integrations</option>
+<option>QA & Software Testing</option>
+
+<!-- ===== WEBSITE & EXPERIENCE ===== -->
+<option>Website Development</option>
+<option>E-Commerce Solutions</option>
+<option>UI / UX Design</option>
+<option>Website Performance Optimization</option>
+<option>Website Maintenance & Support</option>
+<option>Landing Page Development</option>
+
+<!-- ===== DIGITAL MARKETING ===== -->
+<option>Digital Marketing Strategy</option>
+<option>SEO & SEM</option>
+<option>Google Ads Setup & Management</option>
+<option>Social Media Management</option>
+<option>Email & WhatsApp Marketing</option>
+<option>Video Editing & Reels Creation</option>
+
+<!-- ===== CREATIVE & BRANDING ===== -->
+<option>Graphic & Logo Design</option>
+<option>Brand Identity Design</option>
+<option>Ad Creatives & Banners</option>
+<option>Pitch Deck & Presentation Design</option>
+<option>Promo & Explainer Videos</option>
+<option>Packaging & Print Design</option>
+
+<!-- ===== BUSINESS & CONSULTANCY ===== -->
+<option>Business & IT Consultancy</option>
+<option>Startup Consulting</option>
+<option>Digital Transformation Consulting</option>
+<option>Process Optimization</option>
+<option>Automation Consulting</option>
+<option>Technology Roadmap Planning</option>
+
+<!-- ===== CSC / DIGITAL SEVA ===== -->
+<option>PF Withdrawal & Correction</option>
+<option>ITR Filing</option>
+<option>IT & GST Services</option>
+<option>PAN Card Services</option>
+<option>Aadhaar Update</option>
+<option>MSME / Udyam Registration</option>
+
+<!-- ===== GOVERNMENT & UTILITY ===== -->
+<option>Passport Services</option>
+<option>Travel & Ticket Booking</option>
+<option>Visa Assistance</option>
+<option>Online Form Filling</option>
+<option>Bill Payments & Recharge</option>
+<option>Digital Certificates & Documentation</option>
+<option>Notary & Documentation Support</option>
+
+<!-- ===== OTHER ===== -->
+<option>Other / Custom Requirement</option>
       </select>
       <textarea name="message" rows="4" placeholder="Share your project details, including timeline and budget"
         class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500"></textarea>
@@ -617,25 +819,95 @@ document.addEventListener("DOMContentLoaded", renderServicesCategoryWise);
   const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR";
 
   const services = [
-    { icon: "🤖", name: "AI Automation Setup", desc: "Integrate AI tools, chatbots, and workflows into your business.", price: 4999 },
-    { icon: "🌐", name: "Website Development", desc: "Create professional, responsive business or e-commerce websites.", price: 2999 },
-    { icon: "📱", name: "App Development", desc: "Build Android & iOS apps tailored to your business needs.", price: 15000 },
-    { icon: "📈", name: "Digital Marketing", desc: "Promote your brand through SEO, ads, and social media growth.", price: 3000 },
-    { icon: "🎨", name: "Graphic & Logo Design", desc: "Custom logos, posters & creatives that make your brand shine.", price: 499 },
-    { icon: "🧠", name: "Business & IT Consultancy", desc: "Expert consultancy for business setup & tech growth.", price: 999 },
-    { icon: "⚙️", name: "Website Maintenance & Support", desc: "Ongoing updates, bug fixes & uptime monitoring.", price: 999 },
-    { icon: "🧩", name: "Social Media Management", desc: "Plan, post & manage social content for consistent growth.", price: 2499 },
-    { icon: "💡", name: "SEO & Google Ads Setup", desc: "Boost visibility with SEO optimization & ad campaigns.", price: 2999 },
-    { icon: "✉️", name: "Email & WhatsApp Marketing", desc: "Send personalized campaigns that convert leads into clients.", price: 1499 },
-    { icon: "🎥", name: "Video Editing & Reels Creation", desc: "Create short videos & reels for social media engagement.", price: 499 },
-    { icon: "💼", name: "PF Withdrawal & Correction", desc: "EPF withdrawal, name correction, and KYC linking made easy.", price: 299 },
-    { icon: "💰", name: "IT & GST Services", desc: "ITR filing, GST registration, and business tax solutions.", price: 499 },
-    { icon: "🪪", name: "PAN Card Services", desc: "Apply, update or reprint PAN Card quickly.", price: 150 },
-    { icon: "🆔", name: "Aadhaar Update", desc: "Aadhaar name, address or mobile correction support.", price: 199 },
-    { icon: "🏢", name: "MSME Registration", desc: "Udyam / MSME registration for new and existing businesses.", price: 299 },
-    { icon: "🛂", name: "Passport Services", desc: "Apply or renew passport with document verification.", price: 999 },
-    { icon: "✈️", name: "Travel & Ticket Booking", desc: "Book IRCTC train, flight, hotel or visa assistance.", price: 99 }
-  ];
+  // ===== AI & AUTOMATION =====
+  { icon:"🤖", name:"AI Automation Setup", desc:"Integrate AI tools, chatbots, and workflows into your business.", price:4999 },
+  { icon:"💬", name:"AI Chatbots & Virtual Assistants", desc:"Customer support and sales automation chatbots.", price:5999 },
+  { icon:"🧠", name:"Machine Learning Solutions", desc:"Custom ML models for business intelligence and insights.", price:9999 },
+  { icon:"📊", name:"Predictive Analytics", desc:"Data-driven forecasting and business prediction models.", price:7999 },
+  { icon:"📷", name:"Computer Vision & OCR", desc:"Image recognition, OCR and document automation.", price:8999 },
+  { icon:"🗣️", name:"NLP Solutions", desc:"Text analysis, sentiment detection and language processing.", price:6999 },
+
+  // ===== CLOUD & DEVOPS =====
+  { icon:"☁️", name:"Cloud Migration", desc:"Migrate infrastructure and apps to cloud platforms.", price:8999 },
+  { icon:"☁️", name:"AWS / Azure / GCP Solutions", desc:"Cloud architecture, deployment and optimization.", price:9999 },
+  { icon:"🔄", name:"DevOps & CI/CD Pipelines", desc:"Automated build, test and deployment pipelines.", price:7999 },
+  { icon:"📦", name:"Containerization & Kubernetes", desc:"Docker & Kubernetes orchestration solutions.", price:8999 },
+  { icon:"💾", name:"Backup & Disaster Recovery", desc:"Business continuity and disaster recovery planning.", price:4999 },
+  { icon:"💸", name:"Cloud Cost Optimization", desc:"Reduce cloud spend and optimize usage.", price:3999 },
+
+  // ===== IT SERVICES =====
+  { icon:"🛠️", name:"Managed IT Support", desc:"24/7 monitoring, helpdesk and proactive IT support.", price:4999 },
+  { icon:"🧭", name:"IT Consulting", desc:"Technology roadmap and strategic IT advisory.", price:2999 },
+  { icon:"🏢", name:"Enterprise IT Solutions", desc:"End-to-end IT solutions for enterprises.", price:14999 },
+  { icon:"🧩", name:"IT Infrastructure Management", desc:"Servers, networks, storage and endpoint management.", price:6999 },
+  { icon:"🔁", name:"IT Asset & License Management", desc:"Hardware, software and license lifecycle management.", price:1999 },
+  { icon:"🌐", name:"Network & Server Management", desc:"Secure and reliable network/server operations.", price:5999 },
+
+  // ===== CYBERSECURITY =====
+  { icon:"🔐", name:"Cybersecurity Consulting", desc:"Security strategy, risk assessment and planning.", price:4999 },
+  { icon:"🛡️", name:"SOC & Threat Monitoring", desc:"24/7 security monitoring and incident alerts.", price:9999 },
+  { icon:"📜", name:"Compliance & Security Audits", desc:"ISO, GDPR, SOC2 and regulatory compliance.", price:6999 },
+  { icon:"🧬", name:"Data Protection & Privacy", desc:"Encryption, access control and data security.", price:5999 },
+  { icon:"🚨", name:"Incident Response & Recovery", desc:"Security breach response and recovery.", price:7999 },
+  { icon:"🧪", name:"VAPT & Penetration Testing", desc:"Vulnerability assessment and penetration testing.", price:8999 },
+
+  // ===== SOFTWARE & APP DEVELOPMENT =====
+  { icon:"💻", name:"Custom Software Development", desc:"Tailored enterprise and business software solutions.", price:12999 },
+  { icon:"🌐", name:"Web Application Development", desc:"Scalable and secure web applications.", price:7999 },
+  { icon:"📱", name:"App Development", desc:"Android & iOS apps tailored to business needs.", price:15000 },
+  { icon:"🧩", name:"API & System Integrations", desc:"Third-party API and enterprise system integration.", price:5999 },
+  { icon:"☁️", name:"SaaS Product Development", desc:"Cloud-based SaaS platforms and products.", price:19999 },
+  { icon:"🧪", name:"QA & Software Testing", desc:"Manual and automated testing services.", price:3999 },
+
+  // ===== WEBSITE & EXPERIENCE =====
+  { icon:"🌐", name:"Website Development", desc:"Professional, responsive business or e-commerce websites.", price:2999 },
+  { icon:"🛒", name:"E-Commerce Solutions", desc:"Shopify, WooCommerce and custom e-commerce platforms.", price:4999 },
+  { icon:"🎨", name:"UI / UX Design", desc:"User-centric interface and experience design.", price:2999 },
+  { icon:"⚡", name:"Website Performance Optimization", desc:"Speed, SEO and core web vitals optimization.", price:1999 },
+  { icon:"⚙️", name:"Website Maintenance & Support", desc:"Ongoing updates, bug fixes and uptime monitoring.", price:999 },
+  { icon:"📄", name:"Landing Page Development", desc:"High-converting landing pages.", price:1499 },
+
+  // ===== DIGITAL MARKETING =====
+  { icon:"📈", name:"Digital Marketing Strategy", desc:"End-to-end online growth strategy.", price:3999 },
+  { icon:"🔍", name:"SEO & SEM", desc:"Search engine optimization and paid marketing.", price:2999 },
+  { icon:"📢", name:"Social Media Management", desc:"Plan, post and manage social content.", price:2499 },
+  { icon:"✉️", name:"Email & WhatsApp Marketing", desc:"Automated and personalized campaigns.", price:1499 },
+  { icon:"🎥", name:"Video Editing & Reels Creation", desc:"Short videos and reels for engagement.", price:499 },
+  { icon:"📣", name:"Google Ads Setup & Management", desc:"Campaign setup, tracking and optimization.", price:3499 },
+
+  // ===== CREATIVE & BRANDING =====
+  { icon:"🎨", name:"Graphic & Logo Design", desc:"Custom logos, posters and brand creatives.", price:499 },
+  { icon:"🧾", name:"Brand Identity Design", desc:"Complete brand identity systems.", price:2999 },
+  { icon:"📊", name:"Pitch Deck & Presentation Design", desc:"Investor and sales presentations.", price:1999 },
+  { icon:"🖼️", name:"Ad Creatives & Banners", desc:"Marketing creatives for ads.", price:799 },
+  { icon:"🎬", name:"Promo & Explainer Videos", desc:"Short promotional and explainer videos.", price:2999 },
+  { icon:"📦", name:"Packaging & Print Design", desc:"Product packaging and print creatives.", price:1999 },
+
+  // ===== BUSINESS & CONSULTANCY =====
+  { icon:"🧠", name:"Business & IT Consultancy", desc:"Expert consultancy for business and tech growth.", price:999 },
+  { icon:"🚀", name:"Startup Consulting", desc:"Tech and growth consulting for startups.", price:2999 },
+  { icon:"🔄", name:"Digital Transformation Consulting", desc:"Modernize business with digital solutions.", price:4999 },
+  { icon:"⚙️", name:"Process Optimization", desc:"Improve efficiency and reduce costs.", price:1999 },
+  { icon:"📍", name:"Technology Roadmap Planning", desc:"Future-ready technology planning.", price:2999 },
+  { icon:"🤝", name:"Automation Consulting", desc:"Automation strategy and implementation.", price:2499 },
+
+  // ===== CSC / DIGITAL SEVA =====
+  { icon:"💼", name:"PF Withdrawal & Correction", desc:"EPF withdrawal, correction and KYC linking.", price:299 },
+  { icon:"💰", name:"IT & GST Services", desc:"ITR filing, GST registration and returns.", price:499 },
+  { icon:"🪪", name:"PAN Card Services", desc:"Apply, update or reprint PAN card.", price:150 },
+  { icon:"🆔", name:"Aadhaar Update", desc:"Aadhaar name, address or mobile update.", price:199 },
+  { icon:"🏢", name:"MSME Registration", desc:"Udyam / MSME registration services.", price:299 },
+  { icon:"🛂", name:"Passport Services", desc:"Apply or renew passport with verification.", price:999 },
+
+  // ===== GOVERNMENT & UTILITY =====
+  { icon:"✈️", name:"Travel & Ticket Booking", desc:"IRCTC train, flight, hotel or visa assistance.", price:99 },
+  { icon:"🌍", name:"Visa Assistance", desc:"Tourist and business visa support.", price:1999 },
+  { icon:"🧾", name:"Online Form Filling", desc:"Government and private online forms.", price:99 },
+  { icon:"💡", name:"Bill Payments & Recharge", desc:"Electricity, gas, mobile and DTH payments.", price:49 },
+  { icon:"📜", name:"Digital Certificates & Documents", desc:"Income, caste and other certificates.", price:299 },
+  { icon:"📝", name:"Notary & Documentation Support", desc:"Legal and documentation assistance.", price:499 }
+];
+
 
   function renderServices() {
     const grid = document.getElementById('service-grid');
