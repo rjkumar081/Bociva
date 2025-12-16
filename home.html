@@ -220,6 +220,53 @@ html{scroll-behavior:smooth}
     font-size:1.5rem;
   }
 }
+/* ===== CATEGORY TAG BASE ===== */
+.category-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin-top:10px;
+  padding:4px 14px;
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:.6px;
+  border-radius:999px;
+  text-transform:uppercase;
+  box-shadow:0 4px 14px rgba(0,0,0,.15);
+}
+
+/* ===== TAG TYPES ===== */
+.category-tag.most-demanding{
+  background:linear-gradient(135deg,#fde68a,#facc15);
+  color:#78350f;
+}
+
+.category-tag.high-roi{
+  background:linear-gradient(135deg,#bbf7d0,#22c55e);
+  color:#064e3b;
+}
+
+.category-tag.enterprise-ready{
+  background:linear-gradient(135deg,#c7d2fe,#6366f1);
+  color:#1e1b4b;
+}
+
+/* ===== SUBTLE PULSE ANIMATION ===== */
+.pulse{
+  animation:pulseGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow{
+  0%{
+    box-shadow:0 0 0 rgba(0,0,0,0.15);
+  }
+  50%{
+    box-shadow:0 0 16px rgba(99,102,241,.45);
+  }
+  100%{
+    box-shadow:0 0 0 rgba(0,0,0,0.15);
+  }
+}
 
 
 </style>
@@ -393,11 +440,20 @@ function renderServicesCategoryWise() {
   serviceCategories.forEach(cat => {
     grid.insertAdjacentHTML(
   "beforeend",
-  `<div class="col-span-full my-14 text-center">
+  `<div class="col-span-full my-16 text-center">
      <h3 class="category-title">${cat.category}</h3>
+
+     ${cat.tag ? `
+       <div class="category-tag pulse ${cat.tag.replace(/\s/g,'-').toLowerCase()}">
+         ${cat.tag === "Most Demanding" ? "⭐" :
+           cat.tag === "High ROI" ? "🔥" : "🏢"}
+         ${cat.tag}
+       </div>` : ""}
+
      <div class="category-line"></div>
    </div>`
 );
+
 
 
     cat.items.forEach(s => {
