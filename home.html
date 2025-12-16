@@ -194,7 +194,7 @@ html{scroll-behavior:smooth}
     font-size:.65rem;
   }
 }
-/* ===== CATEGORY HEADER STYLE (PREMIUM) ===== */
+/* ===== CATEGORY HEADER STYLE (PROFESSIONAL PREMIUM) ===== */
 .category-title{
   font-size:1.9rem;
   font-weight:800;
@@ -205,13 +205,41 @@ html{scroll-behavior:smooth}
   padding:12px 26px;
   border-radius:14px;
 
-  /* subtle glass + border */
-  background: linear-gradient(135deg,#f8fafc,#eef2ff);
-  border:1px solid rgba(99,102,241,.25);
+  /* elegant glass background */
+  background: linear-gradient(135deg,#f9fafb,#eef2ff);
 
+  /* PROFESSIONAL BORDER */
+  border:1.5px solid transparent;
+  background-clip: padding-box;
+}
+
+/* gradient border using pseudo-element */
+.category-title::before{
+  content:"";
+  position:absolute;
+  inset:-1.5px;
+  border-radius:16px;
+  background: linear-gradient(
+    120deg,
+    #6366f1,
+    #22c55e,
+    #38bdf8
+  );
+  z-index:-1;
+  opacity:.55;
+}
+
+/* depth & polish */
+.category-title{
   box-shadow:
-    0 10px 25px rgba(2,6,23,.08),
-    inset 0 1px 0 rgba(255,255,255,.8);
+    0 12px 30px rgba(2,6,23,.12),
+    inset 0 1px 0 rgba(255,255,255,.85);
+}
+
+/* hover = premium attraction */
+.category-title:hover{
+  transform:translateY(-3px);
+  transition:.35s ease;
 }
 
 /* underline accent */
@@ -222,13 +250,13 @@ html{scroll-behavior:smooth}
   border-radius:999px;
   background: linear-gradient(90deg,#6366f1,#22c55e);
   box-shadow:0 0 18px rgba(99,102,241,.6);
+  position:relative;
 }
 
-/* optional glow dots (adds elegance) */
+/* glow dots */
 .category-line::before,
 .category-line::after{
   content:"";
-  display:block;
   width:6px;
   height:6px;
   border-radius:50%;
