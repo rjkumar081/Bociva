@@ -194,6 +194,33 @@ html{scroll-behavior:smooth}
     font-size:.65rem;
   }
 }
+  /* ===== CATEGORY HEADER STYLE ===== */
+.category-title{
+  font-size:1.9rem;
+  font-weight:800;
+  color:#0f172a;
+  letter-spacing:.3px;
+  display:inline-block;
+  position:relative;
+}
+
+/* underline */
+.category-line{
+  width:80px;
+  height:4px;
+  margin:12px auto 0;
+  border-radius:999px;
+  background: linear-gradient(90deg,#6366f1,#22c55e);
+  box-shadow:0 0 14px rgba(99,102,241,.5);
+}
+
+/* mobile */
+@media(max-width:768px){
+  .category-title{
+    font-size:1.5rem;
+  }
+}
+
 
 </style>
   <script type="application/ld+json">
@@ -365,11 +392,13 @@ function renderServicesCategoryWise() {
 
   serviceCategories.forEach(cat => {
     grid.insertAdjacentHTML(
-      "beforeend",
-      `<div class="col-span-full mt-10 mb-4">
-        <h3 class="text-2xl font-bold text-gray-800">${cat.category}</h3>
-      </div>`
-    );
+  "beforeend",
+  `<div class="col-span-full my-14 text-center">
+     <h3 class="category-title">${cat.category}</h3>
+     <div class="category-line"></div>
+   </div>`
+);
+
 
     cat.items.forEach(s => {
       const chat = `https://wa.me/${whatsappNumber}?text=Hi! I am interested in ${encodeURIComponent(s.name)}`;
