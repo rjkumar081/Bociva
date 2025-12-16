@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | IT Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
+body{color:#222;line-height:1.6}
+
+/* HERO */
+.hero{
+  background:url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover no-repeat;
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  color:#fff;
+}
+.hero-overlay{
+  background:rgba(0,0,0,.65);
+  width:100%;
+  padding:80px 20px;
+}
+.hero-content{
+  max-width:1100px;
+  margin:auto;
+}
+.hero h1{font-size:48px;margin-bottom:15px}
+.hero p{font-size:18px;max-width:650px}
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  background:#ff6a00;
+  padding:14px 30px;
+  color:#fff;
+  font-weight:600;
+  text-decoration:none;
+  border-radius:6px;
+}
+
+/* SECTION */
+.section{padding:70px 20px}
+.container{max-width:1200px;margin:auto}
+.section h2{text-align:center;font-size:34px;margin-bottom:40px}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.card{
+  background:#fff;
+  border-radius:10px;
+  padding:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  text-align:center;
+}
+.card img{
+  width:60px;
+  margin-bottom:15px;
+}
+
+/* WHY US */
+.why{
+  background:#f5f7fb;
+}
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.why-box{
+  background:#fff;
+  padding:25px;
+  border-radius:10px;
+}
+
+/* CTA */
+.cta{
+  background:linear-gradient(135deg,#0b2a55,#08142a);
+  color:#fff;
+  text-align:center;
+}
+.cta h2{margin-bottom:15px}
+
+/* FOOTER */
+.footer{
+  background:#111;
+  color:#ccc;
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1>Smart IT Solutions for Digital Growth</h1>
+      <p>We deliver scalable, secure and innovative IT services including software development, cloud, cybersecurity and enterprise solutions.</p>
+      <a href="services.html" class="btn">View Our Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <div class="container">
+    <h2>Our Core Services</h2>
+    <div class="services">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png">
+        <h3>Software Development</h3>
+        <p>Custom enterprise-grade applications for modern businesses.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149640.png">
+        <h3>Cloud & DevOps</h3>
+        <p>Secure cloud infrastructure with high availability.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png">
+        <h3>Cyber Security</h3>
+        <p>Protect systems, data and networks from threats.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">
+        <h3>IT Support</h3>
+        <p>24/7 monitoring, maintenance and technical support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section why">
+  <div class="container">
+    <h2>Why Choose Us</h2>
+    <div class="why-grid">
+      <div class="why-box">✔ Experienced IT Professionals</div>
+      <div class="why-box">✔ On-Time Project Delivery</div>
+      <div class="why-box">✔ Enterprise Security Standards</div>
+      <div class="why-box">✔ Scalable & Cost Effective</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta">
+  <div class="container">
+    <h2>Let’s Build Your Digital Future</h2>
+    <p>Partner with us for reliable and future-ready IT solutions.</p>
+    <a href="contact.html" class="btn">Contact Us</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  © 2025 IT Services Company. All Rights Reserved.
+</footer>
+
+</body>
+</html>
