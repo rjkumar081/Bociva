@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-75FCFK6Z8F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-75FCFK6Z8F');
+</script>
+  <link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png">
+
+  <link rel="canonical" href="https://merapopi.com/">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexAI Tech & Digital Solutions | IT Support, AI & Digital Consultancy</title>
+  <meta name="description" content="NexAI Tech & Digital Solutions provides IT support, AI automation, website & app development, digital marketing and tech consultancy services for businesses.">
+<meta name="keywords" content="IT support services, AI automation, digital consultancy, website development, app development, digital marketing company">
+
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<style>
+html{scroll-behavior:smooth}
+
+/* ================= NAVBAR ================= */
+#navbar{
+  position:fixed;
+  top:0; left:0;
+  width:100%;
+  z-index:50;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: linear-gradient(135deg,#08142a,#0b2a55);
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.18),
+    inset 0 1px 0 rgba(255,255,255,.25);
+}
+
+/* brand 3D text – CRISP */
+#navbar h1{
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.15),
+    0 1px 2px rgba(0,0,0,0.35);
+}
+
+/* highlight span */
+#navbar h1 span{
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.2),
+    0 1px 2px rgba(0,0,0,0.4);
+}
+
+
+/* nav underline hover */
+#navbar nav a{
+  position:relative;
+}
+#navbar nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0;
+  height:2px;
+  background:#fde68a;
+  transition:.3s;
+}
+#navbar nav a:hover::after{width:100%}
+
+/* CTA 3D button only */
+#navbar a.bg-yellow-400{
+  box-shadow:
+    0 6px 0 #d97706,
+    0 10px 20px rgba(0,0,0,.25);
+  transition:.2s;
+}
+#navbar a.bg-yellow-400:hover{
+  transform:translateY(-1px);
+}
+#navbar a.bg-yellow-400:active{
+  transform:translateY(1px);
+  box-shadow:0 3px 0 #d97706;
+}
+
+/* ================= HERO BANNER ================= */
+.hero{
+  height:280px;
+  background:url('assets/hero.jpg') center/cover no-repeat;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:72px;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(15,23,42,.55);
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  color:#fff;
+  text-align:center;
+}
+.hero-content h2{
+  font-size:2rem;
+  font-weight:700;
+}
+.hero-content p{opacity:.9}
+
+@media(max-width:768px){
+  .hero{height:200px}
+  .hero-content h2{font-size:1.4rem}
+}
+
+/* floating chat */
+.floating-chat{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:60px;
+  height:60px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 15px rgba(0,0,0,.25);
+  z-index:50;
+}
+  /* ===== STYLE FOOTER ===== */
+#site-footer{
+    background: linear-gradient(135deg,#08142a,#0b2a55);
+  color:#e5e7eb;
+  position:relative;
+}
+
+/* footer links */
+#site-footer a{
+  color:#c7d2fe;
+  transition:color .2s ease;
+}
+#site-footer a:hover{
+  color:#ffffff;
+}
+
+/* subtle premium glow */
+#site-footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at top right,
+      rgba(255,255,255,0.06),
+      transparent 45%);
+  pointer-events:none;
+}
+/* ===== BRAND LOGO TEXT ===== */
+.brand{
+  font-size:1.4rem;
+  font-weight:800;
+  color:#ffffff;
+  line-height:1.1;
+  letter-spacing:.2px;
+}
+
+.brand span{
+  color:#facc15; /* premium gold */
+  font-weight:800;
+}
+
+.brand small{
+  display:block;
+  font-size:.72rem;
+  font-weight:500;
+  color:#c7d2fe;
+  letter-spacing:.4px;
+  margin-top:2px;
+}
+
+/* Mobile adjustment */
+@media(max-width:768px){
+  .brand{
+    font-size:1.2rem;
+  }
+  .brand small{
+    font-size:.65rem;
+  }
+}
+/* ===== CATEGORY HEADER STYLE (PROFESSIONAL PREMIUM) ===== */
+.category-title{
+  font-size:1.9rem;
+  font-weight:800;
+  color:#F7F7FF;
+  letter-spacing:.4px;
+  display:inline-block;
+  position:relative;
+  padding:12px 26px;
+  border-radius:14px;
+
+  /* elegant glass background */
+  background: linear-gradient(135deg,#918DB5,#090979,#00D4FF);
+
+  /* PROFESSIONAL BORDER */
+  border:1.5px solid transparent;
+  background-clip: padding-box;
+}
+
+/* gradient border using pseudo-element */
+.category-title::before{
+  content:"";
+  position:absolute;
+  inset:-1.5px;
+  border-radius:16px;
+  background: linear-gradient(
+    120deg,
+    #6366f1,
+    #22c55e,
+    #38bdf8
+  );
+  z-index:-1;
+  opacity:.55;
+}
+
+/* depth & polish */
+.category-title{
+  box-shadow:
+    0 12px 30px rgba(2,6,23,.12),
+    inset 0 1px 0 rgba(255,255,255,.85);
+}
+
+/* hover = premium attraction */
+.category-title:hover{
+  transform:translateY(-3px);
+  transition:.35s ease;
+}
+
+/* underline accent */
+.category-line{
+  width:90px;
+  height:4px;
+  margin:16px auto 0;
+  border-radius:999px;
+  background: linear-gradient(90deg,#6366f1,#22c55e);
+  box-shadow:0 0 18px rgba(99,102,241,.6);
+  position:relative;
+}
+
+/* glow dots */
+.category-line::before,
+.category-line::after{
+  content:"";
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#6366f1;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.category-line::before{ left:-12px; }
+.category-line::after{ right:-12px; }
+
+/* mobile tuning */
+@media(max-width:768px){
+  .category-title{
+    font-size:1.45rem;
+    padding:10px 20px;
+  }
+}
+
+</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "NexAI Tech & Digital Solutions",
+  "url": "https://merapopi.com",
+  "logo": "https://merapopi.com/favicon.png"
+}
+</script>
+
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+<!-- ================= NAVBAR ================= -->
+<header id="navbar" class="fixed top-0 w-full z-50 bg-[#0b0f1a]">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+
+   <h1 class="brand">
+   NexAI <span>Tech & Digital Solutions
+</span>
+  <small>Powered by MeraPopi</small>
+</h1>
+
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex gap-6 text-white font-semibold">
+      <a href="#services">Services</a>
+      <a href="#payment">Fast Payment</a>
+      <a href="contact.html"
+   class="bg-indigo-600 text-white px-4 py-2 rounded-full font-semibold
+          hover:bg-indigo-700 transition">
+  Talk to Expert
+</a>
+
+
+
+    </nav>
+
+    <!-- Mobile Button -->
+    <button id="menuBtn" class="md:hidden text-white text-3xl">
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-[#0b0f1a]">
+    <nav class="flex flex-col px-6 py-4 gap-4 text-white font-semibold">
+      <a href="#services">Services</a>
+      <a href="#payment">Fast Payment</a>
+    <a href="contact.html"
+   class="bg-indigo-600 text-white px-4 py-2 rounded-full font-semibold
+          hover:bg-indigo-700 transition
+          inline-flex items-center justify-center text-center">
+  Talk to Expert
+</a>
+
+
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-content text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white animate-bounce drop-shadow-lg">
+Trusted IT Support & Technology Consultancy Company
+   </h2>
+    <p class="text-gray-200 max-w-2xl mx-auto mb-6 drop-shadow">
+End-to-end IT services designed to improve performance, security, and Grow business continuity.    </p>
+  </div>
+</section>
+
+
+<script>
+const whatsappNumber = "919464642218";
+const upiBase =
+  "upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR";
+
+const serviceCategories = [
+
+/* ================= IT SERVICES ================= */
+{
+  category: "IT Services",
+  items: [
+    { icon:"🛠️", name:"Managed IT Support", desc:"24/7 monitoring, helpdesk and proactive IT support.", allowPay:false },
+    { icon:"🧩", name:"IT Infrastructure Management", desc:"Servers, networks, storage and endpoint management.", allowPay:false },
+    { icon:"📡", name:"Network & Firewall Management", desc:"LAN, WAN, VPN, firewall & security setup.", allowPay:false },
+    { icon:"🔁", name:"IT Asset & License Management", desc:"Hardware, software & license lifecycle management.", allowPay:false },
+    { icon:"🧭", name:"IT Consulting & Strategy", desc:"Technology roadmap & digital transformation.", allowPay:false },
+    { icon:"🏢", name:"Enterprise IT Solutions", desc:"End-to-end IT solutions for enterprises.", allowPay:false }
+  ]
+},
+
+/* ================= CLOUD & DEVOPS ================= */
+{
+  category: "Cloud & DevOps",
+  items: [
+    { icon:"☁️", name:"Cloud Migration", desc:"AWS, Azure & GCP cloud migration.", allowPay:false },
+    { icon:"⚙️", name:"Cloud Architecture Design", desc:"Secure & scalable cloud architecture.", allowPay:false },
+    { icon:"🔄", name:"DevOps & CI/CD Pipelines", desc:"Automation & deployment pipelines.", allowPay:false },
+    { icon:"📦", name:"Docker & Kubernetes", desc:"Containerization & orchestration.", allowPay:false },
+    { icon:"💾", name:"Backup & Disaster Recovery", desc:"Business continuity & data protection.", allowPay:false },
+    { icon:"📊", name:"Cloud Cost Optimization", desc:"Reduce cloud cost & improve performance.", allowPay:false }
+  ]
+},
+
+/* ================= AI & AUTOMATION ================= */
+{
+  category: "AI & Automation",
+  items: [
+    { icon:"🤖", name:"AI Business Automation", desc:"Workflow & process automation using AI.", allowPay:false },
+    { icon:"💬", name:"AI Chatbots & Virtual Assistants", desc:"Customer support & sales chatbots.", allowPay:false },
+    { icon:"📊", name:"Predictive Analytics", desc:"Forecasting & business insights.", allowPay:false },
+    { icon:"🧠", name:"Machine Learning Solutions", desc:"Custom ML models for enterprises.", allowPay:false },
+    { icon:"🔍", name:"Computer Vision & OCR", desc:"Image recognition & document OCR.", allowPay:false },
+    { icon:"🗣️", name:"NLP & Voice AI", desc:"Speech recognition & language processing.", allowPay:false }
+  ]
+},
+
+/* ================= CYBERSECURITY ================= */
+{
+  category: "Cybersecurity",
+  items: [
+    { icon:"🔐", name:"Cybersecurity Consulting", desc:"Security strategy & risk assessment.", allowPay:false },
+    { icon:"🛡️", name:"SOC & Threat Monitoring", desc:"24/7 monitoring & incident alerts.", allowPay:false },
+    { icon:"📜", name:"Compliance & Security Audits", desc:"ISO, GDPR, SOC2 compliance.", allowPay:false },
+    { icon:"🧬", name:"Data Protection & Privacy", desc:"Encryption & access control.", allowPay:false },
+    { icon:"🧪", name:"VAPT & Penetration Testing", desc:"Vulnerability assessment & testing.", allowPay:false },
+    { icon:"🚨", name:"Incident Response & Recovery", desc:"Security breach response.", allowPay:false }
+  ]
+},
+
+/* ================= SOFTWARE & APP DEVELOPMENT ================= */
+{
+  category: "Software & App Development",
+  items: [
+    { icon:"💻", name:"Custom Software Development", desc:"Enterprise & SaaS software solutions.", allowPay:false },
+    { icon:"🌐", name:"Web Application Development", desc:"Secure & scalable web applications.", allowPay:false },
+    { icon:"📱", name:"Mobile App Development", desc:"Android & iOS mobile apps.", allowPay:false },
+    { icon:"🧩", name:"API & System Integration", desc:"Third-party & enterprise integrations.", allowPay:false },
+    { icon:"🧪", name:"QA & Software Testing", desc:"Manual & automated testing.", allowPay:false },
+    { icon:"☁️", name:"SaaS Product Development", desc:"Cloud-based SaaS platforms.", allowPay:false }
+  ]
+},
+
+/* ================= WEBSITE & DIGITAL MARKETING ================= */
+{
+  category: "Website & Digital Marketing",
+  items: [
+    { icon:"🌐", name:"Website Development", desc:"Business & eCommerce websites.", price:2999, allowPay:true },
+    { icon:"🛒", name:"E-Commerce Store Setup", desc:"Shopify & WooCommerce stores.", price:3999, allowPay:true },
+    { icon:"🎨", name:"UI / UX Design", desc:"Modern user experience design.", price:1999, allowPay:true },
+    { icon:"📈", name:"SEO & Performance Optimization", desc:"Google ranking & speed optimization.", price:2499, allowPay:true },
+    { icon:"📢", name:"Social Media Management", desc:"Brand growth & content planning.", price:1999, allowPay:true },
+    { icon:"✉️", name:"Email & WhatsApp Marketing", desc:"Automated marketing campaigns.", price:1499, allowPay:true }
+  ]
+},
+
+/* ================= CREATIVE & MEDIA ================= */
+{
+  category: "Creative & Media",
+  items: [
+    { icon:"🎨", name:"Graphic & Logo Design", desc:"Brand logos & marketing creatives.", price:499, allowPay:true },
+    { icon:"🎥", name:"Video Editing & Reels Creation", desc:"Short videos & reels.", price:499, allowPay:true },
+    { icon:"📊", name:"Pitch Deck & Presentation Design", desc:"Investor & sales decks.", price:1999, allowPay:true },
+    { icon:"🖼️", name:"Ad Creatives & Banners", desc:"Marketing banners & ads.", price:799, allowPay:true },
+    { icon:"🎬", name:"Promo & Explainer Videos", desc:"Business promo videos.", price:2999, allowPay:true },
+    { icon:"📦", name:"Packaging & Print Design", desc:"Product & print designs.", price:1999, allowPay:true }
+  ]
+},
+
+/* ================= BUSINESS & CONSULTANCY ================= */
+{
+  category: "Business & Consultancy",
+  items: [
+    { icon:"🧠", name:"Business & IT Consultancy", desc:"Expert business & tech consulting.", price:999, allowPay:true },
+    { icon:"🚀", name:"Startup Consulting", desc:"Technology & growth guidance.", price:2999, allowPay:true },
+    { icon:"🔄", name:"Digital Transformation Consulting", desc:"Modernize business processes.", price:4999, allowPay:true },
+    { icon:"⚙️", name:"Process Optimization", desc:"Efficiency & cost optimization.", price:1999, allowPay:true },
+    { icon:"📍", name:"Technology Roadmap Planning", desc:"Future-ready planning.", price:2999, allowPay:true },
+    { icon:"🤝", name:"Automation Consulting", desc:"Automation strategy & execution.", price:2499, allowPay:true }
+  ]
+},
+
+/* ================= CSC / DIGITAL SEVA ================= */
+{
+  category: "CSC / Digital Seva Services",
+  items: [
+    { icon:"🪪", name:"PAN Card Services", desc:"New PAN, correction & reprint.", price:150, allowPay:true },
+    { icon:"🆔", name:"Aadhaar Update Services", desc:"Name, address & mobile update.", price:199, allowPay:true },
+    { icon:"💼", name:"PF Withdrawal & Correction", desc:"EPF withdrawal & KYC fix.", price:299, allowPay:true },
+    { icon:"💰", name:"ITR & GST Filing", desc:"Income tax & GST services.", price:499, allowPay:true },
+    { icon:"🏢", name:"MSME / Udyam Registration", desc:"Business registration support.", price:299, allowPay:true },
+    { icon:"🧾", name:"Online Form Filling", desc:"Government & private online forms.", price:99, allowPay:true }
+  ]
+},
+  /* ================= GOVERNMENT SERVICES ================= */
+{
+  category: "Government Services",
+  items: [
+    { icon:"🛂", name:"Passport Services", desc:"New passport & renewal assistance.", price:999, allowPay:true },
+    { icon:"🌍", name:"Visa Assistance", desc:"Tourist & business visa support.", price:1999, allowPay:true },
+    { icon:"✈️", name:"Travel & Ticket Booking", desc:"Train, flight & hotel booking.", price:99, allowPay:true },
+    { icon:"📜", name:"Digital Certificates", desc:"Income, caste, domicile certificates.", price:299, allowPay:true },
+    { icon:"💡", name:"Bill Payments & Recharge", desc:"Electricity, gas, mobile & DTH.", price:49, allowPay:true },
+    { icon:"📝", name:"Notary & Documentation Support", desc:"Legal & documentation help.", price:499, allowPay:true }
+  ]
+}
+
+];
+
+
+function renderServicesCategoryWise() {
+  const grid = document.getElementById("service-grid");
+  if (!grid) return;
+
+  grid.innerHTML = "";
+
+  serviceCategories.forEach(cat => {
+    grid.insertAdjacentHTML(
+  "beforeend",
+  `<div class="col-span-full my-4 text-center">
+     <h3 class="category-title">${cat.category}</h3>
+     <div class="category-line"></div>
+   </div>`
+);
+
+
+    cat.items.forEach(s => {
+      const chat = `https://wa.me/${whatsappNumber}?text=Hi! I am interested in ${encodeURIComponent(s.name)}`;
+      grid.insertAdjacentHTML(
+        "beforeend",
+        `<div class="bg-indigo-50 p-6 rounded-xl shadow hover:shadow-xl transition">
+          <div class="text-4xl mb-4">${s.icon}</div>
+          <h4 class="text-xl font-semibold mb-2">${s.name}</h4>
+          <p class="text-gray-600 text-sm mb-4">${s.desc}</p>
+          <a href="${chat}" target="_blank"
+             class="inline-block bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold">
+            💬 Free Consultation
+          </a>
+        </div>`
+      );
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", renderServicesCategoryWise);
+</script>
+
+
+
+<script>
+// NOTE: I am removing the duplicate script block that re-renders services to avoid conflict.
+// The first, updated script block above handles the full rendering now.
+</script>
+
+
+
+<section id="services" class="pt-0 pb-8 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">
+      Our Core AI, Tech & Digital Services
+    </h2>
+    <div id="service-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </div>
+</section>
+
+
+<section id="payment" class="py-20 bg-gradient-to-br from-indigo-50 via-white to-green-50">
+  <div class="max-w-5xl mx-auto text-center px-4">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">Get started by purchasing your access token.</h2>
+    <p class="text-gray-600 mb-10 max-w-2xl mx-auto">Select your service, enter the amount, and pay securely using UPI. Share the screenshot on WhatsApp for quick confirmation.</p>
+    <div class="bg-white rounded-2xl shadow-xl p-8 md:flex items-center justify-between gap-8">
+      <div class="flex-1 mb-6 md:mb-0">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR&size=220x220"
+          alt="UPI QR" class="mx-auto rounded-xl shadow-lg" />
+        <p class="text-gray-700 text-sm mt-3">Scan to pay via any UPI app (GPay / PhonePe / Paytm)</p>
+      </div>
+      <div class="flex-1 text-left">
+        <label class="block text-gray-700 font-semibold mb-2">Select Service</label>
+        <select id="service" class="border border-gray-300 rounded-lg w-full p-3 mb-4 focus:ring-2 focus:ring-indigo-500">
+          <option value="">-- Choose a Service --</option>
+       <!-- ===== AI & AUTOMATION ===== -->
+<option>AI Automation Setup</option>
+<option>AI Chatbots & Virtual Assistants</option>
+<option>Machine Learning Solutions</option>
+<option>Predictive Analytics</option>
+<option>Computer Vision & OCR</option>
+<option>NLP Solutions</option>
+
+<!-- ===== CLOUD & DEVOPS ===== -->
+<option>Cloud Migration</option>
+<option>AWS / Azure / GCP Solutions</option>
+<option>DevOps & CI/CD Pipelines</option>
+<option>Containerization & Kubernetes</option>
+<option>Backup & Disaster Recovery</option>
+<option>Cloud Cost Optimization</option>
+
+<!-- ===== IT SERVICES ===== -->
+<option>Managed IT Support</option>
+<option>IT Consulting</option>
+<option>Enterprise IT Solutions</option>
+<option>IT Infrastructure Management</option>
+<option>Network & Server Management</option>
+<option>IT Asset & License Management</option>
+
+<!-- ===== CYBERSECURITY ===== -->
+<option>Cybersecurity Consulting</option>
+<option>SOC & Threat Monitoring</option>
+<option>Compliance & Security Audits</option>
+<option>Data Protection & Privacy</option>
+<option>VAPT & Penetration Testing</option>
+<option>Incident Response & Recovery</option>
+
+<!-- ===== SOFTWARE & APP DEVELOPMENT ===== -->
+<option>Custom Software Development</option>
+<option>Web Application Development</option>
+<option>App Development (Android & iOS)</option>
+<option>SaaS Product Development</option>
+<option>API & System Integrations</option>
+<option>QA & Software Testing</option>
+
+<!-- ===== WEBSITE & EXPERIENCE ===== -->
+<option>Website Development</option>
+<option>E-Commerce Solutions</option>
+<option>UI / UX Design</option>
+<option>Website Performance Optimization</option>
+<option>Website Maintenance & Support</option>
+<option>Landing Page Development</option>
+
+<!-- ===== DIGITAL MARKETING ===== -->
+<option>Digital Marketing Strategy</option>
+<option>SEO & SEM</option>
+<option>Google Ads Setup & Management</option>
+<option>Social Media Management</option>
+<option>Email & WhatsApp Marketing</option>
+<option>Video Editing & Reels Creation</option>
+
+<!-- ===== CREATIVE & BRANDING ===== -->
+<option>Graphic & Logo Design</option>
+<option>Brand Identity Design</option>
+<option>Ad Creatives & Banners</option>
+<option>Pitch Deck & Presentation Design</option>
+<option>Promo & Explainer Videos</option>
+<option>Packaging & Print Design</option>
+
+<!-- ===== BUSINESS & CONSULTANCY ===== -->
+<option>Business & IT Consultancy</option>
+<option>Startup Consulting</option>
+<option>Digital Transformation Consulting</option>
+<option>Process Optimization</option>
+<option>Automation Consulting</option>
+<option>Technology Roadmap Planning</option>
+
+<!-- ===== CSC / DIGITAL SEVA ===== -->
+<option>PF Withdrawal & Correction</option>
+<option>ITR Filing</option>
+<option>IT & GST Services</option>
+<option>PAN Card Services</option>
+<option>Aadhaar Update</option>
+<option>MSME / Udyam Registration</option>
+
+<!-- ===== GOVERNMENT & UTILITY ===== -->
+<option>Passport Services</option>
+<option>Travel & Ticket Booking</option>
+<option>Visa Assistance</option>
+<option>Online Form Filling</option>
+<option>Bill Payments & Recharge</option>
+<option>Digital Certificates & Documentation</option>
+<option>Notary & Documentation Support</option>
+
+<!-- ===== OTHER ===== -->
+<option>Other / Custom Requirement</option>
+        </select>
+        <label class="block text-gray-700 font-semibold mb-2">Enter Amount (₹)</label>
+        <input id="amount" type="number" placeholder="Enter Amount"
+          class="border border-gray-300 rounded-lg w-full p-3 mb-6 focus:ring-2 focus:ring-indigo-500" />
+        <a id="upi-link" target="_blank">
+          <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition">
+            Pay via UPI
+          </button>
+        </a>
+        <p class="text-xs text-gray-500 mt-3">Your payment is 100% secure via UPI.</p>
+      </div>
+    </div>
+    <script>
+      const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR";
+      const upiLink = document.getElementById('upi-link');
+      function updateUPILink() {
+        const amount = document.getElementById('amount').value || '';
+        const service = document.getElementById('service').value || '';
+        let link = upiBase;
+        if (amount) link += `&am=${amount}`;
+        if (service) link += `&tn=${encodeURIComponent(service)}`;
+        upiLink.href = link;
+      }
+      document.getElementById('amount').addEventListener('input', updateUPILink);
+      document.getElementById('service').addEventListener('change', updateUPILink);
+    </script>
+</section>
+
+<section id="contact" class="bg-gray-50 py-20">
+  <div class="max-w-3xl mx-auto bg-white shadow-2xl p-8 rounded-2xl">
+    <h2 class="text-3xl font-bold text-center mb-6 text-gray-800">Tell Us About Your Project
+</h2>
+    <p class="text-center text-gray-600 mb-8">Fill the form and we’ll get back to you within a few hours.</p>
+    <form action="https://formspree.io/f/xnnojdpr" method="POST" class="space-y-5">
+      <input name="name" required placeholder="Full Name" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
+      <input name="email" type="email" required placeholder="Email Address" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
+      <input name="phone" required placeholder="Phone / WhatsApp" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500" />
+      <select name="service" id="serviceSelect" class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500">
+         <option value="">Select a Service</option>
+       <!-- ===== AI & AUTOMATION ===== -->
+<option>AI Automation Setup</option>
+<option>AI Chatbots & Virtual Assistants</option>
+<option>Machine Learning Solutions</option>
+<option>Predictive Analytics</option>
+<option>Computer Vision & OCR</option>
+<option>NLP Solutions</option>
+
+<!-- ===== CLOUD & DEVOPS ===== -->
+<option>Cloud Migration</option>
+<option>AWS / Azure / GCP Solutions</option>
+<option>DevOps & CI/CD Pipelines</option>
+<option>Containerization & Kubernetes</option>
+<option>Backup & Disaster Recovery</option>
+<option>Cloud Cost Optimization</option>
+
+<!-- ===== IT SERVICES ===== -->
+<option>Managed IT Support</option>
+<option>IT Consulting</option>
+<option>Enterprise IT Solutions</option>
+<option>IT Infrastructure Management</option>
+<option>Network & Server Management</option>
+<option>IT Asset & License Management</option>
+
+<!-- ===== CYBERSECURITY ===== -->
+<option>Cybersecurity Consulting</option>
+<option>SOC & Threat Monitoring</option>
+<option>Compliance & Security Audits</option>
+<option>Data Protection & Privacy</option>
+<option>VAPT & Penetration Testing</option>
+<option>Incident Response & Recovery</option>
+
+<!-- ===== SOFTWARE & APP DEVELOPMENT ===== -->
+<option>Custom Software Development</option>
+<option>Web Application Development</option>
+<option>App Development (Android & iOS)</option>
+<option>SaaS Product Development</option>
+<option>API & System Integrations</option>
+<option>QA & Software Testing</option>
+
+<!-- ===== WEBSITE & EXPERIENCE ===== -->
+<option>Website Development</option>
+<option>E-Commerce Solutions</option>
+<option>UI / UX Design</option>
+<option>Website Performance Optimization</option>
+<option>Website Maintenance & Support</option>
+<option>Landing Page Development</option>
+
+<!-- ===== DIGITAL MARKETING ===== -->
+<option>Digital Marketing Strategy</option>
+<option>SEO & SEM</option>
+<option>Google Ads Setup & Management</option>
+<option>Social Media Management</option>
+<option>Email & WhatsApp Marketing</option>
+<option>Video Editing & Reels Creation</option>
+
+<!-- ===== CREATIVE & BRANDING ===== -->
+<option>Graphic & Logo Design</option>
+<option>Brand Identity Design</option>
+<option>Ad Creatives & Banners</option>
+<option>Pitch Deck & Presentation Design</option>
+<option>Promo & Explainer Videos</option>
+<option>Packaging & Print Design</option>
+
+<!-- ===== BUSINESS & CONSULTANCY ===== -->
+<option>Business & IT Consultancy</option>
+<option>Startup Consulting</option>
+<option>Digital Transformation Consulting</option>
+<option>Process Optimization</option>
+<option>Automation Consulting</option>
+<option>Technology Roadmap Planning</option>
+
+<!-- ===== CSC / DIGITAL SEVA ===== -->
+<option>PF Withdrawal & Correction</option>
+<option>ITR Filing</option>
+<option>IT & GST Services</option>
+<option>PAN Card Services</option>
+<option>Aadhaar Update</option>
+<option>MSME / Udyam Registration</option>
+
+<!-- ===== GOVERNMENT & UTILITY ===== -->
+<option>Passport Services</option>
+<option>Travel & Ticket Booking</option>
+<option>Visa Assistance</option>
+<option>Online Form Filling</option>
+<option>Bill Payments & Recharge</option>
+<option>Digital Certificates & Documentation</option>
+<option>Notary & Documentation Support</option>
+
+<!-- ===== OTHER ===== -->
+<option>Other / Custom Requirement</option>
+      </select>
+      <textarea name="message" rows="4" placeholder="Share your project details, including timeline and budget"
+        class="border border-gray-300 rounded-lg w-full p-3 focus:ring-2 focus:ring-indigo-500"></textarea>
+      <button type="submit" class="bg-indigo-600 text-white px-5 py-3 rounded-lg font-semibold w-full hover:bg-indigo-700">Submit Request</button>
+    </form>
+  </div>
+</section>
+
+<footer id="site-footer" class="text-gray-300 text-center py-10">
+  <div class="mb-6 flex flex-wrap justify-center items-center gap-4">
+    <a href="about.html" class="hover:text-white transition mx-3">About Us</a>
+        <a href="careers.html" class="hover:text-white transition mx-3">Careers</a>
+    <a href="refund.html" class="hover:text-white transition mx-3">Refund Policy</a>
+    <a href="terms.html" class="hover:text-white transition mx-3">Terms & Conditions</a>
+    <a href="privacy.html" class="hover:text-white transition mx-3">Privacy Policy</a>
+  </div>
+  <p class="text-sm text-yellow-300 font-semibold mb-4">
+    🔒 Secure Payment — All Major UPI, Cards, Wallets & CRED Supported
+  </p>
+  <div class="flex flex-wrap justify-center items-center gap-4 mb-6">
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/Visa.png" alt="Visa" class="h-10 w-auto bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/mastercard.png" alt="MasterCard" class="h-10 w-auto bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/upi.png" alt="UPI" class="h-10 w-auto bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/paytm.png" alt="Paytm" class="h-10 w-auto bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/PhonePe.png" alt="PhonePe" class="h-10 w-auto bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/gpay.png" alt="Google Pay" class="h-10 w-auto bg-white rounded-md p-1 shadow-sm object-contain" />
+    <img src="https://rjkumar081.github.io/MeraPopi-Digital-Seva-Center/assets/cred.png" alt="CRED" class="h-10 w-auto bg-white rounded-md p-1 shadow-sm object-contain" />
+  </div>
+  <p>© 2025 NexAI Tech & Digital Solutions — Powered by MeraPopi</p>
+</footer>
+
+<a href="https://wa.me/919464642218" target="_blank" class="floating-chat">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Chat" class="w-8 h-8" />
+</a>
+
+<script>
+  const whatsappNumber = "919464642218";
+  const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR";
+
+  const services = [
+  // ===== AI & AUTOMATION =====
+  { icon:"🤖", name:"AI Automation Setup", desc:"Integrate AI tools, chatbots, and workflows into your business.", price:4999 },
+  { icon:"💬", name:"AI Chatbots & Virtual Assistants", desc:"Customer support and sales automation chatbots.", price:5999 },
+  { icon:"🧠", name:"Machine Learning Solutions", desc:"Custom ML models for business intelligence and insights.", price:9999 },
+  { icon:"📊", name:"Predictive Analytics", desc:"Data-driven forecasting and business prediction models.", price:7999 },
+  { icon:"📷", name:"Computer Vision & OCR", desc:"Image recognition, OCR and document automation.", price:8999 },
+  { icon:"🗣️", name:"NLP Solutions", desc:"Text analysis, sentiment detection and language processing.", price:6999 },
+
+  // ===== CLOUD & DEVOPS =====
+  { icon:"☁️", name:"Cloud Migration", desc:"Migrate infrastructure and apps to cloud platforms.", price:8999 },
+  { icon:"☁️", name:"AWS / Azure / GCP Solutions", desc:"Cloud architecture, deployment and optimization.", price:9999 },
+  { icon:"🔄", name:"DevOps & CI/CD Pipelines", desc:"Automated build, test and deployment pipelines.", price:7999 },
+  { icon:"📦", name:"Containerization & Kubernetes", desc:"Docker & Kubernetes orchestration solutions.", price:8999 },
+  { icon:"💾", name:"Backup & Disaster Recovery", desc:"Business continuity and disaster recovery planning.", price:4999 },
+  { icon:"💸", name:"Cloud Cost Optimization", desc:"Reduce cloud spend and optimize usage.", price:3999 },
+
+  // ===== IT SERVICES =====
+  { icon:"🛠️", name:"Managed IT Support", desc:"24/7 monitoring, helpdesk and proactive IT support.", price:4999 },
+  { icon:"🧭", name:"IT Consulting", desc:"Technology roadmap and strategic IT advisory.", price:2999 },
+  { icon:"🏢", name:"Enterprise IT Solutions", desc:"End-to-end IT solutions for enterprises.", price:14999 },
+  { icon:"🧩", name:"IT Infrastructure Management", desc:"Servers, networks, storage and endpoint management.", price:6999 },
+  { icon:"🔁", name:"IT Asset & License Management", desc:"Hardware, software and license lifecycle management.", price:1999 },
+  { icon:"🌐", name:"Network & Server Management", desc:"Secure and reliable network/server operations.", price:5999 },
+
+  // ===== CYBERSECURITY =====
+  { icon:"🔐", name:"Cybersecurity Consulting", desc:"Security strategy, risk assessment and planning.", price:4999 },
+  { icon:"🛡️", name:"SOC & Threat Monitoring", desc:"24/7 security monitoring and incident alerts.", price:9999 },
+  { icon:"📜", name:"Compliance & Security Audits", desc:"ISO, GDPR, SOC2 and regulatory compliance.", price:6999 },
+  { icon:"🧬", name:"Data Protection & Privacy", desc:"Encryption, access control and data security.", price:5999 },
+  { icon:"🚨", name:"Incident Response & Recovery", desc:"Security breach response and recovery.", price:7999 },
+  { icon:"🧪", name:"VAPT & Penetration Testing", desc:"Vulnerability assessment and penetration testing.", price:8999 },
+
+  // ===== SOFTWARE & APP DEVELOPMENT =====
+  { icon:"💻", name:"Custom Software Development", desc:"Tailored enterprise and business software solutions.", price:12999 },
+  { icon:"🌐", name:"Web Application Development", desc:"Scalable and secure web applications.", price:7999 },
+  { icon:"📱", name:"App Development", desc:"Android & iOS apps tailored to business needs.", price:15000 },
+  { icon:"🧩", name:"API & System Integrations", desc:"Third-party API and enterprise system integration.", price:5999 },
+  { icon:"☁️", name:"SaaS Product Development", desc:"Cloud-based SaaS platforms and products.", price:19999 },
+  { icon:"🧪", name:"QA & Software Testing", desc:"Manual and automated testing services.", price:3999 },
+
+  // ===== WEBSITE & EXPERIENCE =====
+  { icon:"🌐", name:"Website Development", desc:"Professional, responsive business or e-commerce websites.", price:2999 },
+  { icon:"🛒", name:"E-Commerce Solutions", desc:"Shopify, WooCommerce and custom e-commerce platforms.", price:4999 },
+  { icon:"🎨", name:"UI / UX Design", desc:"User-centric interface and experience design.", price:2999 },
+  { icon:"⚡", name:"Website Performance Optimization", desc:"Speed, SEO and core web vitals optimization.", price:1999 },
+  { icon:"⚙️", name:"Website Maintenance & Support", desc:"Ongoing updates, bug fixes and uptime monitoring.", price:999 },
+  { icon:"📄", name:"Landing Page Development", desc:"High-converting landing pages.", price:1499 },
+
+  // ===== DIGITAL MARKETING =====
+  { icon:"📈", name:"Digital Marketing Strategy", desc:"End-to-end online growth strategy.", price:3999 },
+  { icon:"🔍", name:"SEO & SEM", desc:"Search engine optimization and paid marketing.", price:2999 },
+  { icon:"📢", name:"Social Media Management", desc:"Plan, post and manage social content.", price:2499 },
+  { icon:"✉️", name:"Email & WhatsApp Marketing", desc:"Automated and personalized campaigns.", price:1499 },
+  { icon:"🎥", name:"Video Editing & Reels Creation", desc:"Short videos and reels for engagement.", price:499 },
+  { icon:"📣", name:"Google Ads Setup & Management", desc:"Campaign setup, tracking and optimization.", price:3499 },
+
+  // ===== CREATIVE & BRANDING =====
+  { icon:"🎨", name:"Graphic & Logo Design", desc:"Custom logos, posters and brand creatives.", price:499 },
+  { icon:"🧾", name:"Brand Identity Design", desc:"Complete brand identity systems.", price:2999 },
+  { icon:"📊", name:"Pitch Deck & Presentation Design", desc:"Investor and sales presentations.", price:1999 },
+  { icon:"🖼️", name:"Ad Creatives & Banners", desc:"Marketing creatives for ads.", price:799 },
+  { icon:"🎬", name:"Promo & Explainer Videos", desc:"Short promotional and explainer videos.", price:2999 },
+  { icon:"📦", name:"Packaging & Print Design", desc:"Product packaging and print creatives.", price:1999 },
+
+  // ===== BUSINESS & CONSULTANCY =====
+  { icon:"🧠", name:"Business & IT Consultancy", desc:"Expert consultancy for business and tech growth.", price:999 },
+  { icon:"🚀", name:"Startup Consulting", desc:"Tech and growth consulting for startups.", price:2999 },
+  { icon:"🔄", name:"Digital Transformation Consulting", desc:"Modernize business with digital solutions.", price:4999 },
+  { icon:"⚙️", name:"Process Optimization", desc:"Improve efficiency and reduce costs.", price:1999 },
+  { icon:"📍", name:"Technology Roadmap Planning", desc:"Future-ready technology planning.", price:2999 },
+  { icon:"🤝", name:"Automation Consulting", desc:"Automation strategy and implementation.", price:2499 },
+
+  // ===== CSC / DIGITAL SEVA =====
+  { icon:"💼", name:"PF Withdrawal & Correction", desc:"EPF withdrawal, correction and KYC linking.", price:299 },
+  { icon:"💰", name:"IT & GST Services", desc:"ITR filing, GST registration and returns.", price:499 },
+  { icon:"🪪", name:"PAN Card Services", desc:"Apply, update or reprint PAN card.", price:150 },
+  { icon:"🆔", name:"Aadhaar Update", desc:"Aadhaar name, address or mobile update.", price:199 },
+  { icon:"🏢", name:"MSME Registration", desc:"Udyam / MSME registration services.", price:299 },
+  { icon:"🛂", name:"Passport Services", desc:"Apply or renew passport with verification.", price:999 },
+
+  // ===== GOVERNMENT & UTILITY =====
+  { icon:"✈️", name:"Travel & Ticket Booking", desc:"IRCTC train, flight, hotel or visa assistance.", price:99 },
+  { icon:"🌍", name:"Visa Assistance", desc:"Tourist and business visa support.", price:1999 },
+  { icon:"🧾", name:"Online Form Filling", desc:"Government and private online forms.", price:99 },
+  { icon:"💡", name:"Bill Payments & Recharge", desc:"Electricity, gas, mobile and DTH payments.", price:49 },
+  { icon:"📜", name:"Digital Certificates & Documents", desc:"Income, caste and other certificates.", price:299 },
+  { icon:"📝", name:"Notary & Documentation Support", desc:"Legal and documentation assistance.", price:499 }
+];
+
+
+  function renderServices() {
+    const grid = document.getElementById('service-grid');
+    if (!grid) return;
+    services.forEach(s => {
+      const upiLink = `${upiBase}&am=${s.price}&tn=${encodeURIComponent(s.name)}`;
+      const chatLink = `https://wa.me/${whatsappNumber}?text=Hi! I am interested in ${encodeURIComponent(s.name)}`;
+      // Share link/text for Web Share API or fallback
+      const shareText = `Check out this service: ${s.name} - ${s.desc}. Starting at ₹${s.price}. Powered by NexAI Tech & Digital Solutions.`;
+
+      const div = document.createElement('div');
+      div.className = "bg-indigo-50 p-6 rounded-xl shadow hover:shadow-xl transition";
+      div.innerHTML = `
+        <div class='text-4xl mb-4'>${s.icon}</div>
+        <h3 class='text-xl font-bold mb-2'>${s.name}</h3>
+        <p class='text-gray-600 text-sm mb-3'>${s.desc}</p>
+        <p class='text-indigo-700 font-semibold mb-4'>Starting ₹${s.price}</p>
+        <div class='flex flex-wrap gap-2 items-center'>
+          <a href='${upiLink}' target='_blank' 
+             class='bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
+             Buy Now
+          </a>
+          <a href='${chatLink}' target='_blank'
+             class='bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
+             💬 Chat
+          </a>
+          <button onclick="shareService('${s.name}', '${s.desc}', '${s.price}')"
+              class='bg-gray-400 hover:bg-gray-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
+              🔗 Share
+          </button>
+        </div>
+      `;
+      grid.appendChild(div);
+    });
+  }
+
+  function shareService(name, desc, price) {
+      const shareData = {
+          title: 'NexAI Service: ' + name,
+          text: `Check out this service: ${name} - ${desc}. Starting at ₹${price}. Get in touch now!`,
+          url: window.location.href // Shares the current page link
+      };
+
+      if (navigator.share) {
+          navigator.share(shareData)
+              .catch((error) => console.log('Error sharing', error));
+      } else {
+          // Fallback for browsers that do not support Web Share API
+          alert(`Share this service: ${shareData.text}\nPage URL: ${shareData.url}\n\n(Note: Your browser does not support the native Share feature, please copy and paste the details.)`);
+      }
+  }
+
+
+  document.addEventListener("DOMContentLoaded", renderServices);
+</script>
+  <script>
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.remove("nav-transparent");
+    navbar.classList.add("nav-solid");
+  } else {
+    navbar.classList.add("nav-transparent");
+    navbar.classList.remove("nav-solid");
+  }
+});
+</script>
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const navbar = document.getElementById("navbar");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+
+// navbar solid on scroll
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 40) {
+    navbar.classList.add("nav-solid");
+  } else {
+    navbar.classList.remove("nav-solid");
+  }
+});
+</script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  console.log("menuBtn:", menuBtn);
+  console.log("mobileMenu:", mobileMenu);
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.onclick = function () {
+      mobileMenu.classList.toggle("hidden");
+    };
+  }
+
+});
+</script>
+</body>
+</html>
